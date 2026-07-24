@@ -1,13 +1,59 @@
 [gd_scene format=3 uid="uid://dfqbrobycpr2p"]
 
-[ext_resource type="Script" uid="uid://bn1vm4ybnwktp" path="res://node_2d.gd" id="1_ak2if"]
+[ext_resource type="Script" uid="uid://d3gik2nq5br2p" path="res://title_screen.gd" id="1_ak2if"]
 [ext_resource type="Texture2D" uid="uid://bj8kkhwmgskjq" path="res://addons/godot_super-wakatime/richard-horvath-_nWaeTF6qo0-unsplash.jpg" id="2_ig5kc"]
 
 [node name="TitleScreen" type="Node2D" unique_id=1499543415]
 script = ExtResource("1_ak2if")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=833508508]
+[node name="Background" type="TextureRect" parent="." unique_id=833508508]
 offset_right = 1153.0
 offset_bottom = 649.0
 texture = ExtResource("2_ig5kc")
 expand_mode = 1
+
+[node name="Settings" type="Button" parent="Background" unique_id=576018945]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 368.0
+offset_right = 268.0
+offset_bottom = 412.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "SETTINGS
+"
+
+[node name="Start" type="Button" parent="Background" unique_id=652049103]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 268.0
+offset_right = 268.0
+offset_bottom = 312.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "START
+"
+
+[node name="Quit" type="Button" parent="Background" unique_id=1314716666]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 468.0
+offset_right = 268.0
+offset_bottom = 512.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "QUIT
+"
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=513110769]
+clip_contents = false
+offset_left = 45.0
+offset_top = 17.0
+offset_right = 536.0
+offset_bottom = 174.0
+theme_override_font_sizes/normal_font_size = 108
+text = "TBD!"
+
+[connection signal="pressed" from="Background/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Background/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Background/Quit" to="." method="_on_quit_pressed"]
