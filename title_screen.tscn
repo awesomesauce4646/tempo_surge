@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dfqbrobycpr2p"]
+
+[ext_resource type="Script" uid="uid://bn1vm4ybnwktp" path="res://node_2d.gd" id="1_ak2if"]
+[ext_resource type="Texture2D" uid="uid://bj8kkhwmgskjq" path="res://addons/godot_super-wakatime/richard-horvath-_nWaeTF6qo0-unsplash.jpg" id="2_ig5kc"]
+
+[node name="TitleScreen" type="Node2D" unique_id=1499543415]
+script = ExtResource("1_ak2if")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=833508508]
+offset_right = 1153.0
+offset_bottom = 649.0
+texture = ExtResource("2_ig5kc")
+expand_mode = 1
