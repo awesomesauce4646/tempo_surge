@@ -11,12 +11,17 @@ config_version=5
 [application]
 
 config/name="awesome sauce ware"
-run/main_scene="res://title_screen.tscn"
+run/main_scene="uid://dx6108mmwyt4y"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*uid://drs8kjwt4am3p"
+
 [display]
 
+window/size/mode=3
 window/stretch/mode="viewport"
 
 [editor_plugins]

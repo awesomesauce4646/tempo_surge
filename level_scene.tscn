@@ -1,3 +1,82 @@
 [gd_scene format=3 uid="uid://cecw3nojshvxc"]
 
-[node name="Level" type="Node2D" unique_id=1994702572]
+[ext_resource type="Texture2D" uid="uid://bj8kkhwmgskjq" path="res://addons/godot_super-wakatime/richard-horvath-_nWaeTF6qo0-unsplash.jpg" id="1_4quuv"]
+[ext_resource type="Texture2D" uid="uid://co03xrf5m0kim" path="res://musicnote.png" id="2_187gu"]
+
+[node name="LevelScene" type="Node2D" unique_id=1994702572]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1590093782]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_4quuv")
+expand_mode = 1
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=1262606272]
+offset_left = 72.0
+offset_top = 67.0
+offset_right = 253.0
+offset_bottom = 126.0
+theme_override_font_sizes/normal_font_size = 42
+text = "LEVEL #"
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=264175579]
+offset_left = 1019.0
+offset_top = 67.0
+offset_right = 1083.0
+offset_bottom = 125.0
+theme_override_font_sizes/normal_font_size = 42
+text = "0.0"
+
+[node name="NoteContainer" type="HBoxContainer" parent="." unique_id=2107832984]
+oversampling_with_scale = 1
+offset_left = 71.0
+offset_top = 175.0
+offset_right = 1097.0
+offset_bottom = 438.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Note" type="TextureRect" parent="NoteContainer" unique_id=1146299678]
+custom_minimum_size = Vector2(201.25, 262.5)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.0
+texture = ExtResource("2_187gu")
+expand_mode = 1
+
+[node name="Note2" type="TextureRect" parent="NoteContainer" unique_id=455078631]
+custom_minimum_size = Vector2(201.25, 262.5)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.0
+texture = ExtResource("2_187gu")
+expand_mode = 1
+
+[node name="Note3" type="TextureRect" parent="NoteContainer" unique_id=1212345128]
+custom_minimum_size = Vector2(201.25, 262.5)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.0
+texture = ExtResource("2_187gu")
+expand_mode = 1
+
+[node name="Note4" type="TextureRect" parent="NoteContainer" unique_id=1440267935]
+custom_minimum_size = Vector2(201.25, 262.5)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.0
+texture = ExtResource("2_187gu")
+expand_mode = 1
+
+[node name="Note5" type="TextureRect" parent="NoteContainer" unique_id=1617005110]
+custom_minimum_size = Vector2(201.25, 262.5)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.0
+texture = ExtResource("2_187gu")
+expand_mode = 1

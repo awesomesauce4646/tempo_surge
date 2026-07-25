@@ -1,3 +1,8 @@
-res://title_screen.tscn
-res://addons/godot_super-wakatime/README.md
-res://title_screen.gd
+res://level_scene.tscn
+res://timer_screen.gd
+res://minigame.tscn
+res://minigame_timer.gd
+res://player.tscn
+res://timer.tscn
+res://minigame_1.tscn
+res://player.gd
