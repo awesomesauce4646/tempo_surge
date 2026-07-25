@@ -1,1 +1,5 @@
 res://minigame_1.tscn
+res://minigame_2.tscn
+res://timer.tscn
+res://detect_click.gd
+res://minigame_2.gd

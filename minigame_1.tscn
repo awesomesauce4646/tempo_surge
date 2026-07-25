@@ -58,10 +58,8 @@ repeat_size = Vector2(1150, 0)
 autoscroll = Vector2(100, 0)
 
 [node name="Background" type="TextureRect" parent="ScrollingBackground" unique_id=786788351]
-offset_left = -15.0
-offset_top = -72.0
-offset_right = 1137.0
-offset_bottom = 576.0
+offset_right = 1152.0
+offset_bottom = 648.0
 texture = ExtResource("1_gi7k6")
 expand_mode = 1
 
@@ -172,9 +170,6 @@ position = Vector2(-10, 13)
 position = Vector2(52, 30)
 shape = SubResource("CircleShape2D_7304a")
 
-[node name="Timer" parent="." unique_id=93331502 instance=ExtResource("6_or1ld")]
-position = Vector2(4180, 1328)
-
 [node name="GuitarPick2" type="Node2D" parent="." unique_id=1839987621]
 position = Vector2(32, 141)
 script = ExtResource("4_or1ld")
@@ -215,5 +210,8 @@ position = Vector2(-10, 13)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GuitarPick3/Area2D" unique_id=546688106]
 position = Vector2(52, 30)
 shape = SubResource("CircleShape2D_7304a")
+
+[node name="Timer" parent="." unique_id=93331502 instance=ExtResource("6_or1ld")]
+position = Vector2(16, -4)
 
 [connection signal="note_collected" from="GuitarPick" to="." method="_on_guitar_pick_note_collected"]
