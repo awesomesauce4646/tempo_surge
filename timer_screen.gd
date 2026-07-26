@@ -11,7 +11,7 @@ extends Node2D
 var time
 
 func _ready() -> void:
-	await Timer(5.0) # using the function created
+	await Timer(3.0) # using the function created
 	
 	if Global.minigames_done < 3: # if you havent completed 3 minigames yet 
 		Global.minigames_done = Global.minigames_done +1
@@ -23,7 +23,7 @@ func _ready() -> void:
 # should be next. Make sure you name your minigame saves appropriately.
 
 	else:
-		get_tree().change_scene_to_file("res://scenes/title_screen.tscn") # changes your scene
+		get_tree().change_scene_to_file("res://title_screen.tscn") # changes your scene
 	
 
 func _process(delta: float) -> void: # runs EVERY FRAME

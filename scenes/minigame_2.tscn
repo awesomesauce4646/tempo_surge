@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://0ko44u4465sm"]
+
+[ext_resource type="Script" uid="uid://dt3v83dujp40o" path="res://minigame_2.gd" id="1_dqa6p"]
+[ext_resource type="Texture2D" uid="uid://b7680e8xkw3w5" path="res://blue-bg.png" id="2_c3ytc"]
+[ext_resource type="Texture2D" uid="uid://co03xrf5m0kim" path="res://musicnote.png" id="3_eachr"]
+[ext_resource type="Script" uid="uid://bjxfow30t1sbi" path="res://detect_click.gd" id="4_6tcq3"]
+[ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://scenes/timer.tscn" id="5_6co8m"]
+
+[node name="Minigame_2" type="Node2D" unique_id=809752430]
+script = ExtResource("1_dqa6p")
+
+[node name="Background" type="TextureRect" parent="." unique_id=248404411]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_c3ytc")
+expand_mode = 1
+
+[node name="Button_1" type="TextureButton" parent="." unique_id=1712268124]
+offset_left = 75.0
+offset_top = 123.0
+offset_right = 353.0
+offset_bottom = 494.0
+scale = Vector2(0.61555225, 0.60166913)
+texture_normal = ExtResource("3_eachr")
+script = ExtResource("4_6tcq3")
+
+[node name="Button_2" type="TextureButton" parent="." unique_id=843083989]
+offset_left = 349.0
+offset_top = 304.0
+offset_right = 627.0
+offset_bottom = 675.0
+scale = Vector2(0.61555225, 0.60166913)
+texture_normal = ExtResource("3_eachr")
+script = ExtResource("4_6tcq3")
+
+[node name="Button_3" type="TextureButton" parent="." unique_id=1423610650]
+offset_left = 661.0
+offset_top = 62.0
+offset_right = 939.0
+offset_bottom = 433.0
+scale = Vector2(0.61555225, 0.60166913)
+texture_normal = ExtResource("3_eachr")
+script = ExtResource("4_6tcq3")
+
+[node name="Button_4" type="TextureButton" parent="." unique_id=718147519]
+offset_left = 868.0
+offset_top = 339.0
+offset_right = 1146.0
+offset_bottom = 710.0
+scale = Vector2(0.61555225, 0.60166913)
+texture_normal = ExtResource("3_eachr")
+script = ExtResource("4_6tcq3")
+
+[node name="Timer" parent="." unique_id=93331502 instance=ExtResource("5_6co8m")]
+position = Vector2(16, -4)
+
+[connection signal="pressed" from="Button_1" to="Button_1" method="_on_pressed"]
+[connection signal="pressed" from="Button_2" to="Button_2" method="_on_pressed"]
+[connection signal="pressed" from="Button_3" to="Button_3" method="_on_pressed"]
+[connection signal="pressed" from="Button_4" to="Button_4" method="_on_pressed"]

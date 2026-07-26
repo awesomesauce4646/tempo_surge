@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bhffpchubnmhh"]
+
+[ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://scenes/timer.tscn" id="1_t3ksd"]
+
+[node name="Minigame_3" type="Node2D" unique_id=913392316]
+
+[node name="Timer" parent="." unique_id=93331502 instance=ExtResource("1_t3ksd")]

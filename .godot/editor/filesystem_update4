@@ -1,5 +1,10 @@
-res://minigame_1.tscn
+res://scenes/minigame_1.tscn
+res://timer_screen.gd
 res://minigame_2.tscn
-res://timer.tscn
-res://detect_click.gd
+res://title_screen.gd
+res://scenes/settings.tscn
+res://minigame_1.gd
 res://minigame_2.gd
+res://scenes/minigame_2.tscn
+res://level_scene.tscn
+res://minigame_3.tscn

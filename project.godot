@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="awesome sauce ware"
-run/main_scene="uid://dx6108mmwyt4y"
+run/main_scene="uid://dfqbrobycpr2p"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

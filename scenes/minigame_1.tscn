@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://dx6108mmwyt4y"]
 
-[ext_resource type="Texture2D" uid="uid://c6ft0daol7730" path="res://png.png" id="1_gi7k6"]
-[ext_resource type="Script" uid="uid://dqewthns2k2mb" path="res://minigame_1.gd" id="1_wh6qq"]
-[ext_resource type="PackedScene" uid="uid://calc6mr02v77q" path="res://player.tscn" id="2_gi7k6"]
-[ext_resource type="Texture2D" uid="uid://cfvbagkkcdep" path="res://guitar_pick.png" id="3_0hvi2"]
-[ext_resource type="Script" uid="uid://ux7c5tbpwod0" path="res://guitar_pick.gd" id="4_or1ld"]
-[ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://timer.tscn" id="6_or1ld"]
+[ext_resource type="Script" uid="uid://dqewthns2k2mb" path="res://minigame_1.gd" id="1_j1cg4"]
+[ext_resource type="Texture2D" uid="uid://c6ft0daol7730" path="res://png.png" id="2_vc5od"]
+[ext_resource type="PackedScene" uid="uid://calc6mr02v77q" path="res://player.tscn" id="3_xpvfh"]
+[ext_resource type="Script" uid="uid://ux7c5tbpwod0" path="res://guitar_pick.gd" id="4_r58ir"]
+[ext_resource type="Texture2D" uid="uid://cfvbagkkcdep" path="res://guitar_pick.png" id="5_oxfl2"]
+[ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://scenes/timer.tscn" id="6_1digs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7304a"]
 size = Vector2(1311.3125, 37)
@@ -51,7 +51,7 @@ _data = {
 radius = 46.0
 
 [node name="Minigame_1" type="Node2D" unique_id=1202186254]
-script = ExtResource("1_wh6qq")
+script = ExtResource("1_j1cg4")
 
 [node name="ScrollingBackground" type="Parallax2D" parent="." unique_id=1714096190]
 repeat_size = Vector2(1150, 0)
@@ -60,7 +60,7 @@ autoscroll = Vector2(100, 0)
 [node name="Background" type="TextureRect" parent="ScrollingBackground" unique_id=786788351]
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = ExtResource("1_gi7k6")
+texture = ExtResource("2_vc5od")
 expand_mode = 1
 
 [node name="Platform1" type="StaticBody2D" parent="." unique_id=2062543676]
@@ -89,7 +89,7 @@ color = Color(0.74166036, 2.0888747e-05, 0.5243474, 1)
 position = Vector2(1420, 447)
 shape = SubResource("RectangleShape2D_7304a")
 
-[node name="Player" parent="." unique_id=1483980912 instance=ExtResource("2_gi7k6")]
+[node name="Player" parent="." unique_id=1483980912 instance=ExtResource("3_xpvfh")]
 position = Vector2(157, 464)
 
 [node name="Platform3" type="StaticBody2D" parent="." unique_id=1700724851]
@@ -152,13 +152,13 @@ shape = SubResource("RectangleShape2D_7304a")
 
 [node name="GuitarPick" type="Node2D" parent="." unique_id=57445663]
 position = Vector2(888, 332)
-script = ExtResource("4_or1ld")
+script = ExtResource("4_r58ir")
 
 [node name="GuitarPick" type="TextureRect" parent="GuitarPick" unique_id=1427583164]
 offset_top = 4.0
 offset_right = 80.0
 offset_bottom = 87.0
-texture = ExtResource("3_0hvi2")
+texture = ExtResource("5_oxfl2")
 
 [node name="animation" type="AnimationPlayer" parent="GuitarPick" unique_id=710810341]
 libraries/ = SubResource("AnimationLibrary_or1ld")
@@ -172,13 +172,13 @@ shape = SubResource("CircleShape2D_7304a")
 
 [node name="GuitarPick2" type="Node2D" parent="." unique_id=1839987621]
 position = Vector2(32, 141)
-script = ExtResource("4_or1ld")
+script = ExtResource("4_r58ir")
 
 [node name="GuitarPick" type="TextureRect" parent="GuitarPick2" unique_id=1454600876]
 offset_top = 4.0
 offset_right = 80.0
 offset_bottom = 87.0
-texture = ExtResource("3_0hvi2")
+texture = ExtResource("5_oxfl2")
 metadata/_edit_use_anchors_ = true
 
 [node name="animation" type="AnimationPlayer" parent="GuitarPick2" unique_id=2006125585]
@@ -193,13 +193,13 @@ shape = SubResource("CircleShape2D_7304a")
 
 [node name="GuitarPick3" type="Node2D" parent="." unique_id=63304591]
 position = Vector2(1034, 74)
-script = ExtResource("4_or1ld")
+script = ExtResource("4_r58ir")
 
 [node name="GuitarPick" type="TextureRect" parent="GuitarPick3" unique_id=879915143]
 offset_top = 4.0
 offset_right = 80.0
 offset_bottom = 87.0
-texture = ExtResource("3_0hvi2")
+texture = ExtResource("5_oxfl2")
 
 [node name="animation" type="AnimationPlayer" parent="GuitarPick3" unique_id=1464023611]
 libraries/ = SubResource("AnimationLibrary_or1ld")
@@ -211,7 +211,9 @@ position = Vector2(-10, 13)
 position = Vector2(52, 30)
 shape = SubResource("CircleShape2D_7304a")
 
-[node name="Timer" parent="." unique_id=93331502 instance=ExtResource("6_or1ld")]
+[node name="Timer" parent="." unique_id=93331502 instance=ExtResource("6_1digs")]
 position = Vector2(16, -4)
 
 [connection signal="note_collected" from="GuitarPick" to="." method="_on_guitar_pick_note_collected"]
+[connection signal="note_collected" from="GuitarPick2" to="." method="_on_guitar_pick_2_note_collected"]
+[connection signal="note_collected" from="GuitarPick3" to="." method="_on_guitar_pick_3_note_collected"]
