@@ -45,3 +45,4 @@ func _on_guitar_pick_2_note_collected() -> void:
 func _on_guitar_pick_note_collected() -> void:
 	note_collected = note_collected + 1
 	pass # Replace with function body.
+	

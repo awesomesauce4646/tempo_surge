@@ -1,14 +1,14 @@
+RichTextLabel
 TextureButton
+TextureRect
+Control
 Timer
 CollisionShape2D
 Area2D
 AnimationPlayer
 Node2D
-TextureRect
 Parallax2D
 ColorRect
 StaticBody2D
 Sprite2D
 CharacterBody2D
-RichTextLabel
-HBoxContainer

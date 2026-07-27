@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://bhffpchubnmhh"]
+
+[ext_resource type="Script" uid="uid://biebv2d1555hp" path="res://scenes/minigame_3.gd" id="1_4c0c6"]
+[ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://scenes/timer.tscn" id="2_4c0c6"]
+[ext_resource type="Texture2D" uid="uid://bbrotepamip5g" path="res://green-yell-bg.png" id="2_yiing"]
+[ext_resource type="Texture2D" uid="uid://df87en882qas1" path="res://angry.png" id="4_nuwo7"]
+[ext_resource type="Texture2D" uid="uid://fyecq5y4d14o" path="res://up.png" id="5_rguwe"]
+[ext_resource type="Script" uid="uid://canm8xguitmcu" path="res://scenes/up.gd" id="6_knknf"]
+[ext_resource type="Script" uid="uid://bewnixgmxu1xk" path="res://scenes/down.gd" id="7_knknf"]
+
+[node name="Minigame_3" type="Node2D" unique_id=913392316]
+script = ExtResource("1_4c0c6")
+
+[node name="Background" type="TextureRect" parent="." unique_id=667113542]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_yiing")
+
+[node name="Timer" parent="." unique_id=93331502 instance=ExtResource("2_4c0c6")]
+
+[node name="Face" type="TextureRect" parent="." unique_id=945504385]
+offset_left = 4.0
+offset_top = 137.0
+offset_right = 511.0
+offset_bottom = 583.0
+texture = ExtResource("4_nuwo7")
+
+[node name="up" type="TextureButton" parent="." unique_id=1904969368]
+offset_left = 447.0
+offset_top = 65.99999
+offset_right = 841.0
+offset_bottom = 417.0
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("5_rguwe")
+ignore_texture_size = true
+script = ExtResource("6_knknf")
+
+[node name="down" type="TextureButton" parent="." unique_id=1023147883]
+offset_left = 793.00006
+offset_top = 678.0
+offset_right = 1196.0
+offset_bottom = 1055.0
+rotation = -3.1147869
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("5_rguwe")
+ignore_texture_size = true
+script = ExtResource("7_knknf")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2009845234]
+offset_left = 784.0
+offset_top = 29.0
+offset_right = 1136.0
+offset_bottom = 252.0
+theme_override_font_sizes/normal_font_size = 48
+text = "PRESS"
+
+[connection signal="pressed" from="up" to="up" method="_on_pressed"]
+[connection signal="pressed" from="down" to="down" method="_on_pressed"]

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dwg0bj6nrjalf"]
+
+[ext_resource type="Texture2D" uid="uid://q3260vgoxr27" path="res://winning.png" id="1_mioa6"]
+
+[node name="Winner" type="Node2D" unique_id=1062245485]
+
+[node name="Background" type="TextureRect" parent="." unique_id=252503762]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_mioa6")
