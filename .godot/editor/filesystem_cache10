@@ -1,10 +1,11 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1785134478
+::res://::1785150394
 angry.png::CompressedTexture2D::7580281557415761294::1785134478::1785134478::1::::<><><>0<>0<>3a0d626ac795f8efe6645775ef2edf17<>res://.godot/imported/angry.png-0bcb4cf21447de53ede2dd50326b66ae.ctex::
 blue-bg.png::CompressedTexture2D::4698507958226128362::1785056286::1785056286::1::::<><><>0<>0<>fc48d58d66a2a333aad5e287a1d6a9a9<>res://.godot/imported/blue-bg.png-98e3f3903fc260485f73dd8a50691c38.ctex::
 detect_click.gd::GDScript::3065930750787813778::1785128422::0::1::::<>TextureButton<><>0<>0<><>::
 done_screen.tscn::PackedScene::8717323109466261299::1785134220::0::1::::<><><>0<>0<><>::uid://q3260vgoxr27::::res://winning.png
 eh.png::CompressedTexture2D::3008933533762225174::1785134474::1785134474::1::::<><><>0<>0<>64797c4f15f0d4819c588d534318577a<>res://.godot/imported/eh.png-cae99960f7b73a040a72af0e26ba2ec6.ctex::
+export_presets.cfg::TextFile::-1::1785147812::0::1::::<><><>0<>0<><>::
 global.gd::GDScript::8391653218797162023::1784867697::0::1::::<>Node<><>0<>0<><>::
 green-yell-bg.png::CompressedTexture2D::2492588150414908798::1785128946::1785134204::1::::<><><>0<>0<>566f7a21db586b507184098e5b4785a2<>res://.godot/imported/green-yell-bg.png-155eb967d05550737a5c29d0b41efbcb.ctex::
 guitar.png::CompressedTexture2D::259429853340503374::1784948018::1784950190::1::::<><><>0<>0<>cecd8155d8198e90b09450a0a7ad9759<>res://.godot/imported/guitar.png-a953e910ea7b11e48c92d3da96fb87ac.ctex::
@@ -12,6 +13,9 @@ guitar_pick.gd::GDScript::1453205681578508855::1785128422::0::1::::<>Node2D<><>0
 guitar_pick.png::CompressedTexture2D::151976428424990611::1784961645::1784961645::1::::<><><>0<>0<>f2e40fe8602aaf3c3d613d61f9530193<>res://.godot/imported/guitar_pick.png-a61e0398d836b6af9a248a3673508915.ctex::
 happy.png::CompressedTexture2D::6108382793258424527::1785134426::1785134426::1::::<><><>0<>0<>710c34b7e0d411d3aee6e6c02f947d80<>res://.godot/imported/happy.png-228369519db07281355f96b4b691234e.ctex::
 icon.svg::CompressedTexture2D::7637317499823913067::1784863936::1784864109::1::::<><><>0<>0<>a379e57dddb47ffce5b783f69d489fe3<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+index.apple-touch-icon.png::CompressedTexture2D::4323461615057123852::1785147775::1785147781::1::::<><><>0<>0<>f2184b638d00f6b0bde25c6e9d4c6e80<>res://.godot/imported/index.apple-touch-icon.png-8085a11cc297d91deb55511843765958.ctex::
+index.icon.png::CompressedTexture2D::3384263932780306834::1785147775::1785147781::1::::<><><>0<>0<>baa90319a26b9b1f4a75e93ba08c1af7<>res://.godot/imported/index.icon.png-5665fad188e88d1e882500a4376bfe02.ctex::
+index.png::CompressedTexture2D::2023438369978879929::1785147775::1785147781::1::::<><><>0<>0<>5a0c420ef3b6cab151a2009e2ffea289<>res://.godot/imported/index.png-5122033cac747157decad52589e2295c.ctex::
 level.png::CompressedTexture2D::3401490224035589554::1785133326::1785134212::1::::<><><>0<>0<>c32fadb9330f3ca00d15d9195a782893<>res://.godot/imported/level.png-26db75163bd58204e2a0004ea7b74f86.ctex::
 level_scene.tscn::PackedScene::5059111978380737244::1785134212::0::1::::<><><>0<>0<><>::uid://b0khuk7aiytv6::::res://timer_screen.gd<>uid://bopybumko3qso::::res://level.png<>uid://co03xrf5m0kim::::res://musicnote.png
 lose-screen.png::CompressedTexture2D::8672457559208794699::1785130140::1785134216::1::::<><><>0<>0<>f7c1a6fd27c493fae0d5ea313b695cb3<>res://.godot/imported/lose-screen.png-4243e63b58826a2946ce47d171c1fc08.ctex::
@@ -29,6 +33,9 @@ quit_tempo.png.png::CompressedTexture2D::8981492903396708675::1784960727::178496
 red-purp-bg.png::CompressedTexture2D::6868197325159115659::1784949606::1784949606::1::::<><><>0<>0<>26a6104f7780b7b20ff9fa2ea57c4bc9<>res://.godot/imported/red-purp-bg.png-7b8d21925563bda21ef3e5dd285594ec.ctex::
 settings.tscn::PackedScene::2910145833903950686::1785058065::0::1::::<><><>0<>0<><>::uid://dxw1igdgrs3g::::res://guitar.png
 start_tempo.png.png::CompressedTexture2D::4483192106612151454::1784960731::1784960731::1::::<><><>0<>0<>539522e679c358ad7b28ea0c28944c2a<>res://.godot/imported/start_tempo.png.png-3d1aadd205fcc77b2843b61363cb2d99.ctex::
+tempo surge.apple-touch-icon.png::CompressedTexture2D::117876091432781083::1785147421::1785147430::1::::<><><>0<>0<>b74636a1c631e0265a8c8fbbbe90866b<>res://.godot/imported/tempo surge.apple-touch-icon.png-000397246c54f0631c698d59466d0d13.ctex::
+tempo surge.icon.png::CompressedTexture2D::2909564327759748564::1785147421::1785147430::1::::<><><>0<>0<>d831b2c2aab59af2bfd118093daa30b0<>res://.godot/imported/tempo surge.icon.png-aa787929a7480d9de0629a610564ab87.ctex::
+tempo surge.png::CompressedTexture2D::969872497502408464::1785147421::1785147430::1::::<><><>0<>0<>739abbdc85b06803e245f0796d7d06aa<>res://.godot/imported/tempo surge.png-43f0e3d9d958bf29a7f295e114854c78.ctex::
 timer_screen.gd::GDScript::4162246861690871029::1785131221::0::1::::<>Node2D<><>0<>0<><>::
 title_screen.gd::GDScript::9137440972329777297::1785058144::0::1::::<>Node2D<><>0<>0<><>::
 up.png::CompressedTexture2D::400736611693559864::1785134176::1785134218::1::::<><><>0<>0<>7314790370d5030d28c6fe80a48fb23c<>res://.godot/imported/up.png-e05d8ef68afaab1f2a12687d88973546.ctex::
@@ -45,10 +52,16 @@ README.md::TextFile::-1::1784863936::0::1::::<><><>0<>0<><>::
 richard-horvath-_nWaeTF6qo0-unsplash.jpg::CompressedTexture2D::3086870172389189338::1784863936::1784864111::1::::<><><>0<>0<>c61779b83b4e41e1177890886314417e<>res://.godot/imported/richard-horvath-_nWaeTF6qo0-unsplash.jpg-9afc69ea2255f2e1cba50632cda8b4da.ctex::
 utils.gd::GDScript::5251015809120159908::1784863936::0::1::::<>RefCounted<><>0<>0<><>::
 yuriy-kovalev-nN1HSDtKdlw-unsplash.jpg::CompressedTexture2D::5174267948194248691::1784863936::1784864112::1::::<><><>0<>0<>6b2e7e5e934f6a4dcab5f220247f6821<>res://.godot/imported/yuriy-kovalev-nN1HSDtKdlw-unsplash.jpg-3364b2ac87461bcd802d1f22063574c7.ctex::
-::res://scenes/::1785134220
+::res://exports/::1785147831
+index.apple-touch-icon.png::CompressedTexture2D::6627473545437920746::1785147812::1785147823::1::::<><><>0<>0<>5c6d14430fbf4caa1d60997d33976f61<>res://.godot/imported/index.apple-touch-icon.png-65973ddaad96ecdaf3c752a8d5b693c7.ctex::
+index.icon.png::CompressedTexture2D::8946418101215708701::1785147812::1785147823::1::::<><><>0<>0<>9b01b0e4ad62ef475392d4d6753ffc5f<>res://.godot/imported/index.icon.png-c4a9e96706e70b250c0b0144b6b11313.ctex::
+index.png::CompressedTexture2D::911697316423520412::1785147812::1785147823::1::::<><><>0<>0<>be02927cd79718db58b33cb4cc6247b7<>res://.godot/imported/index.png-b259ab16718bc210c505332965363aff.ctex::
+::res://scenes/::1785146991
+down.gd::GDScript::2713397193974406416::1785135916::0::1::::<>TextureButton<><>0<>0<><>::
 minigame_1.tscn::PackedScene::8839226204173250014::1785059076::0::1::::<><><>0<>0<><>::uid://dqewthns2k2mb::::res://minigame_1.gd<>uid://c6ft0daol7730::::res://png.png<>uid://calc6mr02v77q::::res://player.tscn<>uid://ux7c5tbpwod0::::res://guitar_pick.gd<>uid://cfvbagkkcdep::::res://guitar_pick.png<>uid://dx6cybk5her3x::::res://scenes/timer.tscn
 minigame_2.tscn::PackedScene::1776268249844257104::1785059076::0::1::::<><><>0<>0<><>::uid://dt3v83dujp40o::::res://minigame_2.gd<>uid://b7680e8xkw3w5::::res://blue-bg.png<>uid://co03xrf5m0kim::::res://musicnote.png<>uid://bjxfow30t1sbi::::res://detect_click.gd<>uid://dx6cybk5her3x::::res://scenes/timer.tscn
-minigame_3.gd::GDScript::2956288586465860805::1785133448::0::1::::<>Node2D<><>0<>0<><>::
-minigame_3.tscn::PackedScene::2888394966572933469::1785134204::0::1::::<><><>0<>0<><>::uid://biebv2d1555hp::::res://scenes/minigame_3.gd<>uid://bbrotepamip5g::::res://green-yell-bg.png<>uid://dx6cybk5her3x::::res://scenes/timer.tscn
+minigame_3.gd::GDScript::2956288586465860805::1785136861::0::1::::<>Node2D<><>0<>0<><>::
+minigame_3.tscn::PackedScene::2888394966572933469::1785146991::0::1::::<><><>0<>0<><>::uid://biebv2d1555hp::::res://scenes/minigame_3.gd<>uid://dx6cybk5her3x::::res://scenes/timer.tscn<>uid://bbrotepamip5g::::res://green-yell-bg.png<>uid://df87en882qas1::::res://angry.png<>uid://fyecq5y4d14o::::res://up.png<>uid://canm8xguitmcu::::res://scenes/up.gd<>uid://bewnixgmxu1xk::::res://scenes/down.gd
 timer.tscn::PackedScene::8837765527513140707::1785052911::0::1::::<><><>0<>0<><>::uid://tne1b6262hgf::::res://minigame_timer.gd
 title_screen.tscn::PackedScene::7543328126789010625::1784960853::0::1::::<><><>0<>0<><>::uid://d3gik2nq5br2p::::res://title_screen.gd<>uid://vamaacj23y3t::::res://menu.png<>uid://cvlracfi2n88t::::res://options_tempo.png<>uid://b44xrv7rqmoda::::res://start_tempo.png.png<>uid://d07x41svjbqnr::::res://quit_tempo.png.png
+up.gd::GDScript::4800467031527078048::1785135916::0::1::::<>TextureButton<><>0<>0<><>::

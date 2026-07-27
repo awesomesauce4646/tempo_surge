@@ -26,10 +26,10 @@ offset_bottom = 583.0
 texture = ExtResource("4_nuwo7")
 
 [node name="up" type="TextureButton" parent="." unique_id=1904969368]
-offset_left = 447.0
-offset_top = 65.99999
-offset_right = 841.0
-offset_bottom = 417.0
+offset_left = 432.0
+offset_top = 65.00001
+offset_right = 826.0
+offset_bottom = 416.0
 scale = Vector2(0.8, 0.8)
 texture_normal = ExtResource("5_rguwe")
 ignore_texture_size = true

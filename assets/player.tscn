@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://calc6mr02v77q"]
+
+[ext_resource type="Texture2D" uid="uid://dxw1igdgrs3g" path="res://guitar.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://bw7wbp0t2ia0k" path="res://player.gd" id="1_onrkg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gi7k6"]
+radius = 27.314165
+height = 160.55678
+
+[node name="Player" type="CharacterBody2D" unique_id=1483980912]
+script = ExtResource("1_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=761096217]
+texture = ExtResource("1_4flbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1188596823]
+position = Vector2(6, -2.9999998)
+rotation = -2.2514746
+shape = SubResource("CapsuleShape2D_gi7k6")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=911846138]
+position = Vector2(8, -4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1035026351]
+position = Vector2(-2, 2)
+rotation = 0.89011794
+shape = SubResource("CapsuleShape2D_gi7k6")

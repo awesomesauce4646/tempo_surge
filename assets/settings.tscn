@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bhpxxajjvbu35"]
+
+[ext_resource type="Texture2D" uid="uid://dxw1igdgrs3g" path="res://guitar.png" id="1_5p8wc"]
+
+[node name="Settings" type="Node2D" unique_id=1816991760]
+
+[node name="Guitar" type="Sprite2D" parent="." unique_id=322107232]
+position = Vector2(603, 318)
+texture = ExtResource("1_5p8wc")

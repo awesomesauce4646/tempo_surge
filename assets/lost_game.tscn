@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://lalx2ts38f6i"]
+
+[ext_resource type="Texture2D" uid="uid://dvtadx6yeepwd" path="res://lose-screen.png" id="1_gfqfh"]
+
+[node name="Lost-Game" type="Node2D" unique_id=1587750726]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=67333729]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_gfqfh")
