@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://co03xrf5m0kim"
-path="res://.godot/imported/musicnote.png-574fe5ed82daa85839bd5430947e932b.ctex"
+path="res://.godot/imported/musicnote.png-de34e23f55645c17f2f7e2d7a5e18337.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://musicnote.png"
-dest_files=["res://.godot/imported/musicnote.png-574fe5ed82daa85839bd5430947e932b.ctex"]
+source_file="res://assets/musicnote.png"
+dest_files=["res://.godot/imported/musicnote.png-de34e23f55645c17f2f7e2d7a5e18337.ctex"]
 
 [params]
 

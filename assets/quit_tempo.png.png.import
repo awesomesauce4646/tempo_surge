@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d07x41svjbqnr"
-path="res://.godot/imported/quit_tempo.png.png-ae08f5eccd6558e7d8496bebd616ce2b.ctex"
+path="res://.godot/imported/quit_tempo.png.png-73e400b05a81ec8355576ec42686f6ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://quit_tempo.png.png"
-dest_files=["res://.godot/imported/quit_tempo.png.png-ae08f5eccd6558e7d8496bebd616ce2b.ctex"]
+source_file="res://assets/quit_tempo.png.png"
+dest_files=["res://.godot/imported/quit_tempo.png.png-73e400b05a81ec8355576ec42686f6ec.ctex"]
 
 [params]
 

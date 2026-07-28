@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvtadx6yeepwd"
-path="res://.godot/imported/lose-screen.png-4243e63b58826a2946ce47d171c1fc08.ctex"
+path="res://.godot/imported/lose-screen.png-db14a6b0840d11c90dca116f1d1266cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://lose-screen.png"
-dest_files=["res://.godot/imported/lose-screen.png-4243e63b58826a2946ce47d171c1fc08.ctex"]
+source_file="res://assets/lose-screen.png"
+dest_files=["res://.godot/imported/lose-screen.png-db14a6b0840d11c90dca116f1d1266cd.ctex"]
 
 [params]
 

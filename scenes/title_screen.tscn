@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dfqbrobycpr2p"]
 
 [ext_resource type="Script" uid="uid://d3gik2nq5br2p" path="res://title_screen.gd" id="1_ak2if"]
-[ext_resource type="Texture2D" uid="uid://vamaacj23y3t" path="res://menu.png" id="2_ak2if"]
-[ext_resource type="Texture2D" uid="uid://cvlracfi2n88t" path="res://options_tempo.png" id="3_hafda"]
-[ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://start_tempo.png.png" id="4_tpml5"]
-[ext_resource type="Texture2D" uid="uid://d07x41svjbqnr" path="res://quit_tempo.png.png" id="5_jqemp"]
+[ext_resource type="Texture2D" uid="uid://vamaacj23y3t" path="res://assets/menu.png" id="2_ak2if"]
+[ext_resource type="Texture2D" uid="uid://cvlracfi2n88t" path="res://assets/options_tempo.png" id="3_hafda"]
+[ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="4_tpml5"]
+[ext_resource type="Texture2D" uid="uid://d07x41svjbqnr" path="res://assets/quit_tempo.png.png" id="5_jqemp"]
 
 [node name="TitleScreen" type="Node2D" unique_id=1499543415]
 script = ExtResource("1_ak2if")

@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://bhffpchubnmhh"]
 
-[ext_resource type="Script" uid="uid://biebv2d1555hp" path="res://scenes/minigame_3.gd" id="1_4c0c6"]
+[ext_resource type="Script" uid="uid://biebv2d1555hp" path="res://minigame_3.gd" id="1_4c0c6"]
 [ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://scenes/timer.tscn" id="2_4c0c6"]
-[ext_resource type="Texture2D" uid="uid://bbrotepamip5g" path="res://green-yell-bg.png" id="2_yiing"]
-[ext_resource type="Texture2D" uid="uid://df87en882qas1" path="res://angry.png" id="4_nuwo7"]
-[ext_resource type="Texture2D" uid="uid://fyecq5y4d14o" path="res://up.png" id="5_rguwe"]
-[ext_resource type="Script" uid="uid://canm8xguitmcu" path="res://scenes/up.gd" id="6_knknf"]
-[ext_resource type="Script" uid="uid://bewnixgmxu1xk" path="res://scenes/down.gd" id="7_knknf"]
+[ext_resource type="Texture2D" uid="uid://bbrotepamip5g" path="res://assets/green-yell-bg.png" id="2_yiing"]
+[ext_resource type="Texture2D" uid="uid://df87en882qas1" path="res://assets/angry.png" id="4_nuwo7"]
+[ext_resource type="Texture2D" uid="uid://fyecq5y4d14o" path="res://assets/up.png" id="5_rguwe"]
+[ext_resource type="Script" uid="uid://canm8xguitmcu" path="res://up.gd" id="6_knknf"]
+[ext_resource type="Script" uid="uid://bewnixgmxu1xk" path="res://down.gd" id="7_knknf"]
 
 [node name="Minigame_3" type="Node2D" unique_id=913392316]
 script = ExtResource("1_4c0c6")

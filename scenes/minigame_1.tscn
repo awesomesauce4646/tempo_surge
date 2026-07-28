@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dx6108mmwyt4y"]
 
 [ext_resource type="Script" uid="uid://dqewthns2k2mb" path="res://minigame_1.gd" id="1_j1cg4"]
-[ext_resource type="Texture2D" uid="uid://c6ft0daol7730" path="res://png.png" id="2_vc5od"]
-[ext_resource type="PackedScene" uid="uid://calc6mr02v77q" path="res://player.tscn" id="3_xpvfh"]
+[ext_resource type="Texture2D" uid="uid://c6ft0daol7730" path="res://assets/png.png" id="2_vc5od"]
+[ext_resource type="PackedScene" uid="uid://calc6mr02v77q" path="res://scenes/player.tscn" id="3_xpvfh"]
 [ext_resource type="Script" uid="uid://ux7c5tbpwod0" path="res://guitar_pick.gd" id="4_r58ir"]
-[ext_resource type="Texture2D" uid="uid://cfvbagkkcdep" path="res://guitar_pick.png" id="5_oxfl2"]
+[ext_resource type="Texture2D" uid="uid://cfvbagkkcdep" path="res://assets/guitar_pick.png" id="5_oxfl2"]
 [ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://scenes/timer.tscn" id="6_1digs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7304a"]

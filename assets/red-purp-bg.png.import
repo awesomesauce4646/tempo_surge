@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c44ahax36uaut"
-path="res://.godot/imported/red-purp-bg.png-7b8d21925563bda21ef3e5dd285594ec.ctex"
+path="res://.godot/imported/red-purp-bg.png-fd53c3adc54cf8bfc2d2f9472682fc51.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://red-purp-bg.png"
-dest_files=["res://.godot/imported/red-purp-bg.png-7b8d21925563bda21ef3e5dd285594ec.ctex"]
+source_file="res://assets/red-purp-bg.png"
+dest_files=["res://.godot/imported/red-purp-bg.png-fd53c3adc54cf8bfc2d2f9472682fc51.ctex"]
 
 [params]
 

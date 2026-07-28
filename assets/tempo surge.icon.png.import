@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhpodm5ip57hg"
-path="res://.godot/imported/tempo surge.icon.png-aa787929a7480d9de0629a610564ab87.ctex"
+path="res://.godot/imported/tempo surge.icon.png-4431bc14f0eb17437c823ac7239aeaa8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tempo surge.icon.png"
-dest_files=["res://.godot/imported/tempo surge.icon.png-aa787929a7480d9de0629a610564ab87.ctex"]
+source_file="res://assets/tempo surge.icon.png"
+dest_files=["res://.godot/imported/tempo surge.icon.png-4431bc14f0eb17437c823ac7239aeaa8.ctex"]
 
 [params]
 
