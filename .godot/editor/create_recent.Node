@@ -1,9 +1,9 @@
+TextureButton
+Control
+TextureRect
 Button
 AudioStreamPlayer2D
 RichTextLabel
-TextureButton
-TextureRect
-Control
 Timer
 CollisionShape2D
 Area2D

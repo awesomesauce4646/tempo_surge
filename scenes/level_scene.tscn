@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://bopybumko3qso" path="res://assets/level.png" id="2_3mivm"]
 [ext_resource type="Texture2D" uid="uid://co03xrf5m0kim" path="res://assets/musicnote.png" id="2_187gu"]
 
-
 [node name="LevelScene" type="Node2D" unique_id=1994702572]
 script = ExtResource("1_3mivm")
 

@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://dv7geatoofvee"]
+
+[ext_resource type="Texture2D" uid="uid://cgly44fdvrlln" path="res://assets/xylo_wood.png" id="1_8rojo"]
+[ext_resource type="Script" uid="uid://dpegh27fub4n4" path="res://scenes/minigame_4.gd" id="1_drpx1"]
+[ext_resource type="Texture2D" uid="uid://bpbyaqtbvuxq" path="res://assets/rainbowbg.png" id="2_faa1s"]
+[ext_resource type="Texture2D" uid="uid://dsip25cc6n4om" path="res://assets/xylofirst.png" id="3_bqplk"]
+[ext_resource type="Texture2D" uid="uid://blt7i1ysleniq" path="res://assets/xylosecond.png" id="4_drpx1"]
+[ext_resource type="Texture2D" uid="uid://bhh1wacvvgg8v" path="res://assets/xylothird.png" id="5_k2jsj"]
+[ext_resource type="Texture2D" uid="uid://bwymww3up5xrk" path="res://assets/xylofourth.png" id="6_1n403"]
+[ext_resource type="Script" uid="uid://c046ltidqtj2h" path="res://scenes/1.gd" id="6_n8lor"]
+[ext_resource type="Texture2D" uid="uid://br062kccxdly6" path="res://assets/xylofifth.png" id="7_73u4g"]
+[ext_resource type="Script" uid="uid://c82bvgs0tmyjd" path="res://scenes/2.gd" id="8_s0say"]
+[ext_resource type="Texture2D" uid="uid://bhn5sbyls2un0" path="res://assets/xylosixth.png" id="8_ukqmb"]
+[ext_resource type="Texture2D" uid="uid://doty78wvjqwfc" path="res://assets/xyloseventh.png" id="9_70j3d"]
+[ext_resource type="Texture2D" uid="uid://dinor0k8nwj3g" path="res://assets/xyloeighth.png" id="10_a6r0n"]
+[ext_resource type="Script" uid="uid://dqn0axyvshi4c" path="res://scenes/3.gd" id="10_otrfb"]
+[ext_resource type="Script" uid="uid://dhpmiduqfcouu" path="res://scenes/4.gd" id="12_ikgmd"]
+[ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://scenes/timer.tscn" id="12_k2jsj"]
+[ext_resource type="Script" uid="uid://dejxme03os4rd" path="res://scenes/5.gd" id="14_rkvtw"]
+[ext_resource type="Script" uid="uid://c4f80fhxrveym" path="res://scenes/6.gd" id="16_37ous"]
+[ext_resource type="Script" uid="uid://brfy411r3ebs" path="res://scenes/7.gd" id="18_jbecl"]
+[ext_resource type="Script" uid="uid://bhgu4l8uk8ro8" path="res://scenes/8.gd" id="20_2ar1m"]
+
+[node name="Minigame_4" type="Node2D" unique_id=734237319]
+script = ExtResource("1_drpx1")
+
+[node name="XyloBase" type="TextureRect" parent="." unique_id=1368954974]
+offset_right = 1156.0
+offset_bottom = 651.0
+texture = ExtResource("1_8rojo")
+
+[node name="Background" type="TextureRect" parent="." unique_id=272430038]
+show_behind_parent = true
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_faa1s")
+
+[node name="Timer" parent="." unique_id=93331502 instance=ExtResource("12_k2jsj")]
+position = Vector2(16, -4)
+
+[node name="One" type="TextureButton" parent="." unique_id=2013536469]
+offset_left = 271.0
+offset_top = 156.0
+offset_right = 330.0
+offset_bottom = 481.0
+texture_normal = ExtResource("5_k2jsj")
+script = ExtResource("6_n8lor")
+
+[node name="Two" type="TextureButton" parent="." unique_id=1241843103]
+offset_left = 345.0
+offset_top = 173.0
+offset_right = 405.0
+offset_bottom = 455.0
+texture_normal = ExtResource("6_1n403")
+script = ExtResource("8_s0say")
+
+[node name="Three" type="TextureButton" parent="." unique_id=246707019]
+offset_left = 433.0
+offset_top = 119.0
+offset_right = 490.0
+offset_bottom = 521.0
+texture_normal = ExtResource("3_bqplk")
+script = ExtResource("10_otrfb")
+
+[node name="Four" type="TextureButton" parent="." unique_id=81699631]
+offset_left = 509.0
+offset_top = 124.0
+offset_right = 581.0
+offset_bottom = 493.0
+texture_normal = ExtResource("4_drpx1")
+script = ExtResource("12_ikgmd")
+
+[node name="Five" type="TextureButton" parent="." unique_id=103956600]
+offset_left = 588.0
+offset_top = 254.0
+offset_right = 650.0
+offset_bottom = 391.0
+texture_normal = ExtResource("10_a6r0n")
+script = ExtResource("14_rkvtw")
+
+[node name="Six" type="TextureButton" parent="." unique_id=669158168]
+offset_left = 659.0
+offset_top = 233.0
+offset_right = 722.0
+offset_bottom = 405.0
+texture_normal = ExtResource("9_70j3d")
+script = ExtResource("16_37ous")
+
+[node name="Seven" type="TextureButton" parent="." unique_id=1794312576]
+offset_left = 741.0
+offset_top = 210.0
+offset_right = 797.0
+offset_bottom = 420.0
+texture_normal = ExtResource("8_ukqmb")
+script = ExtResource("18_jbecl")
+
+[node name="Eight" type="TextureButton" parent="." unique_id=780089190]
+offset_left = 816.0
+offset_top = 199.0
+offset_right = 884.0
+offset_bottom = 444.0
+texture_normal = ExtResource("7_73u4g")
+script = ExtResource("20_2ar1m")

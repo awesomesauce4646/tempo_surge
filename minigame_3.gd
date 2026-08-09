@@ -30,8 +30,8 @@ TUNE UP! (SPAM)"
 
 	
 	if buttons_pressed == 20:
-		Global.minigames_done += 1
-		get_tree().change_scene_to_file("res://scenes/done_screen.tscn")
+		#Global.minigames_done += 1
+		get_tree().change_scene_to_file("res://scenes/level_scene.tscn")
 	
 	if timer_end:
 		Global.lives -= 1
