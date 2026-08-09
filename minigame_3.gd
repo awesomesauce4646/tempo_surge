@@ -8,7 +8,7 @@ var rng = RandomNumberGenerator.new()
 var random_number = rng.randf_range(0, 2.0)
 
 func _ready() -> void:
-	await themed_timer.Timer(4.0)
+	await themed_timer.Timer(5.0)
 	#after this is completed...
 	timer_end = true 
 

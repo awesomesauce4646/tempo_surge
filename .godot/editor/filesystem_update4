@@ -1,8 +1,9 @@
-res://scenes/minigame_3.tscn
-res://minigame_1.gd
-res://minigame_3.gd
-res://scenes/title_screen.tscn
-res://scenes/settings.tscn
-res://title_screen.gd
 res://global_music.tscn
-res://scenes/settings.gd
+res://scenes/minigame_2.tscn
+res://minigame_2.gd
+res://minigame_3.gd
+res://minigame_1.gd
+res://scenes/lost_game.gd
+res://scenes/lost_game.tscn
+res://scenes/done_screen.gd
+res://scenes/done_screen.tscn

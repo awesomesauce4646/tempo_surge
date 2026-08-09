@@ -1,11 +1,25 @@
 [gd_scene format=3 uid="uid://dwg0bj6nrjalf"]
 
+[ext_resource type="Script" uid="uid://cuwr6wle1cr3b" path="res://scenes/done_screen.gd" id="1_k66lo"]
 [ext_resource type="Texture2D" uid="uid://q3260vgoxr27" path="res://assets/winning.png" id="1_mioa6"]
-
+[ext_resource type="FontFile" uid="uid://b2q0pxqeuwfe" path="res://BagelFatOne-Regular.ttf" id="3_c2erd"]
 
 [node name="Winner" type="Node2D" unique_id=1062245485]
+script = ExtResource("1_k66lo")
 
 [node name="Background" type="TextureRect" parent="." unique_id=252503762]
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_mioa6")
+
+[node name="Back" type="Button" parent="." unique_id=1448893291]
+offset_left = 361.0
+offset_top = 309.0
+offset_right = 769.0
+offset_bottom = 488.0
+theme_override_fonts/font = ExtResource("3_c2erd")
+theme_override_font_sizes/font_size = 50
+text = "BACK
+"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

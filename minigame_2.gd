@@ -5,7 +5,7 @@ var buttons_pressed := 0
 var timer_end = false
 
 func _ready() -> void:
-	await themed_timer.Timer(2.0)
+	await themed_timer.Timer(3.5)
 	#after this is completed...
 	timer_end = true 
 
