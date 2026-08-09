@@ -15,10 +15,12 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if random_number > 1.5: 
-		info.text = "SHARP! TUNE DOWN!"
+		info.text = "SHARP! 
+TUNE DOWN! 
+(SPAM)"
 	else:
 		info.text = "FLAT!
-TUNE UP!"
+TUNE UP! (SPAM)"
 	if buttons_pressed == 10:
 		var new_texture = preload("res://assets/eh.png")
 		$Face.set_texture(new_texture)

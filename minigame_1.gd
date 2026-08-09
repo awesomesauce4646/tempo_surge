@@ -14,7 +14,7 @@ func _ready() -> void:
 		# tell the script to wait for a signal, or for when a function finshes
 
 
-	await themed_timer.Timer(7.0) #accessing a function from this node
+	await themed_timer.Timer(8.0) #accessing a function from this node
 	#after this is compeleted...
 	timer_end = true # now we're saying "oh ye you ran out of time"
 

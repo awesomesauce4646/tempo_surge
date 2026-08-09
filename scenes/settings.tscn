@@ -1,9 +1,41 @@
 [gd_scene format=3 uid="uid://bhpxxajjvbu35"]
 
-[ext_resource type="Texture2D" uid="uid://dxw1igdgrs3g" path="res://guitar.png" id="1_5p8wc"]
+[ext_resource type="Texture2D" uid="uid://dxw1igdgrs3g" path="res://assets/guitar.png" id="1_5p8wc"]
+[ext_resource type="Script" uid="uid://bal1ofrhhusov" path="res://scenes/settings.gd" id="1_f4mfi"]
+[ext_resource type="Texture2D" uid="uid://0pn770x5niwr" path="res://assets/options.png" id="2_r6d6q"]
+[ext_resource type="FontFile" uid="uid://b2q0pxqeuwfe" path="res://BagelFatOne-Regular.ttf" id="4_es4n0"]
 
 [node name="Settings" type="Node2D" unique_id=1816991760]
+script = ExtResource("1_f4mfi")
 
 [node name="Guitar" type="Sprite2D" parent="." unique_id=322107232]
-position = Vector2(603, 318)
+position = Vector2(-145, 156)
 texture = ExtResource("1_5p8wc")
+
+[node name="Background" type="TextureRect" parent="." unique_id=889532834]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_r6d6q")
+expand_mode = 1
+
+[node name="MusicToggle" type="Button" parent="." unique_id=1989866433]
+offset_left = 48.0
+offset_top = 322.0
+offset_right = 456.0
+offset_bottom = 501.0
+theme_override_fonts/font = ExtResource("4_es4n0")
+theme_override_font_sizes/font_size = 50
+text = "TURN MUSIC OFF"
+
+[node name="Back" type="Button" parent="." unique_id=867040393]
+offset_left = 671.0
+offset_top = 321.0
+offset_right = 1079.0
+offset_bottom = 500.0
+theme_override_fonts/font = ExtResource("4_es4n0")
+theme_override_font_sizes/font_size = 50
+text = "BACK
+"
+
+[connection signal="pressed" from="MusicToggle" to="." method="_on_music_toggle_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
