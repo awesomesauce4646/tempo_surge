@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b0khuk7aiytv6" path="res://timer_screen.gd" id="1_3mivm"]
 [ext_resource type="Texture2D" uid="uid://bopybumko3qso" path="res://assets/level.png" id="2_3mivm"]
 [ext_resource type="Texture2D" uid="uid://co03xrf5m0kim" path="res://assets/musicnote.png" id="2_187gu"]
+[ext_resource type="FontFile" uid="uid://b2q0pxqeuwfe" path="res://BagelFatOne-Regular.ttf" id="3_c8xsp"]
 
 [node name="LevelScene" type="Node2D" unique_id=1994702572]
 script = ExtResource("1_3mivm")
@@ -16,8 +17,9 @@ expand_mode = 1
 [node name="Level" type="RichTextLabel" parent="." unique_id=1262606272]
 offset_left = 72.0
 offset_top = 67.0
-offset_right = 253.0
-offset_bottom = 126.0
+offset_right = 281.0
+offset_bottom = 134.0
+theme_override_fonts/normal_font = ExtResource("3_c8xsp")
 theme_override_font_sizes/normal_font_size = 42
 text = "LEVEL #"
 
@@ -26,6 +28,7 @@ offset_left = 1000.0
 offset_top = 67.0
 offset_right = 1097.0
 offset_bottom = 144.0
+theme_override_fonts/normal_font = ExtResource("3_c8xsp")
 theme_override_font_sizes/normal_font_size = 42
 text = "5"
 

@@ -32,3 +32,5 @@ res://scenes/5.gd
 res://scenes/6.gd
 res://scenes/7.gd
 res://scenes/8.gd
+res://scenes/timer.tscn
+res://detect_click.gd

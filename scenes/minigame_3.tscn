@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" uid="uid://biebv2d1555hp" path="res://minigame_3.gd" id="1_4c0c6"]
 [ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://scenes/timer.tscn" id="2_4c0c6"]
-[ext_resource type="Texture2D" uid="uid://bbrotepamip5g" path="res://assets/green-yell-bg.png" id="2_yiing"]
+[ext_resource type="Texture2D" uid="uid://c44ahax36uaut" path="res://assets/red-purp-bg.png" id="2_knknf"]
 [ext_resource type="Texture2D" uid="uid://df87en882qas1" path="res://assets/angry.png" id="4_nuwo7"]
 [ext_resource type="Texture2D" uid="uid://fyecq5y4d14o" path="res://assets/up.png" id="5_rguwe"]
 [ext_resource type="Script" uid="uid://canm8xguitmcu" path="res://up.gd" id="6_knknf"]
 [ext_resource type="Script" uid="uid://bewnixgmxu1xk" path="res://down.gd" id="7_knknf"]
+[ext_resource type="FontFile" uid="uid://b2q0pxqeuwfe" path="res://BagelFatOne-Regular.ttf" id="8_ybnx4"]
 
 [node name="Minigame_3" type="Node2D" unique_id=913392316]
 script = ExtResource("1_4c0c6")
@@ -14,7 +15,7 @@ script = ExtResource("1_4c0c6")
 [node name="Background" type="TextureRect" parent="." unique_id=667113542]
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = ExtResource("2_yiing")
+texture = ExtResource("2_knknf")
 
 [node name="Timer" parent="." unique_id=93331502 instance=ExtResource("2_4c0c6")]
 
@@ -51,6 +52,7 @@ offset_left = 784.0
 offset_top = 29.0
 offset_right = 1136.0
 offset_bottom = 252.0
+theme_override_fonts/normal_font = ExtResource("8_ybnx4")
 theme_override_font_sizes/normal_font_size = 48
 text = "PRESS"
 

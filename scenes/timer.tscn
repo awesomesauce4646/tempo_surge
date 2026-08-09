@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dx6cybk5her3x"]
 
 [ext_resource type="Script" uid="uid://tne1b6262hgf" path="res://minigame_timer.gd" id="1_jhcr5"]
-
+[ext_resource type="FontFile" uid="uid://b2q0pxqeuwfe" path="res://BagelFatOne-Regular.ttf" id="2_5lxq6"]
 
 [node name="Timer" type="Node2D" unique_id=93331502]
 script = ExtResource("1_jhcr5")
@@ -11,5 +11,6 @@ offset_left = 10.0
 offset_top = 19.0
 offset_right = 284.0
 offset_bottom = 94.0
+theme_override_fonts/normal_font = ExtResource("2_5lxq6")
 theme_override_font_sizes/normal_font_size = 48
 text = "TIME:"
