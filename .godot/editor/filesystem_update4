@@ -1,11 +1,7 @@
-res://minigame_5.gd
-res://point_one.gd
-res://minigame_5.tscn
-res://scenes/minigame_4.tscn
-res://scenes/minigame_4.gd
+res://scenes/minigame_3.tscn
+res://minigame_3.gd
+res://up.gd
+res://down.gd
 res://scenes/level_scene.tscn
 res://timer_screen.gd
-res://minigame_1.gd
-res://scenes/minigame_5.tscn
-res://scenes/timer.tscn
-res://scenes/minigame_3.tscn
+res://minigame_6.tscn

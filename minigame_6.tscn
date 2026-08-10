@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bg5o0mv0ux704"]
+
+[ext_resource type="Texture2D" uid="uid://bs7x1n01x0cqq" path="res://assets/trumpet_key.png" id="1_n7keg"]
+[ext_resource type="Texture2D" uid="uid://b0n5rk12rn1u7" path="res://assets/trumpet_key_down.png" id="2_fow08"]
+[ext_resource type="Texture2D" uid="uid://dmxjsvcrdi88h" path="res://assets/trumpet.png" id="3_kogtn"]
+[ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://scenes/timer.tscn" id="4_fow08"]
+
+[node name="Minigame_6" type="Node2D" unique_id=646867803]
+
+[node name="TrumpetKey1" type="TextureButton" parent="." unique_id=427211198]
+offset_left = 395.0
+offset_top = 380.0
+offset_right = 573.0
+offset_bottom = 488.0
+texture_normal = ExtResource("1_n7keg")
+texture_pressed = ExtResource("2_fow08")
+
+[node name="TrumpetKey2" type="TextureButton" parent="." unique_id=322702582]
+offset_left = 544.0
+offset_top = 380.0
+offset_right = 722.0
+offset_bottom = 488.0
+texture_normal = ExtResource("1_n7keg")
+texture_pressed = ExtResource("2_fow08")
+
+[node name="TrumpetKey3" type="TextureButton" parent="." unique_id=945125694]
+offset_left = 695.0
+offset_top = 380.0
+offset_right = 873.0
+offset_bottom = 488.0
+texture_normal = ExtResource("1_n7keg")
+texture_pressed = ExtResource("2_fow08")
+
+[node name="Trumpet" type="TextureRect" parent="." unique_id=1185215479]
+offset_left = 34.0
+offset_top = 344.0
+offset_right = 1124.0
+offset_bottom = 646.0
+texture = ExtResource("3_kogtn")
+
+[node name="Timer" parent="." unique_id=93331502 instance=ExtResource("4_fow08")]

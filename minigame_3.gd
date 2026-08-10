@@ -14,7 +14,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	if random_number > 1.5: 
+	if random_number > 1: 
 		info.text = "SHARP! 
 TUNE DOWN! 
 (SPAM 20)"
