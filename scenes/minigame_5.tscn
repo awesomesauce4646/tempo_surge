@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://bq112hfms14t6"]
+
+[ext_resource type="Script" uid="uid://dipksxbvmv64m" path="res://minigame_5.gd" id="1_wi4wl"]
+[ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://scenes/timer.tscn" id="2_mye35"]
+[ext_resource type="Texture2D" uid="uid://c4nihyaftlp3p" path="res://assets/string_one.png" id="2_oavfl"]
+[ext_resource type="Texture2D" uid="uid://ca0vtq88jt7au" path="res://assets/string_two.png" id="3_7pr0y"]
+[ext_resource type="Texture2D" uid="uid://d13jcmpinqf6j" path="res://assets/background-harp.png" id="3_mye35"]
+[ext_resource type="Texture2D" uid="uid://do4qk12f3ooe0" path="res://assets/harp.png" id="3_rtm12"]
+[ext_resource type="Texture2D" uid="uid://cjialq3rgp32v" path="res://assets/string_three.png" id="4_c7se5"]
+[ext_resource type="Texture2D" uid="uid://c2rqdre2od5wi" path="res://assets/harp_button.png" id="7_puk54"]
+
+[node name="Minigame_5" type="Node2D" unique_id=2080477134]
+script = ExtResource("1_wi4wl")
+
+[node name="String1" type="TextureRect" parent="." unique_id=715590332]
+visible = false
+offset_left = 692.0
+offset_top = 63.000004
+offset_right = 797.0
+offset_bottom = 473.0
+rotation = 0.049113143
+texture = ExtResource("2_oavfl")
+
+[node name="String2" type="TextureRect" parent="." unique_id=841939654]
+visible = false
+offset_left = 782.0
+offset_top = 97.0
+offset_right = 866.0
+offset_bottom = 518.0
+texture = ExtResource("3_7pr0y")
+
+[node name="String3" type="TextureRect" parent="." unique_id=1330739909]
+visible = false
+offset_left = 877.99994
+offset_top = 98.99999
+offset_right = 957.99994
+offset_bottom = 452.0
+rotation = 0.03466436
+texture = ExtResource("4_c7se5")
+expand_mode = 1
+
+[node name="Background" type="TextureRect" parent="." unique_id=2011475567]
+show_behind_parent = true
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("3_mye35")
+expand_mode = 1
+
+[node name="Harp" type="TextureRect" parent="." unique_id=1213938186]
+offset_left = -602.0
+offset_top = -75.0
+offset_right = 1312.0
+offset_bottom = 760.0
+texture = ExtResource("3_rtm12")
+
+[node name="PointOne" type="TextureButton" parent="." unique_id=431560187]
+offset_left = 689.0
+offset_top = 56.0
+offset_right = 803.0
+offset_bottom = 138.0
+texture_normal = ExtResource("7_puk54")
+stretch_mode = 0
+
+[node name="PointTwo" type="TextureButton" parent="." unique_id=1499868740]
+offset_left = 696.455
+offset_top = 467.0876
+offset_right = 805.6177
+offset_bottom = 537.5883
+rotation = -1.0342703
+texture_normal = ExtResource("7_puk54")
+stretch_mode = 0
+
+[node name="Timer" parent="." unique_id=93331502 instance=ExtResource("2_mye35")]
+
+[node name="PointThree" type="TextureButton" parent="." unique_id=2043756044]
+offset_left = 769.0
+offset_top = 91.0
+offset_right = 878.50134
+offset_bottom = 169.68103
+rotation = -0.14264028
+texture_normal = ExtResource("7_puk54")
+stretch_mode = 0
+
+[node name="PointFour" type="TextureButton" parent="." unique_id=1422223763]
+offset_left = 776.99994
+offset_top = 375.0
+offset_right = 874.13477
+offset_bottom = 424.25928
+rotation = -1.0343745
+scale = Vector2(1, 1.2248682)
+texture_normal = ExtResource("7_puk54")
+stretch_mode = 0
+
+[node name="PointFive" type="TextureButton" parent="." unique_id=1009985134]
+offset_left = 846.0001
+offset_top = 111.99997
+offset_right = 958.0255
+offset_bottom = 193.53052
+rotation = -0.38007033
+texture_normal = ExtResource("7_puk54")
+stretch_mode = 0
+
+[node name="PointSix" type="TextureButton" parent="." unique_id=262226742]
+offset_left = 859.0
+offset_top = 288.0
+offset_right = 943.3247
+offset_bottom = 338.86032
+rotation = -1.245833
+scale = Vector2(1.1163951, 1.1845915)
+texture_normal = ExtResource("7_puk54")
+stretch_mode = 0
+
+[connection signal="pressed" from="PointOne" to="." method="_on_point_one_pressed"]
+[connection signal="pressed" from="PointTwo" to="." method="_on_point_two_pressed"]
+[connection signal="pressed" from="PointThree" to="." method="_on_point_three_pressed"]
+[connection signal="pressed" from="PointFour" to="." method="_on_point_four_pressed"]
+[connection signal="pressed" from="PointFive" to="." method="_on_point_five_pressed"]
+[connection signal="pressed" from="PointSix" to="." method="_on_point_six_pressed"]

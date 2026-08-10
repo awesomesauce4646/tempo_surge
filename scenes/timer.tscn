@@ -7,10 +7,13 @@
 script = ExtResource("1_jhcr5")
 
 [node name="timer" type="RichTextLabel" parent="." unique_id=1703326225]
+clip_contents = false
 offset_left = 10.0
 offset_top = 19.0
 offset_right = 284.0
 offset_bottom = 94.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
 theme_override_fonts/normal_font = ExtResource("2_5lxq6")
 theme_override_font_sizes/normal_font_size = 48
 text = "TIME:"

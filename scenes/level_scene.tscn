@@ -15,19 +15,24 @@ texture = ExtResource("2_3mivm")
 expand_mode = 1
 
 [node name="Level" type="RichTextLabel" parent="." unique_id=1262606272]
+clip_contents = false
 offset_left = 72.0
 offset_top = 67.0
 offset_right = 281.0
 offset_bottom = 134.0
+theme_override_constants/outline_size = 10
 theme_override_fonts/normal_font = ExtResource("3_c8xsp")
 theme_override_font_sizes/normal_font_size = 42
 text = "LEVEL #"
 
 [node name="Timer" type="RichTextLabel" parent="." unique_id=264175579]
+clip_contents = false
 offset_left = 1000.0
 offset_top = 67.0
 offset_right = 1097.0
 offset_bottom = 144.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
 theme_override_fonts/normal_font = ExtResource("3_c8xsp")
 theme_override_font_sizes/normal_font_size = 42
 text = "5"

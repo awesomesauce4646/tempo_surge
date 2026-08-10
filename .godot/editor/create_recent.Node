@@ -1,7 +1,7 @@
-TextureButton
-Control
 TextureRect
+TextureButton
 Button
+Control
 AudioStreamPlayer2D
 RichTextLabel
 Timer

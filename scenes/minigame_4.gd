@@ -84,5 +84,4 @@ func _check_win() -> void:
 	_on_win()
 
 func _on_win() -> void:
-	Global.minigames_done += 1
-	get_tree().change_scene_to_file("res://scenes/done_screen.tscn")
+	get_tree().change_scene_to_file("res://scenes/level_scene.tscn")
