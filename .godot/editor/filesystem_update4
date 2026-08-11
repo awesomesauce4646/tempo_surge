@@ -1,7 +1,11 @@
-res://scenes/minigame_3.tscn
-res://minigame_3.gd
-res://up.gd
-res://down.gd
-res://scenes/level_scene.tscn
-res://timer_screen.gd
 res://minigame_6.tscn
+res://scenes/title_screen.tscn
+res://minigame_6.gd
+res://scenes/minigame_1.tscn
+res://scenes/minigame_2.tscn
+res://scenes/level_scene.tscn
+res://scenes/timer.tscn
+res://scenes/minigame_5.tscn
+res://scenes/minigame_3.tscn
+res://scenes/global_music.tscn
+res://gds/minigame_6.gd

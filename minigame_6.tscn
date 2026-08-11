@@ -1,35 +1,87 @@
 [gd_scene format=3 uid="uid://bg5o0mv0ux704"]
 
+[ext_resource type="Script" uid="uid://dd1ci4avb7sdm" path="res://gds/minigame_6.gd" id="1_86m45"]
 [ext_resource type="Texture2D" uid="uid://bs7x1n01x0cqq" path="res://assets/trumpet_key.png" id="1_n7keg"]
+[ext_resource type="Texture2D" uid="uid://c3w2kb2fcsdv7" path="res://assets/bluepurpbg.png" id="2_3sb6d"]
 [ext_resource type="Texture2D" uid="uid://b0n5rk12rn1u7" path="res://assets/trumpet_key_down.png" id="2_fow08"]
 [ext_resource type="Texture2D" uid="uid://dmxjsvcrdi88h" path="res://assets/trumpet.png" id="3_kogtn"]
 [ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://scenes/timer.tscn" id="4_fow08"]
+[ext_resource type="FontFile" uid="uid://b2q0pxqeuwfe" path="res://BagelFatOne-Regular.ttf" id="5_kogtn"]
+[ext_resource type="AudioStream" uid="uid://bj0wstt1us73" path="res://sounds/g_trumpet.mp3" id="7_wkrsm"]
+[ext_resource type="AudioStream" uid="uid://dlcna1r5b6a7t" path="res://sounds/b_trumpet.mp3" id="8_3sb6d"]
+[ext_resource type="AudioStream" uid="uid://mv43eha4k88m" path="res://sounds/c_trumpet.mp3" id="9_i6gwe"]
+[ext_resource type="AudioStream" uid="uid://2prwi4r8go7s" path="res://sounds/d_trumpet.mp3" id="10_05sel"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_86m45"]
+keycode = 49
+
+[sub_resource type="Shortcut" id="Shortcut_fogwe"]
+events = [SubResource("InputEventKey_86m45")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_fogwe"]
+device = -1
+pressed = true
+keycode = 50
+unicode = 50
+
+[sub_resource type="Shortcut" id="Shortcut_2jndo"]
+events = [SubResource("InputEventKey_fogwe")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_2jndo"]
+device = -1
+keycode = 51
+unicode = 51
+
+[sub_resource type="Shortcut" id="Shortcut_wkrsm"]
+events = [SubResource("InputEventKey_2jndo")]
 
 [node name="Minigame_6" type="Node2D" unique_id=646867803]
+script = ExtResource("1_86m45")
 
-[node name="TrumpetKey1" type="TextureButton" parent="." unique_id=427211198]
-offset_left = 395.0
-offset_top = 380.0
-offset_right = 573.0
-offset_bottom = 488.0
-texture_normal = ExtResource("1_n7keg")
-texture_pressed = ExtResource("2_fow08")
+[node name="Background" type="TextureRect" parent="." unique_id=1839522500]
+show_behind_parent = true
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_3sb6d")
+expand_mode = 1
 
-[node name="TrumpetKey2" type="TextureButton" parent="." unique_id=322702582]
-offset_left = 544.0
-offset_top = 380.0
-offset_right = 722.0
-offset_bottom = 488.0
-texture_normal = ExtResource("1_n7keg")
-texture_pressed = ExtResource("2_fow08")
+[node name="1" type="RichTextLabel" parent="." unique_id=729289690]
+offset_left = 457.0
+offset_top = 326.0
+offset_right = 512.0
+offset_bottom = 403.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("5_kogtn")
+theme_override_font_sizes/normal_font_size = 48
+text = "1"
+horizontal_alignment = 1
 
-[node name="TrumpetKey3" type="TextureButton" parent="." unique_id=945125694]
-offset_left = 695.0
-offset_top = 380.0
-offset_right = 873.0
-offset_bottom = 488.0
-texture_normal = ExtResource("1_n7keg")
-texture_pressed = ExtResource("2_fow08")
+[node name="2" type="RichTextLabel" parent="." unique_id=241027206]
+offset_left = 608.0
+offset_top = 326.0
+offset_right = 663.0
+offset_bottom = 403.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("5_kogtn")
+theme_override_font_sizes/normal_font_size = 48
+text = "2
+"
+horizontal_alignment = 1
+
+[node name="3" type="RichTextLabel" parent="." unique_id=169345865]
+offset_left = 758.0
+offset_top = 326.0
+offset_right = 813.0
+offset_bottom = 403.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("5_kogtn")
+theme_override_font_sizes/normal_font_size = 48
+text = "3
+"
+horizontal_alignment = 1
 
 [node name="Trumpet" type="TextureRect" parent="." unique_id=1185215479]
 offset_left = 34.0
@@ -38,4 +90,63 @@ offset_right = 1124.0
 offset_bottom = 646.0
 texture = ExtResource("3_kogtn")
 
+[node name="TrumpetKey1" type="TextureButton" parent="." unique_id=427211198]
+offset_left = 395.0
+offset_top = 380.0
+offset_right = 573.0
+offset_bottom = 488.0
+shortcut = SubResource("Shortcut_fogwe")
+texture_normal = ExtResource("1_n7keg")
+texture_pressed = ExtResource("2_fow08")
+
+[node name="TrumpetKey2" type="TextureButton" parent="." unique_id=322702582]
+offset_left = 544.0
+offset_top = 380.0
+offset_right = 722.0
+offset_bottom = 488.0
+shortcut = SubResource("Shortcut_2jndo")
+texture_normal = ExtResource("1_n7keg")
+texture_pressed = ExtResource("2_fow08")
+
+[node name="TrumpetKey3" type="TextureButton" parent="." unique_id=945125694]
+offset_left = 695.0
+offset_top = 380.0
+offset_right = 873.0
+offset_bottom = 488.0
+shortcut = SubResource("Shortcut_wkrsm")
+texture_normal = ExtResource("1_n7keg")
+texture_pressed = ExtResource("2_fow08")
+
 [node name="Timer" parent="." unique_id=93331502 instance=ExtResource("4_fow08")]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1905524229]
+offset_left = 580.0
+offset_top = 29.0
+offset_right = 1137.0
+offset_bottom = 377.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("5_kogtn")
+theme_override_font_sizes/normal_font_size = 48
+text = "PLAY THE TRUMPET!
+( PRESS KEY SHOWN / BUTTON HIGHLIGHTED )"
+horizontal_alignment = 1
+
+[node name="G" type="AudioStreamPlayer2D" parent="." unique_id=640055095]
+stream = ExtResource("7_wkrsm")
+
+[node name="B" type="AudioStreamPlayer2D" parent="." unique_id=1763433824]
+stream = ExtResource("8_3sb6d")
+
+[node name="C" type="AudioStreamPlayer2D" parent="." unique_id=455702802]
+stream = ExtResource("9_i6gwe")
+
+[node name="D" type="AudioStreamPlayer2D" parent="." unique_id=1824307520]
+stream = ExtResource("10_05sel")
+
+[connection signal="button_down" from="TrumpetKey1" to="." method="_on_trumpet_key_1_button_down"]
+[connection signal="button_up" from="TrumpetKey1" to="." method="_on_trumpet_key_1_button_up"]
+[connection signal="button_down" from="TrumpetKey2" to="." method="_on_trumpet_key_2_button_down"]
+[connection signal="button_up" from="TrumpetKey2" to="." method="_on_trumpet_key_2_button_up"]
+[connection signal="button_down" from="TrumpetKey3" to="." method="_on_trumpet_key_3_button_down"]
+[connection signal="button_up" from="TrumpetKey3" to="." method="_on_trumpet_key_3_button_up"]

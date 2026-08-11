@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://calc6mr02v77q"]
 
 [ext_resource type="Texture2D" uid="uid://dxw1igdgrs3g" path="res://assets/guitar.png" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://bw7wbp0t2ia0k" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://bw7wbp0t2ia0k" path="res://gds/player.gd" id="1_onrkg"]
 
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gi7k6"]

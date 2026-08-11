@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b3coxlj010w3j"]
 
-[ext_resource type="AudioStream" uid="uid://dg2vqfxbei0oq" path="res://the_mountain-game-game-music-508018.mp3" id="1_j0w4y"]
+[ext_resource type="AudioStream" uid="uid://dg2vqfxbei0oq" path="res://sounds/the_mountain-game-game-music-508018.mp3" id="1_j0w4y"]
 
 [node name="GlobalMusic" type="AudioStreamPlayer2D" unique_id=191994305]
 stream = ExtResource("1_j0w4y")
