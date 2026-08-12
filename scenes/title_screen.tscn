@@ -39,15 +39,6 @@ offset_right = 1145.0
 offset_bottom = 584.0
 texture_normal = ExtResource("5_jqemp")
 
-[node name="Title" type="RichTextLabel" parent="." unique_id=513110769]
-clip_contents = false
-offset_left = 340.0
-offset_top = -225.0
-offset_right = 831.0
-offset_bottom = -68.0
-theme_override_font_sizes/normal_font_size = 108
-text = "TBD!"
-
 [connection signal="pressed" from="Background/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Background/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Background/Quit" to="." method="_on_quit_pressed"]

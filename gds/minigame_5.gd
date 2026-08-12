@@ -29,8 +29,7 @@ func _process(delta: float) -> void:
 
 	_string_strung()
 	if strungOne && strungTwo && strungThree == true:
-		#Global.minigames_done += 1
-		get_tree().change_scene_to_file("res://scenes/done_screen.tscn")
+		get_tree().change_scene_to_file("res://scenes/level_scene.tscn") # back to intermission
 	
 	if timer_end:
 		Global.lives -= 1

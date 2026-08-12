@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://fyecq5y4d14o" path="res://assets/up.png" id="5_rguwe"]
 [ext_resource type="Script" uid="uid://canm8xguitmcu" path="res://gds/up.gd" id="6_knknf"]
 [ext_resource type="Script" uid="uid://bewnixgmxu1xk" path="res://gds/down.gd" id="7_knknf"]
-[ext_resource type="FontFile" uid="uid://b2q0pxqeuwfe" path="res://BagelFatOne-Regular.ttf" id="8_ybnx4"]
+[ext_resource type="FontFile" uid="uid://v2lc0jgyarh8" path="res://PixelifySans-VariableFont_wght.ttf" id="8_ybnx4"]
 
 [node name="Minigame_3" type="Node2D" unique_id=913392316]
 script = ExtResource("1_4c0c6")
@@ -56,7 +56,7 @@ offset_bottom = 252.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/normal_font = ExtResource("8_ybnx4")
-theme_override_font_sizes/normal_font_size = 48
+theme_override_font_sizes/normal_font_size = 57
 text = "PRESS"
 
 [connection signal="pressed" from="up" to="up" method="_on_pressed"]

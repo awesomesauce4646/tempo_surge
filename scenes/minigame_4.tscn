@@ -1,25 +1,26 @@
 [gd_scene format=3 uid="uid://dv7geatoofvee"]
 
 [ext_resource type="Texture2D" uid="uid://cgly44fdvrlln" path="res://assets/xylo_wood.png" id="1_8rojo"]
-[ext_resource type="Script" uid="uid://dpegh27fub4n4" path="res://scenes/minigame_4.gd" id="1_drpx1"]
+[ext_resource type="Script" uid="uid://dpegh27fub4n4" path="res://gds/minigame_4.gd" id="1_drpx1"]
 [ext_resource type="Texture2D" uid="uid://bpbyaqtbvuxq" path="res://assets/rainbowbg.png" id="2_faa1s"]
 [ext_resource type="Texture2D" uid="uid://dsip25cc6n4om" path="res://assets/xylofirst.png" id="3_bqplk"]
 [ext_resource type="Texture2D" uid="uid://blt7i1ysleniq" path="res://assets/xylosecond.png" id="4_drpx1"]
 [ext_resource type="Texture2D" uid="uid://bhh1wacvvgg8v" path="res://assets/xylothird.png" id="5_k2jsj"]
 [ext_resource type="Texture2D" uid="uid://bwymww3up5xrk" path="res://assets/xylofourth.png" id="6_1n403"]
-[ext_resource type="Script" uid="uid://c046ltidqtj2h" path="res://scenes/1.gd" id="6_n8lor"]
+[ext_resource type="Script" uid="uid://c046ltidqtj2h" path="res://gds/1.gd" id="6_n8lor"]
 [ext_resource type="Texture2D" uid="uid://br062kccxdly6" path="res://assets/xylofifth.png" id="7_73u4g"]
-[ext_resource type="Script" uid="uid://c82bvgs0tmyjd" path="res://scenes/2.gd" id="8_s0say"]
+[ext_resource type="FontFile" uid="uid://v2lc0jgyarh8" path="res://PixelifySans-VariableFont_wght.ttf" id="7_s0say"]
+[ext_resource type="Script" uid="uid://c82bvgs0tmyjd" path="res://gds/2.gd" id="8_s0say"]
 [ext_resource type="Texture2D" uid="uid://bhn5sbyls2un0" path="res://assets/xylosixth.png" id="8_ukqmb"]
 [ext_resource type="Texture2D" uid="uid://doty78wvjqwfc" path="res://assets/xyloseventh.png" id="9_70j3d"]
 [ext_resource type="Texture2D" uid="uid://dinor0k8nwj3g" path="res://assets/xyloeighth.png" id="10_a6r0n"]
-[ext_resource type="Script" uid="uid://dqn0axyvshi4c" path="res://scenes/3.gd" id="10_otrfb"]
-[ext_resource type="Script" uid="uid://dhpmiduqfcouu" path="res://scenes/4.gd" id="12_ikgmd"]
+[ext_resource type="Script" uid="uid://dqn0axyvshi4c" path="res://gds/3.gd" id="10_otrfb"]
+[ext_resource type="Script" uid="uid://dhpmiduqfcouu" path="res://gds/4.gd" id="12_ikgmd"]
 [ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://scenes/timer.tscn" id="12_k2jsj"]
-[ext_resource type="Script" uid="uid://dejxme03os4rd" path="res://scenes/5.gd" id="14_rkvtw"]
-[ext_resource type="Script" uid="uid://c4f80fhxrveym" path="res://scenes/6.gd" id="16_37ous"]
-[ext_resource type="Script" uid="uid://brfy411r3ebs" path="res://scenes/7.gd" id="18_jbecl"]
-[ext_resource type="Script" uid="uid://bhgu4l8uk8ro8" path="res://scenes/8.gd" id="20_2ar1m"]
+[ext_resource type="Script" uid="uid://dejxme03os4rd" path="res://gds/5.gd" id="14_rkvtw"]
+[ext_resource type="Script" uid="uid://c4f80fhxrveym" path="res://gds/6.gd" id="16_37ous"]
+[ext_resource type="Script" uid="uid://brfy411r3ebs" path="res://gds/7.gd" id="18_jbecl"]
+[ext_resource type="Script" uid="uid://bhgu4l8uk8ro8" path="res://gds/8.gd" id="20_2ar1m"]
 
 [node name="Minigame_4" type="Node2D" unique_id=734237319]
 script = ExtResource("1_drpx1")
@@ -45,6 +46,18 @@ offset_right = 330.0
 offset_bottom = 481.0
 texture_normal = ExtResource("5_k2jsj")
 script = ExtResource("6_n8lor")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1835888876]
+offset_left = 620.0
+offset_top = 19.0
+offset_right = 1177.0
+offset_bottom = 367.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("7_s0say")
+theme_override_font_sizes/normal_font_size = 57
+text = "SWAP THE KEYS IN ORDER!"
+horizontal_alignment = 1
 
 [node name="Two" type="TextureButton" parent="." unique_id=1241843103]
 offset_left = 345.0

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://lalx2ts38f6i"]
 
 [ext_resource type="Texture2D" uid="uid://dvtadx6yeepwd" path="res://assets/lose-screen.png" id="1_gfqfh"]
-[ext_resource type="Script" uid="uid://dh8bx1jkt3xt7" path="res://scenes/lost_game.gd" id="1_lxqjt"]
+[ext_resource type="Script" uid="uid://dh8bx1jkt3xt7" path="res://gds/lost_game.gd" id="1_lxqjt"]
 [ext_resource type="Texture2D" uid="uid://c14detrxlyfq" path="res://assets/back_lost.png" id="3_lxqjt"]
 
 [node name="Lost-Game" type="Node2D" unique_id=1587750726]

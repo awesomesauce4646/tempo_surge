@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://ux7c5tbpwod0" path="res://gds/guitar_pick.gd" id="4_r58ir"]
 [ext_resource type="Texture2D" uid="uid://cfvbagkkcdep" path="res://assets/guitar_pick.png" id="5_oxfl2"]
 [ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://scenes/timer.tscn" id="6_1digs"]
+[ext_resource type="FontFile" uid="uid://v2lc0jgyarh8" path="res://PixelifySans-VariableFont_wght.ttf" id="6_vc5od"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7304a"]
 size = Vector2(1311.3125, 37)
@@ -169,6 +170,18 @@ position = Vector2(-10, 13)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GuitarPick/Area2D" unique_id=98562457]
 position = Vector2(52, 30)
 shape = SubResource("CircleShape2D_7304a")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GuitarPick" unique_id=290456941]
+offset_left = -510.0
+offset_top = -124.0
+offset_right = 47.0
+offset_bottom = 224.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("6_vc5od")
+theme_override_font_sizes/normal_font_size = 57
+text = "COLLECT THE GUITAR PICKS!"
+horizontal_alignment = 1
 
 [node name="GuitarPick2" type="Node2D" parent="." unique_id=1839987621]
 position = Vector2(32, 141)

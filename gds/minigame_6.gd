@@ -13,6 +13,7 @@ extends Node2D
 var stepOne = false
 var stepTwo = false
 var stepThree = false
+var endGame = false
 
 var timer_end = false
 
@@ -40,7 +41,7 @@ func _process(delta: float) -> void:
 	if (won == true):
 		won = false
 		textHi.text = "HUZZAH! GO WILD!"
-		await get_tree().create_timer(2).timeout
+		await get_tree().create_timer(3).timeout
 		get_tree().change_scene_to_file("res://scenes/done_screen.tscn")
 	
 	if timer_end:
@@ -59,10 +60,10 @@ func _keys() -> void:
 		bNote.play()
 	if(keyOnePressed):
 		dNote.play()
-	if(keyTwoPressed && keyThreePressed):
+	if(keyThreePressed):
 		cNote.play()
 		
-	if keyOnePressed && keyThreePressed && !keyTwoPressed:
+	if keyOnePressed && keyThreePressed && !keyTwoPressed && !endGame:
 		keyTwo.modulate = Color(0.373, 1.0, 0.537, 1.0)
 		keyOne.modulate = Color(1.0, 1.0, 1.0, 1.0)
 		keyThree.modulate = Color(1, 1, 1, 1)
@@ -72,7 +73,7 @@ func _keys() -> void:
 		stepOne = true
 		return
 
-	if keyTwoPressed && !keyOnePressed && !keyThreePressed && stepOne:
+	if keyTwoPressed && !keyOnePressed && !keyThreePressed && stepOne && !endGame:
 		keyTwo.modulate = Color(1, 1, 1, 1)
 		keyOne.modulate = Color(0.373, 1.0, 0.537, 1.0)
 		keyOnePressed = false
@@ -82,9 +83,9 @@ func _keys() -> void:
 		stepTwo = true
 		return
 
-	if keyOnePressed && !keyTwoPressed && !keyThreePressed && stepTwo:
+	if keyOnePressed && !keyTwoPressed && !keyThreePressed && stepTwo && !endGame:
 		keyOne.modulate = Color(1, 1, 1, 1)
-		keyTwo.modulate = Color(0.373, 1.0, 0.537, 1.0)
+		keyTwo.modulate = Color(1,1,1,1)
 		keyThree.modulate = Color(0.373, 1.0, 0.537, 1.0)
 		keyOnePressed = false
 		keyTwoPressed = false
@@ -93,7 +94,7 @@ func _keys() -> void:
 		stepThree = true
 		return
 
-	if keyTwoPressed && keyThreePressed && !keyOnePressed && stepThree:
+	if !keyTwoPressed && keyThreePressed && !keyOnePressed && stepThree && !endGame:
 		keyOne.modulate = Color(1.0, 1.0, 1.0, 1.0)
 		keyThree.modulate = Color(1, 1, 1, 1)
 		keyTwo.modulate = Color(1,1,1,1)
@@ -102,7 +103,7 @@ func _keys() -> void:
 		keyThreePressed = false
 		stepThree = false # sequence fully complete, ready to start again
 		won = true
-		
+		endGame = true
 
 
 
