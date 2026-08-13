@@ -9,20 +9,28 @@ To start, just press run!
 - WASD / Arrow keys to move
 - Space to jump
 - Mouse click to interact with things
+- 1 2 3 on keyboard to press trumpet keys
 
 
 ### Features 
 
-3 fast minigames! Such as:
+6 fast-paced minigames! Such as:
 - Platformer - Grab the guitar picks as fast as possible
 - Clicker - Collect all the music notes in time
 - Click-Smasher - Tune your sound before time ends
+- Swap Pieces - Swap the xylophone keys into place
+- Click parallel buttons - String the harp as soon as you can
+- Press keyboard numbers - Press the trumpet keys in the right order
 
 Made in Godot and was made for the Stardance Hackclub program, with the project: Make a WarioWare game. 
 **Tempo Surge** was also made in order to learn Godot and to learn how to make games and art.
 
-All art assets used in game were made by me.
+All art assets used in game were made by me :)
 
 I will probably add more things in the game, as well as redesign some things that I didn't really like but didn't want to spend more time drawing.
 
 Hope you have fun playing **Tempo Surge!**
+
+### AI Usage
+
+I used AI to help me debug some errors in the code as well as help me bring the fourth minigame to life, since I wasn't sure on what the best way of adding a swap object system would look like.
