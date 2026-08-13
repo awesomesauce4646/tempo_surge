@@ -1,6 +1,6 @@
 # Tempo Surge
 A game inspired off of WarioWare, where you must complete many minigames to win!
-<img width="1917" height="532" alt="Screenshot 2026-07-26 040905" src="https://github.com/user-attachments/assets/e9e5134d-1f61-464d-80f1-ce55adee94eb" />
+<img width="1584" height="437" alt="a" src="https://github.com/user-attachments/assets/0adbd403-93be-4b65-bb25-1fdaec6e0673" />
 You can play **Tempo Surge** at: https://marygoat.itch.io/tempo-surge
 To start, just press run!
 
@@ -18,7 +18,8 @@ To start, just press run!
 - Clicker - Collect all the music notes in time
 - Click-Smasher - Tune your sound before time ends
 
-Made in Godot and was made for the Stardance Hackclub program, with the project: Make a WarioWare game.
+Made in Godot and was made for the Stardance Hackclub program, with the project: Make a WarioWare game. 
+**Tempo Surge** was also made in order to learn Godot and to learn how to make games and art.
 
 All art assets used in game were made by me.
 
