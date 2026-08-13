@@ -4,9 +4,10 @@ extends Node2D
 var buttons_pressed := 0
 var timer_end = false
 
+var rng = RandomNumberGenerator.new()
 
-
-func _ready() -> void:
+func _ready():
+	rng.randomize()
 	
 	await themed_timer.Timer(4)
 	#after this is completed...
