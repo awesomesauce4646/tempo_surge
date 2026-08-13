@@ -3,6 +3,12 @@ extends Node2D
 @onready var stringOne: TextureRect = $String1
 @onready var stringTwo: TextureRect = $String2
 @onready var stringThree: TextureRect = $String3
+@onready var pointOne: TextureButton = $PointOne
+@onready var pointTwo: TextureButton = $PointTwo
+@onready var pointThree: TextureButton = $PointThree
+@onready var pointFour: TextureButton = $PointFour
+@onready var pointFive: TextureButton = $PointFive
+@onready var pointSix: TextureButton = $PointSix
 
 var timer_end = false
 
@@ -19,7 +25,7 @@ var strungThree = false
 
 
 func _ready() -> void:
-	await themed_timer.Timer(8.0)
+	await themed_timer.Timer(7.0)
 	#after this is completed...
 	timer_end = true 
 
@@ -54,6 +60,14 @@ func _string_strung() -> void:
 
 func _on_point_one_pressed() -> void:
 	pointOneClick = !pointOneClick
+	if (pointOneClick == true):
+		pointOne.modulate = Color(0.373, 1.0, 0.537, 1.0)
+		pointThree.modulate = Color(1,1,1,1)
+		pointFour.modulate = Color(1,1,1,1)
+		pointFive.modulate = Color(1,1,1,1)
+		pointSix.modulate = Color(1,1,1,1)
+	else:
+		pointOne.modulate = Color(1,1,1,1)
 	pointThreeClick = false
 	pointFourClick = false
 	pointFiveClick = false
@@ -62,6 +76,14 @@ func _on_point_one_pressed() -> void:
 
 func _on_point_two_pressed() -> void:
 	pointTwoClick = !pointTwoClick
+	if (pointTwoClick == true):
+		pointTwo.modulate = Color(0.373, 1.0, 0.537, 1.0)
+		pointThree.modulate = Color(1,1,1,1)
+		pointFour.modulate = Color(1,1,1,1)
+		pointFive.modulate = Color(1,1,1,1)
+		pointSix.modulate = Color(1,1,1,1)
+	else:
+		pointTwo.modulate = Color(1,1,1,1)
 	pointThreeClick = false
 	pointFourClick = false
 	pointFiveClick = false
@@ -70,6 +92,14 @@ func _on_point_two_pressed() -> void:
 
 func _on_point_three_pressed() -> void:
 	pointThreeClick = !pointThreeClick
+	if (pointThreeClick == true):
+		pointThree.modulate = Color(0.373, 1.0, 0.537, 1.0)
+		pointOne.modulate = Color(1,1,1,1)
+		pointTwo.modulate = Color(1,1,1,1)
+		pointFive.modulate = Color(1,1,1,1)
+		pointSix.modulate = Color(1,1,1,1)
+	else:
+		pointThree.modulate = Color(1,1,1,1)
 	pointOneClick = false
 	pointTwoClick = false
 	pointFiveClick = false
@@ -77,6 +107,14 @@ func _on_point_three_pressed() -> void:
 
 func _on_point_four_pressed() -> void:
 	pointFourClick = !pointFourClick
+	if (pointFourClick == true):
+		pointFour.modulate = Color(0.373, 1.0, 0.537, 1.0)
+		pointOne.modulate = Color(1,1,1,1)
+		pointTwo.modulate = Color(1,1,1,1)
+		pointFive.modulate = Color(1,1,1,1)
+		pointSix.modulate = Color(1,1,1,1)
+	else:
+		pointFour.modulate = Color(1,1,1,1)
 	pointOneClick = false
 	pointTwoClick = false
 	pointFiveClick = false
@@ -85,6 +123,14 @@ func _on_point_four_pressed() -> void:
 
 func _on_point_five_pressed() -> void:
 	pointFiveClick = !pointFiveClick
+	if (pointFiveClick == true):
+		pointFive.modulate = Color(0.373, 1.0, 0.537, 1.0)
+		pointOne.modulate = Color(1,1,1,1)
+		pointTwo.modulate = Color(1,1,1,1)
+		pointFour.modulate = Color(1,1,1,1)
+		pointThree.modulate = Color(1,1,1,1)
+	else:
+		pointFive.modulate = Color(1,1,1,1)
 	pointOneClick = false
 	pointTwoClick = false
 	pointThreeClick = false
@@ -93,6 +139,14 @@ func _on_point_five_pressed() -> void:
 
 func _on_point_six_pressed() -> void:
 	pointSixClick = !pointSixClick
+	if (pointSixClick == true):
+		pointSix.modulate = Color(0.373, 1.0, 0.537, 1.0)
+		pointOne.modulate = Color(1,1,1,1)
+		pointTwo.modulate = Color(1,1,1,1)
+		pointFour.modulate = Color(1,1,1,1)
+		pointThree.modulate = Color(1,1,1,1)
+	else:
+		pointSix.modulate = Color(1,1,1,1)
 	pointOneClick = false
 	pointTwoClick = false
 	pointThreeClick = false

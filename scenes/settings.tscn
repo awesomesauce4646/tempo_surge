@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dxw1igdgrs3g" path="res://assets/guitar.png" id="1_5p8wc"]
 [ext_resource type="Script" uid="uid://bal1ofrhhusov" path="res://gds/settings.gd" id="1_f4mfi"]
-[ext_resource type="Texture2D" uid="uid://0pn770x5niwr" path="res://assets/options.png" id="2_r6d6q"]
-[ext_resource type="Texture2D" uid="uid://t35kofc2ik3k" path="res://assets/music_off.png.png" id="4_es4n0"]
+[ext_resource type="Texture2D" uid="uid://dqkwe8v27bjvc" path="res://assets/optionsbg.png" id="3_es4n0"]
+[ext_resource type="Texture2D" uid="uid://c6c8hk8yan1wx" path="res://assets/music_off.png.png.png" id="4_es4n0"]
 [ext_resource type="Texture2D" uid="uid://fc8k6p0cru1v" path="res://assets/options_tempo.png.png" id="5_es4n0"]
 
 [node name="Settings" type="Node2D" unique_id=1816991760]
@@ -16,7 +16,7 @@ texture = ExtResource("1_5p8wc")
 [node name="Background" type="TextureRect" parent="." unique_id=889532834]
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = ExtResource("2_r6d6q")
+texture = ExtResource("3_es4n0")
 expand_mode = 1
 
 [node name="MusicToggle" type="TextureButton" parent="." unique_id=414059727]

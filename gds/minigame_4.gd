@@ -33,7 +33,7 @@ func _ready() -> void:
 	for btn in [x1, x2, x3, x4, x5, x6, x7, x8]:
 		btn.pressed.connect(_on_button_pressed.bind(btn))
 
-	await themed_timer.Timer(10.0)
+	await themed_timer.Timer(8.0)
 	timer_end = true
 
 func _process(delta: float) -> void:

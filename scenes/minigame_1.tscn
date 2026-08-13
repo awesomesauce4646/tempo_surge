@@ -2,11 +2,17 @@
 
 [ext_resource type="Script" uid="uid://dqewthns2k2mb" path="res://gds/minigame_1.gd" id="1_j1cg4"]
 [ext_resource type="Texture2D" uid="uid://c6ft0daol7730" path="res://assets/png.png" id="2_vc5od"]
+[ext_resource type="Texture2D" uid="uid://chddn6e7emug" path="res://assets/brick.png" id="3_oxfl2"]
 [ext_resource type="PackedScene" uid="uid://calc6mr02v77q" path="res://scenes/player.tscn" id="3_xpvfh"]
+[ext_resource type="Texture2D" uid="uid://mldvwrd8cndk" path="res://assets/brick2.png" id="4_1digs"]
 [ext_resource type="Script" uid="uid://ux7c5tbpwod0" path="res://gds/guitar_pick.gd" id="4_r58ir"]
 [ext_resource type="Texture2D" uid="uid://cfvbagkkcdep" path="res://assets/guitar_pick.png" id="5_oxfl2"]
+[ext_resource type="Texture2D" uid="uid://blqcu6iecpsn2" path="res://assets/brick3.png" id="6_00jeu"]
 [ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://scenes/timer.tscn" id="6_1digs"]
 [ext_resource type="FontFile" uid="uid://v2lc0jgyarh8" path="res://PixelifySans-VariableFont_wght.ttf" id="6_vc5od"]
+[ext_resource type="Texture2D" uid="uid://0y3golswfj2d" path="res://assets/brick6.png" id="7_6n0yg"]
+[ext_resource type="Texture2D" uid="uid://7swidhx2bj4t" path="res://assets/brick4.png" id="8_2gcu5"]
+[ext_resource type="Texture2D" uid="uid://co10aouc6m57p" path="res://assets/brick5.png" id="9_g4fmr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7304a"]
 size = Vector2(1311.3125, 37)
@@ -70,21 +76,22 @@ expand_mode = 1
 position = Vector2(569.5, 548.5)
 shape = SubResource("RectangleShape2D_7304a")
 
-[node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=197420189]
-offset_left = -8.0
-offset_top = 529.0
-offset_right = 1915.0
-offset_bottom = 650.0
-color = Color(0.74166036, 2.0888747e-05, 0.5243474, 1)
+[node name="ColorRect" type="TextureRect" parent="Platform1" unique_id=231884392]
+offset_left = -10.0
+offset_top = 523.0
+offset_right = 1913.0
+offset_bottom = 654.0
+texture = ExtResource("3_oxfl2")
 
 [node name="Platform2" type="StaticBody2D" parent="." unique_id=959073243]
 
-[node name="ColorRect2" type="ColorRect" parent="Platform2" unique_id=1864684883]
-offset_left = 767.0
-offset_top = 427.0
-offset_right = 1928.0
-offset_bottom = 470.0
-color = Color(0.74166036, 2.0888747e-05, 0.5243474, 1)
+[node name="ColorRect2" type="TextureRect" parent="Platform2" unique_id=1567151934]
+offset_left = 756.0
+offset_top = 419.0
+offset_right = 1159.0
+offset_bottom = 494.0
+texture = ExtResource("4_1digs")
+stretch_mode = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=410771953]
 position = Vector2(1420, 447)
@@ -95,12 +102,13 @@ position = Vector2(157, 464)
 
 [node name="Platform3" type="StaticBody2D" parent="." unique_id=1700724851]
 
-[node name="ColorRect" type="ColorRect" parent="Platform3" unique_id=2128291087]
-offset_left = -770.0
-offset_top = 326.0
-offset_right = 532.0
-offset_bottom = 370.0
-color = Color(0.74166036, 2.0888747e-05, 0.5243474, 1)
+[node name="ColorRect" type="TextureRect" parent="Platform3" unique_id=931082445]
+offset_left = -2.0
+offset_top = 310.0
+offset_right = 591.0
+offset_bottom = 387.0
+texture = ExtResource("6_00jeu")
+stretch_mode = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" unique_id=827477468]
 position = Vector2(-119, 346)
@@ -109,12 +117,13 @@ shape = SubResource("RectangleShape2D_7304a")
 [node name="Platform4" type="StaticBody2D" parent="." unique_id=1410841085]
 position = Vector2(-117, -273)
 
-[node name="ColorRect2" type="ColorRect" parent="Platform4" unique_id=41186486]
-offset_left = 1146.0
-offset_top = 451.0
-offset_right = 2307.0
-offset_bottom = 494.0
-color = Color(0.74166036, 2.0888747e-05, 0.5243474, 1)
+[node name="ColorRect2" type="TextureRect" parent="Platform4" unique_id=1468759910]
+offset_left = 1131.0
+offset_top = 444.0
+offset_right = 2292.0
+offset_bottom = 511.0
+texture = ExtResource("7_6n0yg")
+stretch_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4" unique_id=855308207]
@@ -124,13 +133,13 @@ shape = SubResource("RectangleShape2D_7304a")
 [node name="Platform5" type="StaticBody2D" parent="." unique_id=546652]
 position = Vector2(-2195, -314)
 
-[node name="ColorRect2" type="ColorRect" parent="Platform5" unique_id=711711155]
-offset_left = 1345.0
-offset_top = 551.0
-offset_right = 2506.0
-offset_bottom = 594.0
-color = Color(0.74166036, 2.0888747e-05, 0.5243474, 1)
-metadata/_edit_use_anchors_ = true
+[node name="ColorRect2" type="TextureRect" parent="Platform5" unique_id=1549220547]
+offset_left = 2188.0
+offset_top = 542.0
+offset_right = 2513.0
+offset_bottom = 616.0
+texture = ExtResource("8_2gcu5")
+stretch_mode = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform5" unique_id=1757980352]
 position = Vector2(1850, 573)
@@ -139,15 +148,16 @@ shape = SubResource("RectangleShape2D_7304a")
 [node name="Platform6" type="StaticBody2D" parent="." unique_id=647784996]
 position = Vector2(-4092, -609)
 
-[node name="ColorRect2" type="ColorRect" parent="Platform6" unique_id=2087349587]
-offset_left = 4633.0
-offset_top = 723.0
-offset_right = 4964.0
-offset_bottom = 766.0
-color = Color(0.74166036, 2.0888747e-05, 0.5243474, 1)
+[node name="ColorRect2" type="TextureRect" parent="Platform6" unique_id=2113772413]
+offset_left = 4610.0
+offset_top = 721.0
+offset_right = 5005.0
+offset_bottom = 777.0
+texture = ExtResource("9_g4fmr")
+stretch_mode = 2
 
 [node name="CollisionShape2Dd" type="CollisionShape2D" parent="Platform6" unique_id=872353631]
-position = Vector2(4796.3438, 745)
+position = Vector2(4796, 745)
 scale = Vector2(0.25, 1)
 shape = SubResource("RectangleShape2D_7304a")
 

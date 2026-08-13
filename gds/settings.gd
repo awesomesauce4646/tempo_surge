@@ -9,7 +9,7 @@ var is_muted: bool = false
 var onOrOff: String = "ON"
 
 func _on_music_toggle_pressed() -> void:
-	var off = preload("res://assets/music_off.png.png")
+	var off = preload("res://assets/music_off.png.png.png")
 	var on = preload("res://assets/music_on.png.png")
 	
 	is_muted = !is_muted 
