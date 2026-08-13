@@ -31,6 +31,6 @@ I will probably add more things in the game, as well as redesign some things tha
 
 Hope you have fun playing **Tempo Surge!**
 
-​### ​AI USAGE: 
+### AI Usage
 
-​I used AI to help me debug some errors in the code as well as help me bring the fourth minigame to life, since I wasn't sure on what the best way of adding a swap object system would look like.
+I used AI to help me debug some errors in the code as well as help me bring the fourth minigame to life, since I wasn't sure on what the best way of adding a swap object system would look like.
