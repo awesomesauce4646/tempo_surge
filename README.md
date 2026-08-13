@@ -30,3 +30,7 @@ All art assets used in game were made by me :)
 I will probably add more things in the game, as well as redesign some things that I didn't really like but didn't want to spend more time drawing.
 
 Hope you have fun playing **Tempo Surge!**
+
+​### ​AI USAGE: 
+
+​I used AI to help me debug some errors in the code as well as help me bring the fourth minigame to life, since I wasn't sure on what the best way of adding a swap object system would look like.
