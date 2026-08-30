@@ -9,6 +9,7 @@ extends Node2D
 @onready var cNote: AudioStreamPlayer2D = $C
 @onready var dNote: AudioStreamPlayer2D = $D
 @onready var textHi: RichTextLabel = $RichTextLabel
+@onready var instructions: ColorRect = $InstructionBg
 
 var stepOne = false
 var stepTwo = false
@@ -21,17 +22,24 @@ var keyOnePressed = false
 var keyTwoPressed = false
 var keyThreePressed = false
 
+var start = false
+
 var won = false
 
 func _ready() -> void:
-	keyOne.modulate = Color(0.373, 1.0, 0.537, 1.0)
-	keyThree.modulate = Color(0.373, 1.0, 0.537, 1.0)
-	await themed_timer.Timer(7.0)
-	#after this is completed...
-	timer_end = true 
+	pass
 
 
 func _process(delta: float) -> void:
+	if start:
+		start = false
+		instructions.hide()
+		keyOne.modulate = Color(0.373, 1.0, 0.537, 1.0)
+		keyThree.modulate = Color(0.373, 1.0, 0.537, 1.0)
+		await themed_timer.Timer(7.0)
+		#after this is completed...
+		timer_end = true 
+	
 	keyOnePressed = Input.is_action_pressed("key_one")
 	keyTwoPressed = Input.is_action_pressed("key_two")
 	keyThreePressed = Input.is_action_pressed("key_three")
@@ -128,3 +136,7 @@ func _on_trumpet_key_3_button_down() -> void:
 
 func _on_trumpet_key_3_button_up() -> void:
 	keyThreePressed = false
+
+
+func _on_start_pressed() -> void:
+	start = true

@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bjxfow30t1sbi" path="res://gds/detect_click.gd" id="4_6tcq3"]
 [ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://scenes/timer.tscn" id="5_6co8m"]
 [ext_resource type="FontFile" uid="uid://v2lc0jgyarh8" path="res://PixelifySans-VariableFont_wght.ttf" id="6_c3ytc"]
+[ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="7_eachr"]
 
 [node name="Minigame_2" type="Node2D" unique_id=809752430]
 script = ExtResource("1_dqa6p")
@@ -17,6 +18,7 @@ texture = ExtResource("2_c3ytc")
 expand_mode = 1
 
 [node name="Button_1" type="TextureButton" parent="." unique_id=1712268124]
+visible = false
 offset_left = 75.0
 offset_top = 123.0
 offset_right = 353.0
@@ -26,6 +28,7 @@ texture_normal = ExtResource("3_eachr")
 script = ExtResource("4_6tcq3")
 
 [node name="Button_2" type="TextureButton" parent="." unique_id=843083989]
+visible = false
 offset_left = 349.0
 offset_top = 304.0
 offset_right = 627.0
@@ -35,6 +38,7 @@ texture_normal = ExtResource("3_eachr")
 script = ExtResource("4_6tcq3")
 
 [node name="Button_3" type="TextureButton" parent="." unique_id=1423610650]
+visible = false
 offset_left = 661.0
 offset_top = 62.0
 offset_right = 939.0
@@ -44,6 +48,7 @@ texture_normal = ExtResource("3_eachr")
 script = ExtResource("4_6tcq3")
 
 [node name="Button_4" type="TextureButton" parent="." unique_id=718147519]
+visible = false
 offset_left = 868.0
 offset_top = 339.0
 offset_right = 1146.0
@@ -55,19 +60,41 @@ script = ExtResource("4_6tcq3")
 [node name="Timer" parent="." unique_id=93331502 instance=ExtResource("5_6co8m")]
 position = Vector2(16, -4)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=113432993]
-offset_left = 609.0
-offset_top = 19.0
-offset_right = 1166.0
-offset_bottom = 162.0
+[node name="InstructionBg" type="ColorRect" parent="." unique_id=82123844]
+offset_left = 272.0
+offset_top = 53.0
+offset_right = 875.0
+offset_bottom = 592.0
+color = Color(0.27688348, 0.0006513053, 0.690726, 1)
+
+[node name="Instructions" type="RichTextLabel" parent="InstructionBg" unique_id=336990947]
+layout_mode = 0
+offset_left = 27.0
+offset_top = -5.0
+offset_right = 584.0
+offset_bottom = 343.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/normal_font = ExtResource("6_c3ytc")
-theme_override_font_sizes/normal_font_size = 57
-text = "CLICK ON THE MUSIC NOTES!"
+theme_override_font_sizes/normal_font_size = 45
+text = "
+CLICK ON ALL OF THE MUSIC NOTES TO WIN!
+
+CONTROLS: LEFT MOUSE CLICK"
 horizontal_alignment = 1
+
+[node name="Start" type="TextureButton" parent="InstructionBg" unique_id=1796145942]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 381.0
+offset_right = 435.0
+offset_bottom = 513.0
+texture_normal = ExtResource("7_eachr")
+ignore_texture_size = true
+stretch_mode = 0
 
 [connection signal="pressed" from="Button_1" to="Button_1" method="_on_pressed"]
 [connection signal="pressed" from="Button_2" to="Button_2" method="_on_pressed"]
 [connection signal="pressed" from="Button_3" to="Button_3" method="_on_pressed"]
 [connection signal="pressed" from="Button_4" to="Button_4" method="_on_pressed"]
+[connection signal="pressed" from="InstructionBg/Start" to="." method="_on_start_pressed"]

@@ -8,7 +8,9 @@ extends Node2D
 @onready var x6: TextureButton = $Seven
 @onready var x7: TextureButton = $Six
 @onready var x8: TextureButton = $Five
+@onready var instructions: ColorRect = $InstructionBg
 
+var start = false
 var timer_end = false
 var selected: TextureButton = null
 var pairs = []
@@ -33,10 +35,14 @@ func _ready() -> void:
 	for btn in [x1, x2, x3, x4, x5, x6, x7, x8]:
 		btn.pressed.connect(_on_button_pressed.bind(btn))
 
-	await themed_timer.Timer(8.0)
-	timer_end = true
+
 
 func _process(delta: float) -> void:
+	if start: 
+		start = false
+		instructions.hide()
+		await themed_timer.Timer(8.0)
+		timer_end = true
 	if timer_end:
 		Global.lives -= 1
 		Global.minigames_done -= 1
@@ -85,3 +91,7 @@ func _check_win() -> void:
 
 func _on_win() -> void:
 	get_tree().change_scene_to_file("res://scenes/level_scene.tscn")
+
+
+func _on_start_pressed() -> void:
+	start = true

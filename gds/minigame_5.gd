@@ -9,6 +9,7 @@ extends Node2D
 @onready var pointFour: TextureButton = $PointFour
 @onready var pointFive: TextureButton = $PointFive
 @onready var pointSix: TextureButton = $PointSix
+@onready var instructions: ColorRect = $InstructionBg
 
 var timer_end = false
 
@@ -23,15 +24,19 @@ var strungOne = false
 var strungTwo = false
 var strungThree = false
 
+var start = false
 
 func _ready() -> void:
-	await themed_timer.Timer(7.0)
-	#after this is completed...
-	timer_end = true 
+	pass
 
 
 func _process(delta: float) -> void:
-
+	if start:
+		start = false
+		instructions.hide()
+		await themed_timer.Timer(7.0)
+		#after this is completed...
+		timer_end = true 
 
 	_string_strung()
 	if strungOne && strungTwo && strungThree == true:
@@ -151,3 +156,7 @@ func _on_point_six_pressed() -> void:
 	pointTwoClick = false
 	pointThreeClick = false
 	pointFourClick = false
+
+
+func _on_start_pressed() -> void:
+	start = true

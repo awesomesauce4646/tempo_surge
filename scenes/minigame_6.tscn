@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://dlcna1r5b6a7t" path="res://sounds/b_trumpet.mp3" id="9_qgktd"]
 [ext_resource type="AudioStream" uid="uid://mv43eha4k88m" path="res://sounds/c_trumpet.mp3" id="10_w7g22"]
 [ext_resource type="AudioStream" uid="uid://2prwi4r8go7s" path="res://sounds/d_trumpet.mp3" id="11_tpeky"]
+[ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="13_j4u76"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_86m45"]
 keycode = 49
@@ -129,8 +130,6 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/normal_font = ExtResource("8_p8f5j")
 theme_override_font_sizes/normal_font_size = 57
-text = "PLAY THE TRUMPET!
-( PRESS KEY SHOWN / BUTTON HIGHLIGHTED )"
 horizontal_alignment = 1
 
 [node name="G" type="AudioStreamPlayer2D" parent="." unique_id=640055095]
@@ -145,9 +144,43 @@ stream = ExtResource("10_w7g22")
 [node name="D" type="AudioStreamPlayer2D" parent="." unique_id=1824307520]
 stream = ExtResource("11_tpeky")
 
+[node name="InstructionBg" type="ColorRect" parent="." unique_id=1733578316]
+offset_left = 272.0
+offset_top = 53.0
+offset_right = 875.0
+offset_bottom = 592.0
+color = Color(0.27688348, 0.0006513053, 0.690726, 1)
+
+[node name="Instructions" type="RichTextLabel" parent="InstructionBg" unique_id=1347439591]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 70.0
+offset_right = 577.0
+offset_bottom = 418.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("8_p8f5j")
+theme_override_font_sizes/normal_font_size = 45
+text = "PRESS THE RIGHT KEYS THAT ARE HIGHLIGHTED
+
+CONTROLS: NUMBER KEYS 
+1 2 3"
+horizontal_alignment = 1
+
+[node name="Start" type="TextureButton" parent="InstructionBg" unique_id=1677907741]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 381.0
+offset_right = 435.0
+offset_bottom = 513.0
+texture_normal = ExtResource("13_j4u76")
+ignore_texture_size = true
+stretch_mode = 0
+
 [connection signal="button_down" from="TrumpetKey1" to="." method="_on_trumpet_key_1_button_down"]
 [connection signal="button_up" from="TrumpetKey1" to="." method="_on_trumpet_key_1_button_up"]
 [connection signal="button_down" from="TrumpetKey2" to="." method="_on_trumpet_key_2_button_down"]
 [connection signal="button_up" from="TrumpetKey2" to="." method="_on_trumpet_key_2_button_up"]
 [connection signal="button_down" from="TrumpetKey3" to="." method="_on_trumpet_key_3_button_down"]
 [connection signal="button_up" from="TrumpetKey3" to="." method="_on_trumpet_key_3_button_up"]
+[connection signal="pressed" from="InstructionBg/Start" to="." method="_on_start_pressed"]
