@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://0y3golswfj2d" path="res://assets/brick6.png" id="7_6n0yg"]
 [ext_resource type="Texture2D" uid="uid://7swidhx2bj4t" path="res://assets/brick4.png" id="8_2gcu5"]
 [ext_resource type="Texture2D" uid="uid://co10aouc6m57p" path="res://assets/brick5.png" id="9_g4fmr"]
+[ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="14_2gcu5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7304a"]
 size = Vector2(1311.3125, 37)
@@ -181,18 +182,6 @@ position = Vector2(-10, 13)
 position = Vector2(52, 30)
 shape = SubResource("CircleShape2D_7304a")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="GuitarPick" unique_id=290456941]
-offset_left = -510.0
-offset_top = -124.0
-offset_right = 47.0
-offset_bottom = 224.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/normal_font = ExtResource("6_vc5od")
-theme_override_font_sizes/normal_font_size = 57
-text = "COLLECT THE GUITAR PICKS!"
-horizontal_alignment = 1
-
 [node name="GuitarPick2" type="Node2D" parent="." unique_id=1839987621]
 position = Vector2(32, 141)
 script = ExtResource("4_r58ir")
@@ -237,6 +226,56 @@ shape = SubResource("CircleShape2D_7304a")
 [node name="Timer" parent="." unique_id=93331502 instance=ExtResource("6_1digs")]
 position = Vector2(16, -4)
 
+[node name="Barrier" type="StaticBody2D" parent="." unique_id=637672580]
+position = Vector2(-1272.0001, -89.00001)
+scale = Vector2(0.9026325, 1.0206088)
+
+[node name="ColorRect2" type="TextureRect" parent="Barrier" unique_id=2060969542]
+visible = false
+offset_left = 2188.0
+offset_top = 542.0
+offset_right = 2513.0
+offset_bottom = 616.0
+texture = ExtResource("8_2gcu5")
+stretch_mode = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier" unique_id=1593467949]
+position = Vector2(2314.3418, 542.81323)
+shape = SubResource("RectangleShape2D_7304a")
+
+[node name="InstructionBg" type="ColorRect" parent="." unique_id=1095769498]
+offset_left = 272.0
+offset_top = 53.0
+offset_right = 875.0
+offset_bottom = 592.0
+color = Color(0.27688348, 0.0006513053, 0.690726, 1)
+
+[node name="Instructions" type="RichTextLabel" parent="InstructionBg" unique_id=290456941]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 27.0
+offset_right = 579.0
+offset_bottom = 375.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("6_vc5od")
+theme_override_font_sizes/normal_font_size = 45
+text = "COLLECT THE GUITAR PICKS! WALK INTO EACH GUITAR PICK TO COLLECT!
+
+CONTROLS: ARROW KEYS TO MOVE. SPACE TO JUMP."
+horizontal_alignment = 1
+
+[node name="Start" type="TextureButton" parent="InstructionBg" unique_id=1801364449]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 381.0
+offset_right = 435.0
+offset_bottom = 513.0
+texture_normal = ExtResource("14_2gcu5")
+ignore_texture_size = true
+stretch_mode = 0
+
 [connection signal="note_collected" from="GuitarPick" to="." method="_on_guitar_pick_note_collected"]
 [connection signal="note_collected" from="GuitarPick2" to="." method="_on_guitar_pick_2_note_collected"]
 [connection signal="note_collected" from="GuitarPick3" to="." method="_on_guitar_pick_3_note_collected"]
+[connection signal="pressed" from="InstructionBg/Start" to="." method="_on_start_pressed"]

@@ -25,6 +25,18 @@ theme_override_fonts/normal_font = ExtResource("3_c8xsp")
 theme_override_font_sizes/normal_font_size = 57
 text = "LEVEL #"
 
+[node name="LevelComplete" type="RichTextLabel" parent="." unique_id=1082488813]
+clip_contents = false
+offset_left = 436.0
+offset_top = 67.0
+offset_right = 753.0
+offset_bottom = 143.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("3_c8xsp")
+theme_override_font_sizes/normal_font_size = 57
+text = "hi"
+horizontal_alignment = 1
+
 [node name="Timer" type="RichTextLabel" parent="." unique_id=264175579]
 clip_contents = false
 offset_left = 1000.0

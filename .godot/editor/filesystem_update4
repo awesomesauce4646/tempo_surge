@@ -1,3 +1,5 @@
-res://scenes/minigame_2.tscn
-res://gds/detect_click.gd
-res://gds/minigame_2.gd
+res://gds/timer_screen.gd
+res://scenes/level_scene.tscn
+res://global.gd
+res://gds/minigame_1.gd
+res://scenes/minigame_1.tscn

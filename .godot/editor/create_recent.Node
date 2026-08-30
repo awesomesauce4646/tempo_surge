@@ -1,7 +1,8 @@
-TextureRect
-AudioStreamPlayer2D
-TextureButton
 Button
+ColorRect
+TextureRect
+TextureButton
+AudioStreamPlayer2D
 Control
 RichTextLabel
 Timer
@@ -10,5 +11,4 @@ Area2D
 AnimationPlayer
 Node2D
 Parallax2D
-ColorRect
 StaticBody2D

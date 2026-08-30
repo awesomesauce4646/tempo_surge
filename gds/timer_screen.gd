@@ -7,13 +7,13 @@ extends Node2D
 @onready var note_5: TextureRect = $NoteContainer/Note
 @onready var level: RichTextLabel = $Level
 @onready var timer: RichTextLabel = $Timer
+@onready var completeLevel: RichTextLabel = $LevelComplete
 
 var time
 
 func _ready() -> void:
 
-	await Timer(1.5) # using the function created
-
+	await Timer(2) # using the function created
 	if Global.minigames_done < 6: # if you havent completed 6 minigames yet 
 		Global.minigames_done = Global.minigames_done +1
 		get_tree().change_scene_to_file("res://scenes/minigame_" + str(Global.minigames_done) + ".tscn") # changes your scene by arranging this frankenstein path. 
