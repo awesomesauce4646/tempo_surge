@@ -46,6 +46,7 @@ func _process(delta: float) -> void:
 	if timer_end:
 		Global.lives -= 1
 		Global.minigames_done -= 1
+		Global.won = false
 		if Global.lives == 0:
 			get_tree().change_scene_to_file("res://scenes/lost_game.tscn")
 		else:
@@ -90,6 +91,7 @@ func _check_win() -> void:
 	_on_win()
 
 func _on_win() -> void:
+	Global.won = true
 	get_tree().change_scene_to_file("res://scenes/level_scene.tscn")
 
 

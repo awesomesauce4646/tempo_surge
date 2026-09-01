@@ -1,10 +1,11 @@
+res://scenes/level_scene.tscn
+res://gds/timer_screen.gd
+res://global.gd
+res://scenes/minigame_1.tscn
+res://gds/minigame_1.gd
 res://scenes/minigame_2.tscn
 res://gds/minigame_2.gd
 res://gds/minigame_3.gd
-res://scenes/minigame_3.tscn
-res://scenes/minigame_4.tscn
 res://gds/minigame_4.gd
-res://scenes/minigame_5.tscn
 res://gds/minigame_5.gd
-res://scenes/minigame_6.tscn
 res://gds/minigame_6.gd

@@ -12,7 +12,12 @@ extends Node2D
 var time
 
 func _ready() -> void:
-
+	if Global.firstRound:
+		pass
+	elif Global.won:
+		completeLevel.text ="GOOD JOB!"
+	else:
+		completeLevel.text = "TRY AGAIN!"
 	await Timer(2) # using the function created
 	if Global.minigames_done < 6: # if you havent completed 6 minigames yet 
 		Global.minigames_done = Global.minigames_done +1

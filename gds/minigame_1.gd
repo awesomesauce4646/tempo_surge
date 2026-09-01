@@ -9,6 +9,7 @@ var note_collected = 0 # just keeping track of garlic collected
 var timer_end = false # boolean (true or false) stating whether the timer ended
 
 func _ready() -> void:
+		Global.firstRound = false
 		pass
 		#Below you can see that I have a function that I named. I grab a 
 		#function from it that was created in it's script and use `await` to 
@@ -24,11 +25,14 @@ func _process(delta: float) -> void: # running every frame brochacho
 		#after this is compeleted...
 		timer_end = true # now we're saying "oh ye you ran out of time"
 	if note_collected == 3: # the double equals is just an argument asking if it's the same, with "=" it'll give an error
+			Global.won = true
 			get_tree().change_scene_to_file("res://scenes/level_scene.tscn") # go back to the intermission scene
 	
 	if timer_end: # if the timer does end...
 		Global.minigames_done -=1 #go back a minigame
 		Global.lives -= 1 # lose ur lives
+		Global.won = false
+
 		if Global.lives == 0:
 			get_tree().change_scene_to_file("res://scenes/lost_game.tscn") 
 		else:
