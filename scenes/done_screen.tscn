@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dwg0bj6nrjalf"]
 
 [ext_resource type="Script" uid="uid://cuwr6wle1cr3b" path="res://gds/done_screen.gd" id="1_k66lo"]
-[ext_resource type="Texture2D" uid="uid://q3260vgoxr27" path="res://assets/winning.png" id="1_mioa6"]
+[ext_resource type="Texture2D" uid="uid://ceftupstutjtn" path="res://assets/winning.png" id="1_mioa6"]
 [ext_resource type="Texture2D" uid="uid://y4kr5tulyyoa" path="res://assets/back_won.png" id="3_k66lo"]
 
 [node name="Winner" type="Node2D" unique_id=1062245485]

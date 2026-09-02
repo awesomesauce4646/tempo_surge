@@ -27,7 +27,7 @@ func _process(delta: float) -> void:
 		noteTwo.show()
 		noteThree.show()
 		noteFour.show()
-		await themed_timer.Timer(4)
+		await themed_timer.Timer(3.5)
 		#after this is completed...
 		timer_end = true 
 		

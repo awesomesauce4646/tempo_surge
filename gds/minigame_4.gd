@@ -41,7 +41,7 @@ func _process(delta: float) -> void:
 	if start: 
 		start = false
 		instructions.hide()
-		await themed_timer.Timer(8.0)
+		await themed_timer.Timer(6.0)
 		timer_end = true
 	if timer_end:
 		Global.lives -= 1

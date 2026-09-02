@@ -36,7 +36,7 @@ func _process(delta: float) -> void:
 		instructions.hide()
 		keyOne.modulate = Color(0.373, 1.0, 0.537, 1.0)
 		keyThree.modulate = Color(0.373, 1.0, 0.537, 1.0)
-		await themed_timer.Timer(7.0)
+		await themed_timer.Timer(6.0)
 		#after this is completed...
 		timer_end = true 
 	

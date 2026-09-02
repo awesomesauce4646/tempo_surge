@@ -18,7 +18,7 @@ func _process(delta: float) -> void:
 		instructions.hide()
 		start = false
 		info.show()
-		await themed_timer.Timer(5.0)
+		await themed_timer.Timer(4.5)
 		#after this is completed...
 		timer_end = true 
 	

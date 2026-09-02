@@ -121,7 +121,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/normal_font = ExtResource("7_s0say")
 theme_override_font_sizes/normal_font_size = 40
-text = "SWAP THE KEYS IN TALLEST TO SHORTEST ORDER, FROM LEFT TO RIGHT. ONLY CORRECT SWAPS WORK!
+text = "SWAP THE KEYS IN TALLEST TO SHORTEST ORDER, FROM LEFT TO RIGHT. ONLY CORRECT PAIR SWAPS WORK!
 
 CONTROLS: LEFT MOUSE CLICK"
 horizontal_alignment = 1
