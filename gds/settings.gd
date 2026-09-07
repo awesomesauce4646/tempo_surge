@@ -3,7 +3,7 @@ extends Node2D
 @onready var musicButton: TextureButton = $MusicToggle
 
 func _on_back_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/title_screen.tscn")
+	Transition.change_scene_to_file("res://scenes/title_screen.tscn")
 
 var is_muted: bool = false
 var onOrOff: String = "ON"

@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*uid://drs8kjwt4am3p"
 GlobalMusic="*uid://b3coxlj010w3j"
+Transition="*uid://csbapg072ro3h"
 
 [display]
 

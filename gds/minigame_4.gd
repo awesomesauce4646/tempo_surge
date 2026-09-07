@@ -48,9 +48,9 @@ func _process(delta: float) -> void:
 		Global.minigames_done -= 1
 		Global.won = false
 		if Global.lives == 0:
-			get_tree().change_scene_to_file("res://scenes/lost_game.tscn")
+			Transition.change_scene_to_file("res://scenes/lost_game.tscn")
 		else:
-			get_tree().change_scene_to_file("res://scenes/level_scene.tscn")
+			Transition.change_scene_to_file("res://scenes/level_scene.tscn")
 
 func _on_button_pressed(btn: TextureButton) -> void:
 	if selected == null:

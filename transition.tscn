@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://csbapg072ro3h"]
+
+[ext_resource type="Script" uid="uid://dpvpu8hyghjwj" path="res://scenes/transition_controller.gd" id="2_4r5tf"]
+
+[sub_resource type="Animation" id="Animation_dc4i4"]
+resource_name = "Fade In"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.15692872, 0.0003027424, 0.36854994, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_e54dn"]
+resource_name = "Fade Out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0.15686275, 0, 0.36862746, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3yumr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e54dn"]
+_data = {
+&"Fade In": SubResource("Animation_dc4i4"),
+&"Fade Out": SubResource("Animation_e54dn"),
+&"RESET": SubResource("Animation_3yumr")
+}
+
+[node name="TransitionController" type="CanvasLayer" unique_id=2018841320 node_paths=PackedStringArray("background", "animation_player")]
+script = ExtResource("2_4r5tf")
+background = NodePath("ColorRect")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1231408847]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=377307676]
+libraries/ = SubResource("AnimationLibrary_e54dn")

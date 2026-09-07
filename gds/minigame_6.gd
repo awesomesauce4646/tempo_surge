@@ -51,16 +51,16 @@ func _process(delta: float) -> void:
 		textHi.text = "HUZZAH! GO WILD!"
 		await get_tree().create_timer(3).timeout
 		Global.won = true
-		get_tree().change_scene_to_file("res://scenes/done_screen.tscn")
+		Transition.change_scene_to_file("res://scenes/done_screen.tscn")
 	
 	if timer_end:
 		Global.lives -= 1
 		Global.minigames_done -=1
 		Global.won = false
 		if Global.lives == 0:
-			get_tree().change_scene_to_file("res://scenes/lost_game.tscn") 
+			Transition.change_scene_to_file("res://scenes/lost_game.tscn") 
 		else:
-			get_tree().change_scene_to_file("res://scenes/level_scene.tscn") # back to intermission
+			Transition.change_scene_to_file("res://scenes/level_scene.tscn") # back to intermission
 
 func _keys() -> void:
 	

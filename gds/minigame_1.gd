@@ -26,7 +26,7 @@ func _process(delta: float) -> void: # running every frame brochacho
 		timer_end = true # now we're saying "oh ye you ran out of time"
 	if note_collected == 3: # the double equals is just an argument asking if it's the same, with "=" it'll give an error
 			Global.won = true
-			get_tree().change_scene_to_file("res://scenes/level_scene.tscn") # go back to the intermission scene
+			Transition.change_scene_to_file("res://scenes/level_scene.tscn") # go back to the intermission scene
 	
 	if timer_end: # if the timer does end...
 		Global.minigames_done -=1 #go back a minigame
@@ -34,9 +34,9 @@ func _process(delta: float) -> void: # running every frame brochacho
 		Global.won = false
 
 		if Global.lives == 0:
-			get_tree().change_scene_to_file("res://scenes/lost_game.tscn") 
+			Transition.change_scene_to_file("res://scenes/lost_game.tscn") 
 		else:
-			get_tree().change_scene_to_file("res://scenes/level_scene.tscn") # back to intermission
+			Transition.change_scene_to_file("res://scenes/level_scene.tscn") # back to intermission
 		
 
 func _on_guitar_pick_3_note_collected() -> void:
