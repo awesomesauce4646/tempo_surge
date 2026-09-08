@@ -32,7 +32,7 @@ func _process(delta: float) -> void: # running every frame brochacho
 		Global.minigames_done -=1 #go back a minigame
 		Global.lives -= 1 # lose ur lives
 		Global.won = false
-
+		timer_end = false
 		if Global.lives == 0:
 			Transition.change_scene_to_file("res://scenes/lost_game.tscn") 
 		else:

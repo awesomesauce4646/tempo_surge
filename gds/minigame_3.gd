@@ -46,6 +46,7 @@ TUNE UP! (CLICK 20)"
 		Global.lives -= 1
 		Global.minigames_done -=1
 		Global.won = false
+		timer_end = false
 		if Global.lives == 0:
 			get_tree().change_scene_to_file("res://scenes/lost_game.tscn") 
 		else:
