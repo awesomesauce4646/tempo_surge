@@ -1,4 +1,3 @@
-res://transition.tscn
-res://scenes/transition_controller.gd
-res://scenes/minigame_7.tscn
 res://scenes/minigame_7.gd
+res://scenes/minigame_7.tscn
+res://scenes/minigame_6.tscn

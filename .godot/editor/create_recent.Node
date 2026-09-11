@@ -1,11 +1,11 @@
+TextureRect
+TextureButton
 Button
 CanvasLayer
 Node2D
 AnimationPlayer
 ColorRect
 Control
-TextureRect
-TextureButton
 AudioStreamPlayer2D
 RichTextLabel
 Timer

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c75cfv1nriqs1"
-path="res://.godot/imported/bongo-set-top-modern-light-brown-photographed-above-isolated-white-35130602.webp-48bda26aafced7480e8490f2f580fbef.ctex"
+uid="uid://d22x5xnvds5fa"
+path="res://.godot/imported/bongoconnector.png-2242991e7b9608cea3724c213e1da819.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bongo-set-top-modern-light-brown-photographed-above-isolated-white-35130602.webp"
-dest_files=["res://.godot/imported/bongo-set-top-modern-light-brown-photographed-above-isolated-white-35130602.webp-48bda26aafced7480e8490f2f580fbef.ctex"]
+source_file="res://assets/bongoconnector.png"
+dest_files=["res://.godot/imported/bongoconnector.png-2242991e7b9608cea3724c213e1da819.ctex"]
 
 [params]
 
