@@ -8,7 +8,7 @@ func _ready() -> void:
 	background.color.a = 0
 
 func transition(animation: String, seconds: float) -> void:
-	animation_player.play(animation, -1.0, 2 / seconds)
+	animation_player.play(animation, -1.0, 2.5 / seconds)
 
 func change_scene_to_file(path: String, fade_time: float = 0.5) -> void:
 	transition("Fade Out", fade_time)

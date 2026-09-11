@@ -51,7 +51,7 @@ func _process(delta: float) -> void:
 		textHi.text = "HUZZAH! GO WILD!"
 		await get_tree().create_timer(3).timeout
 		Global.won = true
-		Transition.change_scene_to_file("res://scenes/done_screen.tscn")
+		Transition.change_scene_to_file("res://scenes/level_scene.tscn")
 	
 	if timer_end:
 		Global.lives -= 1

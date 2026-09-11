@@ -12,6 +12,7 @@ extends Node2D
 var stepOne = false
 var stepTwo = false
 var stepThree = false
+var stepFour = false
 var endGame = false
 
 var timer_end = false
@@ -50,8 +51,8 @@ func _process(delta: float) -> void:
 		
 	if (won == true):
 		won = false
-		await get_tree().create_timer(3).timeout
 		Global.won = true
+		await get_tree().create_timer(.5).timeout
 		Transition.change_scene_to_file("res://scenes/done_screen.tscn")
 	
 	if timer_end:
@@ -76,7 +77,7 @@ func _keys() -> void:
 		rightSound.play()
 
 		
-	if keyOnePressed && !keyTwoPressed && !endGame:
+	if keyOnePressed && !keyTwoPressed && !endGame && !stepOne && !stepTwo && !stepThree:
 		keyTwo.modulate = Color(0.373, 1.0, 0.537, 1.0)
 		keyOne.modulate = Color(1.0, 1.0, 1.0, 1.0)
 		keyOnePressed = false
@@ -96,8 +97,8 @@ func _keys() -> void:
 		return
 
 	if keyOnePressed && !keyTwoPressed && stepTwo && !endGame:
-		keyOne.modulate = Color(1, 1, 1, 1)
-		keyTwo.modulate = Color(1,1,1,1)
+		keyOne.modulate = Color(0.373, 1.0, 0.537, 1.0)
+		keyTwo.modulate = Color(1, 1, 1, 1)
 		keyOnePressed = false
 		keyTwoPressed = false
 		stepTwo = false
@@ -105,16 +106,28 @@ func _keys() -> void:
 		key_cooldown = KEY_COOLDOWN_TIME
 		return
 
-	if !keyTwoPressed && !keyOnePressed && stepThree && !endGame:
+	if !keyTwoPressed && keyOnePressed && stepThree && !endGame:
 		keyOne.modulate = Color(1.0, 1.0, 1.0, 1.0)
-		keyTwo.modulate = Color(1,1,1,1)
+		keyTwo.modulate = Color(0.373, 1.0, 0.537, 1.0)
 		keyOnePressed = false
 		keyTwoPressed = false
 
-		stepThree = false # sequence fully complete, ready to start again
+		stepThree = false 
+		stepFour = true
+		key_cooldown = KEY_COOLDOWN_TIME
+		return
+
+		
+	if keyTwoPressed && !keyOnePressed && stepFour && !endGame:
+		keyOne.modulate = Color(1.0, 1.0, 1.0, 1.0)
+		keyTwo.modulate = Color(1.0, 1.0, 1.0, 1.0)
+		keyOnePressed = false
+		keyTwoPressed = false
+
+		stepFour = false 
 		won = true
 		endGame = true
-
+		return
 
 func _on_start_pressed() -> void:
 	start = true
