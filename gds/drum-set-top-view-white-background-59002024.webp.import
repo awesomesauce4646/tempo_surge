@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c80v66nrjgu4u"
-path="res://.godot/imported/level.png-6d234a015a2313792ea6bbb1019359d0.ctex"
+uid="uid://bph5r6o20brw7"
+path="res://.godot/imported/drum-set-top-view-white-background-59002024.webp-77ff683c13f03394f14d5467e3b62753.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gds/level.png"
-dest_files=["res://.godot/imported/level.png-6d234a015a2313792ea6bbb1019359d0.ctex"]
+source_file="res://gds/drum-set-top-view-white-background-59002024.webp"
+dest_files=["res://.godot/imported/drum-set-top-view-white-background-59002024.webp-77ff683c13f03394f14d5467e3b62753.ctex"]
 
 [params]
 

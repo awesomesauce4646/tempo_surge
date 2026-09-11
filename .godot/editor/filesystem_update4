@@ -1,10 +1,4 @@
 res://transition.tscn
-res://scenes/player.tscn
-res://gds/player.gd
-res://gds/minigame_1.gd
-res://scenes/level_scene.tscn
-res://gds/minigame_2.gd
-res://gds/minigame_3.gd
-res://gds/minigame_4.gd
-res://gds/minigame_5.gd
-res://gds/minigame_6.gd
+res://scenes/transition_controller.gd
+res://scenes/minigame_7.tscn
+res://scenes/minigame_7.gd

@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://cox3hu8qobf57"]
+
+[ext_resource type="Script" uid="uid://k7vmhpwopv6t" path="res://scenes/minigame_7.gd" id="1_vodl3"]
+[ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://scenes/timer.tscn" id="2_vuxkx"]
+[ext_resource type="FontFile" uid="uid://v2lc0jgyarh8" path="res://PixelifySans-VariableFont_wght.ttf" id="3_me5al"]
+[ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="4_ol02w"]
+[ext_resource type="Texture2D" uid="uid://c75cfv1nriqs1" path="res://bongo-set-top-modern-light-brown-photographed-above-isolated-white-35130602.webp" id="5_0fn5h"]
+
+[node name="Minigame_7" type="Node2D" unique_id=913392316]
+script = ExtResource("1_vodl3")
+
+[node name="Background" type="TextureRect" parent="." unique_id=667113542]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Timer" parent="." unique_id=93331502 instance=ExtResource("2_vuxkx")]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2009845234]
+visible = false
+clip_contents = false
+offset_left = 784.0
+offset_top = 29.0
+offset_right = 1136.0
+offset_bottom = 252.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("3_me5al")
+theme_override_font_sizes/normal_font_size = 57
+text = "PRESS"
+
+[node name="InstructionBg" type="ColorRect" parent="." unique_id=2103152419]
+offset_left = -702.0
+offset_top = -141.0
+offset_right = -99.0
+offset_bottom = 398.0
+color = Color(0.27688348, 0.0006513053, 0.690726, 1)
+
+[node name="Instructions" type="RichTextLabel" parent="InstructionBg" unique_id=1468149387]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 27.0
+offset_right = 579.0
+offset_bottom = 375.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("3_me5al")
+theme_override_font_sizes/normal_font_size = 40
+text = "CLICK 20 TIMES ON THE UP OR DOWN ARROW, WHETHER IT'S SHARP OR FLAT, INDICATED BY THE TEXT ON THE TOP RIGHT CORNER.
+
+CONTROLS: LEFT MOUSE CLICK"
+horizontal_alignment = 1
+
+[node name="Start" type="TextureButton" parent="InstructionBg" unique_id=1932501601]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 381.0
+offset_right = 435.0
+offset_bottom = 513.0
+texture_normal = ExtResource("4_ol02w")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BongoSetTopModernLightBrownPhotographedAboveIsolatedWhite35130602" type="Sprite2D" parent="." unique_id=1821066863]
+position = Vector2(586, 329)
+texture = ExtResource("5_0fn5h")
+
+[node name="Button" type="Button" parent="." unique_id=1145158977]
+offset_left = 272.0
+offset_top = 168.0
+offset_right = 568.0
+offset_bottom = 463.0
+text = "DRUM
+Q"
+
+[node name="Button2" type="Button" parent="." unique_id=1802684125]
+offset_left = 667.0
+offset_top = 216.0
+offset_right = 917.0
+offset_bottom = 466.0
+text = "DRUM
+E"
+
+[connection signal="pressed" from="InstructionBg/Start" to="." method="_on_start_pressed"]
