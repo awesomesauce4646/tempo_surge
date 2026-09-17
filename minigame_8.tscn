@@ -1,0 +1,171 @@
+[gd_scene format=3 uid="uid://cy4ai44rc4qsj"]
+
+[ext_resource type="Script" uid="uid://k7vmhpwopv6t" path="res://scenes/minigame_7.gd" id="1_1n1x2"]
+[ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://scenes/timer.tscn" id="3_fli1p"]
+[ext_resource type="FontFile" uid="uid://v2lc0jgyarh8" path="res://PixelifySans-VariableFont_wght.ttf" id="4_wwrp0"]
+[ext_resource type="FontFile" uid="uid://b2q0pxqeuwfe" path="res://BagelFatOne-Regular.ttf" id="5_w2dmm"]
+[ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="8_eyr1m"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_w2dmm"]
+device = -1
+keycode = 67
+unicode = 99
+
+[sub_resource type="Shortcut" id="Shortcut_ra0f0"]
+events = [SubResource("InputEventKey_w2dmm")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_ra0f0"]
+device = -1
+keycode = 67
+unicode = 99
+
+[sub_resource type="Shortcut" id="Shortcut_jokvb"]
+events = [SubResource("InputEventKey_ra0f0")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_8uwxd"]
+device = -1
+keycode = 68
+unicode = 100
+
+[sub_resource type="Shortcut" id="Shortcut_j5rk6"]
+events = [SubResource("InputEventKey_8uwxd")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_jokvb"]
+device = -1
+keycode = 65
+unicode = 97
+
+[sub_resource type="Shortcut" id="Shortcut_wwrp0"]
+events = [SubResource("InputEventKey_jokvb")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_1n1x2"]
+device = -1
+keycode = 65
+unicode = 97
+
+[sub_resource type="Shortcut" id="Shortcut_n6hnm"]
+events = [SubResource("InputEventKey_1n1x2")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_j5rk6"]
+device = -1
+keycode = 71
+unicode = 103
+
+[sub_resource type="Shortcut" id="Shortcut_eyr1m"]
+events = [SubResource("InputEventKey_j5rk6")]
+
+[node name="Minigame_8" type="Node2D" unique_id=913392316]
+script = ExtResource("1_1n1x2")
+
+[node name="Background" type="TextureRect" parent="." unique_id=667113542]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Timer" parent="." unique_id=93331502 instance=ExtResource("3_fli1p")]
+
+[node name="InstructionBg" type="ColorRect" parent="." unique_id=2103152419]
+offset_left = 1296.0
+offset_top = 31.0
+offset_right = 1899.0
+offset_bottom = 570.0
+color = Color(0.27688348, 0.0006513053, 0.690726, 1)
+
+[node name="Instructions" type="RichTextLabel" parent="InstructionBg" unique_id=1468149387]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 107.0
+offset_right = 582.0
+offset_bottom = 455.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("4_wwrp0")
+theme_override_font_sizes/normal_font_size = 40
+text = "MEMORIZE THE LISTED MUSIC NOTE LETTERS, THEN TYPE IT OUT!
+
+CONTROLS: A, B, C, D, E, F, G"
+horizontal_alignment = 1
+
+[node name="Start" type="TextureButton" parent="InstructionBg" unique_id=1932501601]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 381.0
+offset_right = 435.0
+offset_bottom = 513.0
+texture_normal = ExtResource("8_eyr1m")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="C" type="Button" parent="." unique_id=1022574599]
+offset_left = 113.0
+offset_top = 391.0
+offset_right = 168.0
+offset_bottom = 468.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_w2dmm")
+theme_override_font_sizes/font_size = 40
+shortcut = SubResource("Shortcut_ra0f0")
+text = "C"
+
+[node name="C2" type="Button" parent="." unique_id=2095210142]
+offset_left = 244.0
+offset_top = 393.0
+offset_right = 299.0
+offset_bottom = 470.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_w2dmm")
+theme_override_font_sizes/font_size = 40
+shortcut = SubResource("Shortcut_jokvb")
+text = "C"
+
+[node name="D" type="Button" parent="." unique_id=341114877]
+offset_left = 416.0
+offset_top = 145.0
+offset_right = 471.0
+offset_bottom = 222.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_w2dmm")
+theme_override_font_sizes/font_size = 40
+shortcut = SubResource("Shortcut_j5rk6")
+text = "D"
+
+[node name="A" type="Button" parent="." unique_id=231103660]
+offset_left = 546.0
+offset_top = 278.0
+offset_right = 601.0
+offset_bottom = 355.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_w2dmm")
+theme_override_font_sizes/font_size = 40
+shortcut = SubResource("Shortcut_wwrp0")
+text = "A"
+
+[node name="A2" type="Button" parent="." unique_id=2105985248]
+offset_left = 797.0
+offset_top = 278.0
+offset_right = 852.0
+offset_bottom = 355.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_w2dmm")
+theme_override_font_sizes/font_size = 40
+shortcut = SubResource("Shortcut_n6hnm")
+text = "A"
+
+[node name="G" type="Button" parent="." unique_id=557253994]
+offset_left = 919.0
+offset_top = 396.0
+offset_right = 974.0
+offset_bottom = 473.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_w2dmm")
+theme_override_font_sizes/font_size = 40
+keep_pressed_outside = true
+shortcut = SubResource("Shortcut_eyr1m")
+text = "G"
+
+[connection signal="pressed" from="InstructionBg/Start" to="." method="_on_start_pressed"]

@@ -39,19 +39,6 @@ texture = ExtResource("2_ol02w")
 
 [node name="Timer" parent="." unique_id=93331502 instance=ExtResource("2_vuxkx")]
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2009845234]
-visible = false
-clip_contents = false
-offset_left = 784.0
-offset_top = 29.0
-offset_right = 1136.0
-offset_bottom = 252.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/normal_font = ExtResource("3_me5al")
-theme_override_font_sizes/normal_font_size = 57
-text = "PRESS"
-
 [node name="BongoConnector" type="TextureRect" parent="." unique_id=1273739820]
 offset_left = 540.0
 offset_top = 295.0
