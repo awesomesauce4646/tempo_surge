@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://csbapg072ro3h"]
 
-[ext_resource type="Script" uid="uid://dpvpu8hyghjwj" path="res://scenes/transition_controller.gd" id="2_4r5tf"]
+[ext_resource type="Script" uid="uid://dpvpu8hyghjwj" path="res://gds/transition_controller.gd" id="2_4r5tf"]
 
 [sub_resource type="Animation" id="Animation_dc4i4"]
 resource_name = "Fade In"

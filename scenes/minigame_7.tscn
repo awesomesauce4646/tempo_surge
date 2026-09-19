@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://cox3hu8qobf57"]
 
-[ext_resource type="Script" uid="uid://k7vmhpwopv6t" path="res://scenes/minigame_7.gd" id="1_vodl3"]
+[ext_resource type="Script" uid="uid://k7vmhpwopv6t" path="res://gds/minigame_7.gd" id="1_vodl3"]
 [ext_resource type="Texture2D" uid="uid://b0wcry0yxn4eb" path="res://assets/sevenbg.png" id="2_ol02w"]
 [ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://scenes/timer.tscn" id="2_vuxkx"]
 [ext_resource type="FontFile" uid="uid://v2lc0jgyarh8" path="res://PixelifySans-VariableFont_wght.ttf" id="3_me5al"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="4_ol02w"]
 [ext_resource type="Texture2D" uid="uid://y5j8mlpwl5kp" path="res://assets/bongokey1.png" id="5_ol02w"]
 [ext_resource type="Texture2D" uid="uid://clbxuw82he4pb" path="res://assets/bongokey2.png" id="6_0fn5h"]
+[ext_resource type="FontFile" uid="uid://b2q0pxqeuwfe" path="res://BagelFatOne-Regular.ttf" id="9_2i8f8"]
 [ext_resource type="AudioStream" uid="uid://dc13f1aiwfmj3" path="res://sounds/freesound_community-bongo2-91982.mp3" id="9_sren0"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_vodl3"]
@@ -68,11 +69,36 @@ texture_normal = ExtResource("6_0fn5h")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="1" type="RichTextLabel" parent="." unique_id=350929362]
+offset_left = 353.0
+offset_top = 283.0
+offset_right = 408.0
+offset_bottom = 360.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("9_2i8f8")
+theme_override_font_sizes/normal_font_size = 48
+text = "Q"
+horizontal_alignment = 1
+
+[node name="2" type="RichTextLabel" parent="." unique_id=1765558209]
+offset_left = 729.0
+offset_top = 298.0
+offset_right = 784.0
+offset_bottom = 375.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("9_2i8f8")
+theme_override_font_sizes/normal_font_size = 48
+text = "E
+"
+horizontal_alignment = 1
+
 [node name="InstructionBg" type="ColorRect" parent="." unique_id=2103152419]
-offset_left = 278.0
-offset_top = 53.0
-offset_right = 881.0
-offset_bottom = 592.0
+offset_left = 257.0
+offset_top = 46.0
+offset_right = 860.0
+offset_bottom = 585.0
 color = Color(0.27688348, 0.0006513053, 0.690726, 1)
 
 [node name="Instructions" type="RichTextLabel" parent="InstructionBg" unique_id=1468149387]

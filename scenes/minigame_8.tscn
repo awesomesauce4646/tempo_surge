@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cy4ai44rc4qsj"]
 
-[ext_resource type="Script" uid="uid://k7vmhpwopv6t" path="res://scenes/minigame_7.gd" id="1_1n1x2"]
-[ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://scenes/timer.tscn" id="3_fli1p"]
-[ext_resource type="FontFile" uid="uid://v2lc0jgyarh8" path="res://PixelifySans-VariableFont_wght.ttf" id="4_wwrp0"]
-[ext_resource type="FontFile" uid="uid://b2q0pxqeuwfe" path="res://BagelFatOne-Regular.ttf" id="5_w2dmm"]
-[ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="8_eyr1m"]
+[ext_resource type="Script" uid="uid://ov35u0j1e8d3" path="res://gds/minigame_8.gd" id="1_7v0go"]
+[ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://scenes/timer.tscn" id="2_abttf"]
+[ext_resource type="FontFile" uid="uid://v2lc0jgyarh8" path="res://PixelifySans-VariableFont_wght.ttf" id="3_1qg8j"]
+[ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="4_tuwxn"]
+[ext_resource type="FontFile" uid="uid://b2q0pxqeuwfe" path="res://BagelFatOne-Regular.ttf" id="5_17cad"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_w2dmm"]
 device = -1
@@ -55,13 +55,13 @@ unicode = 103
 events = [SubResource("InputEventKey_j5rk6")]
 
 [node name="Minigame_8" type="Node2D" unique_id=913392316]
-script = ExtResource("1_1n1x2")
+script = ExtResource("1_7v0go")
 
 [node name="Background" type="TextureRect" parent="." unique_id=667113542]
 offset_right = 1152.0
 offset_bottom = 648.0
 
-[node name="Timer" parent="." unique_id=93331502 instance=ExtResource("3_fli1p")]
+[node name="Timer" parent="." unique_id=93331502 instance=ExtResource("2_abttf")]
 
 [node name="InstructionBg" type="ColorRect" parent="." unique_id=2103152419]
 offset_left = 1296.0
@@ -78,7 +78,7 @@ offset_right = 582.0
 offset_bottom = 455.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/normal_font = ExtResource("4_wwrp0")
+theme_override_fonts/normal_font = ExtResource("3_1qg8j")
 theme_override_font_sizes/normal_font_size = 40
 text = "MEMORIZE THE LISTED MUSIC NOTE LETTERS, THEN TYPE IT OUT!
 
@@ -91,7 +91,7 @@ offset_left = 151.0
 offset_top = 381.0
 offset_right = 435.0
 offset_bottom = 513.0
-texture_normal = ExtResource("8_eyr1m")
+texture_normal = ExtResource("4_tuwxn")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -102,7 +102,7 @@ offset_right = 168.0
 offset_bottom = 468.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("5_w2dmm")
+theme_override_fonts/font = ExtResource("5_17cad")
 theme_override_font_sizes/font_size = 40
 shortcut = SubResource("Shortcut_ra0f0")
 text = "C"
@@ -114,7 +114,7 @@ offset_right = 299.0
 offset_bottom = 470.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("5_w2dmm")
+theme_override_fonts/font = ExtResource("5_17cad")
 theme_override_font_sizes/font_size = 40
 shortcut = SubResource("Shortcut_jokvb")
 text = "C"
@@ -126,7 +126,7 @@ offset_right = 471.0
 offset_bottom = 222.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("5_w2dmm")
+theme_override_fonts/font = ExtResource("5_17cad")
 theme_override_font_sizes/font_size = 40
 shortcut = SubResource("Shortcut_j5rk6")
 text = "D"
@@ -138,7 +138,7 @@ offset_right = 601.0
 offset_bottom = 355.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("5_w2dmm")
+theme_override_fonts/font = ExtResource("5_17cad")
 theme_override_font_sizes/font_size = 40
 shortcut = SubResource("Shortcut_wwrp0")
 text = "A"
@@ -150,7 +150,7 @@ offset_right = 852.0
 offset_bottom = 355.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("5_w2dmm")
+theme_override_fonts/font = ExtResource("5_17cad")
 theme_override_font_sizes/font_size = 40
 shortcut = SubResource("Shortcut_n6hnm")
 text = "A"
@@ -162,7 +162,7 @@ offset_right = 974.0
 offset_bottom = 473.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("5_w2dmm")
+theme_override_fonts/font = ExtResource("5_17cad")
 theme_override_font_sizes/font_size = 40
 keep_pressed_outside = true
 shortcut = SubResource("Shortcut_eyr1m")
