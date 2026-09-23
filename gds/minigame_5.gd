@@ -41,7 +41,7 @@ func _process(delta: float) -> void:
 	_string_strung()
 	if strungOne && strungTwo && strungThree == true:
 		Global.won = true
-		get_tree().change_scene_to_file("res://scenes/level_scene.tscn") # back to intermission
+		Transition.change_scene_to_file("res://scenes/level_scene.tscn") # back to intermission
 	
 	if timer_end:
 		Global.lives -= 1

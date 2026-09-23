@@ -1,7 +1,7 @@
-res://scenes/transition.tscn
-res://scenes/minigame_7.tscn
+res://scenes/minigame_5.tscn
+res://gds/minigame_5.gd
 res://scenes/minigame_8.tscn
-res://sounds/c_trumpet.mp3
+res://gds/minigame_8.gd
+res://scenes/minigame_7.tscn
 res://scenes/level_scene.tscn
 res://gds/timer_screen.gd
-res://gds/minigame_8.gd

@@ -1,6 +1,6 @@
-Button
 TextureRect
 TextureButton
+Button
 CanvasLayer
 Node2D
 AnimationPlayer

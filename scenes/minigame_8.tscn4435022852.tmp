@@ -1,13 +1,13 @@
-[gd_scene format=3 uid="uid://cox3hu8qobf57"]
+[gd_scene format=3 uid="uid://cy4ai44rc4qsj"]
 
-[ext_resource type="Script" uid="uid://ov35u0j1e8d3" path="res://gds/minigame_8.gd" id="1_ol02w"]
-[ext_resource type="Texture2D" uid="uid://3eoeayg0xjmq" path="res://assets/bg.png" id="2_0fn5h"]
-[ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://scenes/timer.tscn" id="2_vuxkx"]
-[ext_resource type="FontFile" uid="uid://v2lc0jgyarh8" path="res://PixelifySans-VariableFont_wght.ttf" id="3_me5al"]
-[ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="4_ol02w"]
-[ext_resource type="Texture2D" uid="uid://b22bcfltv6jse" path="res://assets/bluenote.png" id="4_sren0"]
-[ext_resource type="Texture2D" uid="uid://bwmumxgpujvf4" path="res://assets/trebleclef.png" id="5_2i8f8"]
-[ext_resource type="FontFile" uid="uid://b2q0pxqeuwfe" path="res://BagelFatOne-Regular.ttf" id="9_2i8f8"]
+[ext_resource type="Script" uid="uid://ov35u0j1e8d3" path="res://gds/minigame_8.gd" id="1_7v0go"]
+[ext_resource type="Texture2D" uid="uid://3eoeayg0xjmq" path="res://assets/bg.png" id="2_1qg8j"]
+[ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://scenes/timer.tscn" id="2_abttf"]
+[ext_resource type="FontFile" uid="uid://v2lc0jgyarh8" path="res://PixelifySans-VariableFont_wght.ttf" id="3_1qg8j"]
+[ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="4_tuwxn"]
+[ext_resource type="FontFile" uid="uid://b2q0pxqeuwfe" path="res://BagelFatOne-Regular.ttf" id="5_17cad"]
+[ext_resource type="Texture2D" uid="uid://b22bcfltv6jse" path="res://assets/bluenote.png" id="6_abttf"]
+[ext_resource type="Texture2D" uid="uid://bwmumxgpujvf4" path="res://assets/trebleclef.png" id="7_tuwxn"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_w2dmm"]
 device = -1
@@ -41,125 +41,21 @@ unicode = 103
 [sub_resource type="Shortcut" id="Shortcut_eyr1m"]
 events = [SubResource("InputEventKey_j5rk6")]
 
-[node name="Minigame_7" type="Node2D" unique_id=913392316]
-script = ExtResource("1_ol02w")
+[node name="Minigame_8" type="Node2D" unique_id=913392316]
+script = ExtResource("1_7v0go")
 
 [node name="Background" type="TextureRect" parent="." unique_id=667113542]
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = ExtResource("2_0fn5h")
+texture = ExtResource("2_1qg8j")
 
-[node name="Timer" parent="." unique_id=93331502 instance=ExtResource("2_vuxkx")]
-
-[node name="C" type="TextureButton" parent="." unique_id=1125127928]
-visible = false
-offset_left = 294.0
-offset_top = 370.0
-offset_right = 641.0
-offset_bottom = 754.0
-scale = Vector2(0.5, 0.5)
-shortcut = SubResource("Shortcut_ra0f0")
-texture_normal = ExtResource("4_sren0")
-
-[node name="D" type="TextureButton" parent="." unique_id=1877332271]
-visible = false
-offset_left = 499.0
-offset_top = 77.0
-offset_right = 846.0
-offset_bottom = 461.0
-scale = Vector2(0.5, 0.5)
-shortcut = SubResource("Shortcut_j5rk6")
-texture_normal = ExtResource("4_sren0")
-
-[node name="A" type="TextureButton" parent="." unique_id=517212211]
-visible = false
-offset_left = 734.0
-offset_top = 165.0
-offset_right = 1081.0
-offset_bottom = 549.0
-scale = Vector2(0.5, 0.5)
-shortcut = SubResource("Shortcut_wwrp0")
-texture_normal = ExtResource("4_sren0")
-
-[node name="G" type="TextureButton" parent="." unique_id=528429213]
-visible = false
-offset_left = 962.0
-offset_top = 208.0
-offset_right = 1309.0
-offset_bottom = 592.0
-scale = Vector2(0.5, 0.5)
-keep_pressed_outside = true
-shortcut = SubResource("Shortcut_eyr1m")
-texture_normal = ExtResource("4_sren0")
-stretch_mode = 0
-
-[node name="TrebleClef" type="TextureRect" parent="." unique_id=1943283227]
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("5_2i8f8")
-
-[node name="CText" type="RichTextLabel" parent="." unique_id=442978405]
-visible = false
-offset_left = 325.0
-offset_top = 472.0
-offset_right = 380.0
-offset_bottom = 549.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/normal_font = ExtResource("9_2i8f8")
-theme_override_font_sizes/normal_font_size = 48
-text = "C
-"
-horizontal_alignment = 1
-
-[node name="DText" type="RichTextLabel" parent="." unique_id=1710081748]
-visible = false
-offset_left = 534.0
-offset_top = 182.0
-offset_right = 589.0
-offset_bottom = 259.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/normal_font = ExtResource("9_2i8f8")
-theme_override_font_sizes/normal_font_size = 48
-text = "D
-"
-horizontal_alignment = 1
-
-[node name="AText" type="RichTextLabel" parent="." unique_id=1407410598]
-visible = false
-offset_left = 752.0
-offset_top = 269.0
-offset_right = 842.0
-offset_bottom = 444.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/normal_font = ExtResource("9_2i8f8")
-theme_override_font_sizes/normal_font_size = 48
-text = "A
-
-"
-horizontal_alignment = 1
-
-[node name="GText" type="RichTextLabel" parent="." unique_id=648009614]
-visible = false
-offset_left = 997.0
-offset_top = 313.0
-offset_right = 1052.0
-offset_bottom = 390.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/normal_font = ExtResource("9_2i8f8")
-theme_override_font_sizes/normal_font_size = 48
-text = "G
-"
-horizontal_alignment = 1
+[node name="Timer" parent="." unique_id=93331502 instance=ExtResource("2_abttf")]
 
 [node name="InstructionBg" type="ColorRect" parent="." unique_id=2103152419]
-offset_left = 280.0
-offset_top = 54.0
-offset_right = 883.0
-offset_bottom = 593.0
+offset_left = 1296.0
+offset_top = 31.0
+offset_right = 1899.0
+offset_bottom = 570.0
 color = Color(0.27688348, 0.0006513053, 0.690726, 1)
 
 [node name="Instructions" type="RichTextLabel" parent="InstructionBg" unique_id=1468149387]
@@ -170,7 +66,7 @@ offset_right = 582.0
 offset_bottom = 455.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/normal_font = ExtResource("3_me5al")
+theme_override_fonts/normal_font = ExtResource("3_1qg8j")
 theme_override_font_sizes/normal_font_size = 40
 text = "MEMORIZE THE LISTED MUSIC NOTE LETTERS, THEN TYPE IT OUT!
 
@@ -183,12 +79,108 @@ offset_left = 151.0
 offset_top = 381.0
 offset_right = 435.0
 offset_bottom = 513.0
-texture_normal = ExtResource("4_ol02w")
+texture_normal = ExtResource("4_tuwxn")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="C" type="TextureButton" parent="." unique_id=1125127928]
+offset_left = 294.0
+offset_top = 370.0
+offset_right = 641.0
+offset_bottom = 754.0
+scale = Vector2(0.5, 0.5)
+shortcut = SubResource("Shortcut_ra0f0")
+texture_normal = ExtResource("6_abttf")
+
+[node name="D" type="TextureButton" parent="." unique_id=1877332271]
+offset_left = 499.0
+offset_top = 77.0
+offset_right = 846.0
+offset_bottom = 461.0
+scale = Vector2(0.5, 0.5)
+shortcut = SubResource("Shortcut_j5rk6")
+texture_normal = ExtResource("6_abttf")
+
+[node name="A" type="TextureButton" parent="." unique_id=517212211]
+offset_left = 734.0
+offset_top = 165.0
+offset_right = 1081.0
+offset_bottom = 549.0
+scale = Vector2(0.5, 0.5)
+shortcut = SubResource("Shortcut_wwrp0")
+texture_normal = ExtResource("6_abttf")
+
+[node name="G" type="TextureButton" parent="." unique_id=528429213]
+offset_left = 962.0
+offset_top = 208.0
+offset_right = 1309.0
+offset_bottom = 592.0
+scale = Vector2(0.5, 0.5)
+keep_pressed_outside = true
+shortcut = SubResource("Shortcut_eyr1m")
+texture_normal = ExtResource("6_abttf")
+stretch_mode = 0
+
+[node name="TrebleClef" type="TextureRect" parent="." unique_id=1943283227]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("7_tuwxn")
+
+[node name="CText" type="RichTextLabel" parent="." unique_id=442978405]
+offset_left = 325.0
+offset_top = 472.0
+offset_right = 380.0
+offset_bottom = 549.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("5_17cad")
+theme_override_font_sizes/normal_font_size = 48
+text = "C
+"
+horizontal_alignment = 1
+
+[node name="DText" type="RichTextLabel" parent="." unique_id=1710081748]
+offset_left = 534.0
+offset_top = 182.0
+offset_right = 589.0
+offset_bottom = 259.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("5_17cad")
+theme_override_font_sizes/normal_font_size = 48
+text = "D
+"
+horizontal_alignment = 1
+
+[node name="AText" type="RichTextLabel" parent="." unique_id=1407410598]
+offset_left = 752.0
+offset_top = 269.0
+offset_right = 842.0
+offset_bottom = 444.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("5_17cad")
+theme_override_font_sizes/normal_font_size = 48
+text = "A
+
+"
+horizontal_alignment = 1
+
+[node name="GText" type="RichTextLabel" parent="." unique_id=648009614]
+offset_left = 997.0
+offset_top = 313.0
+offset_right = 1052.0
+offset_bottom = 390.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("5_17cad")
+theme_override_font_sizes/normal_font_size = 48
+text = "G
+"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="InstructionBg/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="C" to="." method="_on_c_pressed"]
 [connection signal="pressed" from="D" to="." method="_on_d_pressed"]
 [connection signal="pressed" from="A" to="." method="_on_a_pressed"]
 [connection signal="pressed" from="G" to="." method="_on_g_pressed"]
-[connection signal="pressed" from="InstructionBg/Start" to="." method="_on_start_pressed"]
