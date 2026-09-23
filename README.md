@@ -7,7 +7,7 @@ To start, just press run!
 ### Controls
 
 - WASD / Arrow keys to move
-- Space to jump
+- Space / W / Up arrow to jump
 - Mouse click to interact with things
 - 1 2 3 on keyboard to press trumpet keys
 - Q E on the bongos
