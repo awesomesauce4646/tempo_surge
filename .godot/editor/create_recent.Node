@@ -1,3 +1,4 @@
+Panel
 TextureRect
 TextureButton
 Button
@@ -11,4 +12,3 @@ RichTextLabel
 Timer
 CollisionShape2D
 Area2D
-Parallax2D

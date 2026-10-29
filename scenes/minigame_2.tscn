@@ -9,6 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="7_eachr"]
 [ext_resource type="Script" uid="uid://4amyffha4f7s" path="res://scenes/buttonHover.gd" id="8_6tcq3"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kptrr"]
+bg_color = Color(0.2784314, 0, 0.6901961, 1)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(0.40285927, 0.19668385, 0.99999994, 1)
+
 [node name="Minigame_2" type="Node2D" unique_id=809752430]
 script = ExtResource("1_dqa6p")
 
@@ -61,19 +69,19 @@ script = ExtResource("4_6tcq3")
 [node name="Timer" parent="." unique_id=93331502 instance=ExtResource("5_6co8m")]
 position = Vector2(16, -4)
 
-[node name="InstructionBg" type="ColorRect" parent="." unique_id=82123844]
-offset_left = 272.0
-offset_top = 53.0
-offset_right = 875.0
-offset_bottom = 592.0
-color = Color(0.27688348, 0.0006513053, 0.690726, 1)
+[node name="InstructionBg" type="Panel" parent="." unique_id=847347550]
+offset_left = 241.0
+offset_top = 26.0
+offset_right = 892.0
+offset_bottom = 616.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kptrr")
 
 [node name="Instructions" type="RichTextLabel" parent="InstructionBg" unique_id=336990947]
 layout_mode = 0
-offset_left = 27.0
-offset_top = -5.0
-offset_right = 584.0
-offset_bottom = 343.0
+offset_left = 48.0
+offset_top = 31.0
+offset_right = 605.0
+offset_bottom = 379.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/normal_font = ExtResource("6_c3ytc")
@@ -86,10 +94,10 @@ horizontal_alignment = 1
 
 [node name="Start" type="TextureButton" parent="InstructionBg" unique_id=1796145942]
 layout_mode = 0
-offset_left = 151.0
-offset_top = 381.0
-offset_right = 435.0
-offset_bottom = 513.0
+offset_left = 186.0
+offset_top = 412.0
+offset_right = 470.0
+offset_bottom = 544.0
 texture_normal = ExtResource("7_eachr")
 ignore_texture_size = true
 stretch_mode = 0

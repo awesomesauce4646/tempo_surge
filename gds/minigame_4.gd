@@ -9,7 +9,7 @@ extends Node2D
 @onready var x6: TextureButton = $Seven
 @onready var x7: TextureButton = $Six
 @onready var x8: TextureButton = $Five
-@onready var instructions: ColorRect = $InstructionBg
+@onready var instructions: Panel = $InstructionBg
 
 const HOVER_MULT := 1.05
 const HOVER_TIME := 0.12
