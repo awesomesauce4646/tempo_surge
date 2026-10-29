@@ -1,4 +1,5 @@
 extends Node2D
+
 @onready var themed_timer: Node2D = $Timer
 @onready var x1: TextureButton = $Three
 @onready var x2: TextureButton = $Four
@@ -10,12 +11,17 @@ extends Node2D
 @onready var x8: TextureButton = $Five
 @onready var instructions: ColorRect = $InstructionBg
 
+const HOVER_MULT := 1.05
+const HOVER_TIME := 0.12
+
 var start = false
 var timer_end = false
 var selected: TextureButton = null
 var pairs = []
 var swapped_state = {} # pair_index -> bool (true = currently swapped)
 var correct_swapped = {} # pair_index -> bool (what "solved" means for that pair)
+var hover_tweens := {}
+var base_scales := {}
 
 func _ready() -> void:
 	pairs = [
@@ -33,12 +39,13 @@ func _ready() -> void:
 		correct_swapped[i] = true
 
 	for btn in [x1, x2, x3, x4, x5, x6, x7, x8]:
+		base_scales[btn] = btn.scale
 		btn.pressed.connect(_on_button_pressed.bind(btn))
-
-
+		btn.mouse_entered.connect(_on_key_hover.bind(btn, true))
+		btn.mouse_exited.connect(_on_key_hover.bind(btn, false))
 
 func _process(delta: float) -> void:
-	if start: 
+	if start:
 		start = false
 		instructions.hide()
 		await themed_timer.Timer(6.0)
@@ -53,6 +60,16 @@ func _process(delta: float) -> void:
 			Transition.change_scene_to_file("res://scenes/lost_game.tscn")
 		else:
 			Transition.change_scene_to_file("res://scenes/level_scene.tscn")
+
+func _on_key_hover(btn: TextureButton, hovering: bool) -> void:
+	btn.pivot_offset = btn.size / 2 # set at hover time so size is final
+	var old = hover_tweens.get(btn)
+	if old and old.is_valid():
+		old.kill()
+	var target: Vector2 = base_scales[btn] * (HOVER_MULT if hovering else 1.0)
+	var t := create_tween()
+	t.tween_property(btn, "scale", target, HOVER_TIME)
+	hover_tweens[btn] = t
 
 func _on_button_pressed(btn: TextureButton) -> void:
 	if selected == null:
@@ -69,6 +86,9 @@ func _on_button_pressed(btn: TextureButton) -> void:
 	if pair_index != -1:
 		_swap_positions(selected, btn)
 		swapped_state[pair_index] = !swapped_state[pair_index]
+		# keys moved, so drop their hover enlargement
+		_on_key_hover(selected, false)
+		_on_key_hover(btn, false)
 		_check_win()
 
 	selected.modulate = Color(1, 1, 1)
@@ -95,7 +115,6 @@ func _check_win() -> void:
 func _on_win() -> void:
 	Global.won = true
 	get_tree().change_scene_to_file("res://scenes/level_scene.tscn")
-
 
 func _on_start_pressed() -> void:
 	start = true

@@ -11,6 +11,9 @@ extends Node2D
 @onready var pointSix: TextureButton = $PointSix
 @onready var instructions: ColorRect = $InstructionBg
 
+const HOVER_MULT := 1.20
+const HOVER_TIME := 0.12
+
 var timer_end = false
 
 var pointOneClick = false
@@ -26,8 +29,12 @@ var strungThree = false
 
 var start = false
 
+var hover_data := {} # btn -> base_scale, center, zoom, tween
+
 func _ready() -> void:
-	pass
+	for btn in [pointOne, pointTwo, pointThree, pointFour, pointFive, pointSix]:
+		btn.mouse_entered.connect(_on_point_hover.bind(btn, true))
+		btn.mouse_exited.connect(_on_point_hover.bind(btn, false))
 
 
 func _process(delta: float) -> void:
@@ -36,13 +43,13 @@ func _process(delta: float) -> void:
 		instructions.hide()
 		await themed_timer.Timer(5.0)
 		#after this is completed...
-		timer_end = true 
+		timer_end = true
 
 	_string_strung()
 	if strungOne && strungTwo && strungThree == true:
 		Global.won = true
 		Transition.change_scene_to_file("res://scenes/level_scene.tscn") # back to intermission
-	
+
 	if timer_end:
 		Global.lives -= 1
 		Global.minigames_done -=1
@@ -50,12 +57,41 @@ func _process(delta: float) -> void:
 		timer_end = false
 
 		if Global.lives == 0:
-			Transition.change_scene_to_file("res://scenes/lost_game.tscn") 
+			Transition.change_scene_to_file("res://scenes/lost_game.tscn")
 		else:
 			Transition.change_scene_to_file("res://scenes/level_scene.tscn") # back to intermission
 
 
-func _string_strung() -> void: 
+# ---------- hover ----------
+
+func _on_point_hover(btn: TextureButton, hovering: bool) -> void:
+	# Captured on first hover so size/scale are final by then
+	if not hover_data.has(btn):
+		hover_data[btn] = {
+			"base_scale": btn.scale,
+			"center": btn.position + (btn.size / 2 * btn.scale).rotated(btn.rotation),
+			"zoom": 1.0,
+			"tween": null,
+		}
+	var d = hover_data[btn]
+	if d.tween and d.tween.is_valid():
+		d.tween.kill()
+	var t := create_tween()
+	t.tween_method(_set_point_zoom.bind(btn), d.zoom, HOVER_MULT if hovering else 1.0, HOVER_TIME)
+	d.tween = t
+
+
+func _set_point_zoom(z: float, btn: TextureButton) -> void:
+	var d = hover_data[btn]
+	d.zoom = z
+	var s: Vector2 = d.base_scale * z
+	btn.scale = s
+	btn.position = d.center - (btn.size / 2 * s).rotated(btn.rotation)
+
+
+# ---------- game logic ----------
+
+func _string_strung() -> void:
 	if pointOneClick && pointTwoClick == true:
 		strungOne = true
 		stringOne.show()

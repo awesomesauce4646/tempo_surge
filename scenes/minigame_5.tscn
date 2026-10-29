@@ -10,6 +10,7 @@
 [ext_resource type="FontFile" uid="uid://v2lc0jgyarh8" path="res://PixelifySans-VariableFont_wght.ttf" id="5_7pr0y"]
 [ext_resource type="Texture2D" uid="uid://c2rqdre2od5wi" path="res://assets/harp_button.png" id="7_puk54"]
 [ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="10_c7se5"]
+[ext_resource type="Script" uid="uid://4amyffha4f7s" path="res://scenes/buttonHover.gd" id="11_puk54"]
 
 [node name="Minigame_5" type="Node2D" unique_id=2080477134]
 script = ExtResource("1_wi4wl")
@@ -143,6 +144,7 @@ offset_bottom = 513.0
 texture_normal = ExtResource("10_c7se5")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("11_puk54")
 
 [connection signal="pressed" from="PointOne" to="." method="_on_point_one_pressed"]
 [connection signal="pressed" from="PointTwo" to="." method="_on_point_two_pressed"]

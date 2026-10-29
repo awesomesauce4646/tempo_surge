@@ -11,6 +11,7 @@ extends Node2D
 @onready var thirdText: RichTextLabel = $AText
 @onready var fourthText: RichTextLabel = $GText
 
+const FADE_TIME := 0.4
 
 var stepOne = false
 var stepTwo = false
@@ -48,34 +49,22 @@ func _process(delta: float) -> void:
 		fourthText.show()
 		await themed_timer.Timer(1)
 		#after this is completed...
-		firstNote.hide()
-		secondNote.hide()
-		thirdNote.hide()
-		fourthNote.hide()
-		firstText.hide()
-		secondText.hide()
-		thirdText.hide()
-		fourthText.hide()
+		await _fade_out_notes()
 		stepOne = true
 		await themed_timer.Timer(3.0)
-		timer_end = true 
+		timer_end = true
 
-
-
-
-	
 	cPressed = Input.is_action_pressed("c")
 	dPressed = Input.is_action_pressed("d")
 	aPressed = Input.is_action_pressed("a")
 	gPressed = Input.is_action_pressed("g")
 
-
 	_keys()
-		
+
 	if (won == true):
 		Global.won = true
 		Transition.change_scene_to_file("res://scenes/level_scene.tscn") # go back to the intermission scene
-	
+
 	if timer_end:
 		Global.lives -= 1
 		Global.minigames_done -=1
@@ -83,14 +72,27 @@ func _process(delta: float) -> void:
 		timer_end = false
 
 		if Global.lives == 0:
-			Transition.change_scene_to_file("res://scenes/lost_game.tscn") 
+			Transition.change_scene_to_file("res://scenes/lost_game.tscn")
 		else:
 			Transition.change_scene_to_file("res://scenes/level_scene.tscn") # back to intermission
 
 
+func _fade_out_notes() -> void:
+	var items = [
+		firstNote, secondNote, thirdNote, fourthNote,
+		firstText, secondText, thirdText, fourthText,
+	]
+	var tween := create_tween().set_parallel(true)
+	for item in items:
+		tween.tween_property(item, "modulate:a", 0.0, FADE_TIME)
+	await tween.finished
+	for item in items:
+		item.hide()
+		item.modulate.a = 1.0 # reset so show() works later when the player types it
+
+
 func _keys() -> void:
 
-		
 	if cPressed && !dPressed && !aPressed && !gPressed && !endGame && stepOne && !stepTwo && !stepThree &&  !stepFour:
 		firstNote.show()
 		cPressed = false

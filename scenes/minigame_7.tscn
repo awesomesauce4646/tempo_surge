@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="4_ol02w"]
 [ext_resource type="Texture2D" uid="uid://b22bcfltv6jse" path="res://assets/bluenote.png" id="4_sren0"]
 [ext_resource type="Texture2D" uid="uid://bwmumxgpujvf4" path="res://assets/trebleclef.png" id="5_2i8f8"]
+[ext_resource type="Script" uid="uid://4amyffha4f7s" path="res://scenes/buttonHover.gd" id="9_0fn5h"]
 [ext_resource type="FontFile" uid="uid://b2q0pxqeuwfe" path="res://BagelFatOne-Regular.ttf" id="9_2i8f8"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_w2dmm"]
@@ -164,15 +165,15 @@ color = Color(0.27688348, 0.0006513053, 0.690726, 1)
 
 [node name="Instructions" type="RichTextLabel" parent="InstructionBg" unique_id=1468149387]
 layout_mode = 0
-offset_left = 25.0
-offset_top = 107.0
-offset_right = 582.0
-offset_bottom = 455.0
+offset_left = 24.0
+offset_top = 54.0
+offset_right = 581.0
+offset_bottom = 402.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/normal_font = ExtResource("3_me5al")
 theme_override_font_sizes/normal_font_size = 40
-text = "MEMORIZE THE LISTED MUSIC NOTE LETTERS, THEN TYPE IT OUT!
+text = "MEMORIZE THE LISTED MUSIC NOTE LETTERS BEFORE IT DISAPPEARS, THEN REPEAT IT BY TYPING IT OUT!
 
 CONTROLS: A, B, C, D, E, F, G"
 horizontal_alignment = 1
@@ -186,6 +187,7 @@ offset_bottom = 513.0
 texture_normal = ExtResource("4_ol02w")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("9_0fn5h")
 
 [connection signal="pressed" from="C" to="." method="_on_c_pressed"]
 [connection signal="pressed" from="D" to="." method="_on_d_pressed"]
