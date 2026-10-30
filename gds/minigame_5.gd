@@ -9,7 +9,7 @@ extends Node2D
 @onready var pointFour: TextureButton = $PointFour
 @onready var pointFive: TextureButton = $PointFive
 @onready var pointSix: TextureButton = $PointSix
-@onready var instructions: Panel = $InstructionBg
+@onready var instructions: TextureRect = $InstructionBg
 @onready var harpStrung: AudioStreamPlayer2D = $HarpStrung
 @onready var wrongString: AudioStreamPlayer2D = $WrongHarp
 
@@ -55,7 +55,7 @@ func _process(delta: float) -> void:
 		start = false
 		playing = true
 		instructions.hide()
-		await themed_timer.Timer(5.0 + Global.extra_time)
+		await themed_timer.Timer(8.0 + Global.extra_time)
 		#after this is completed...
 		timer_end = true
 

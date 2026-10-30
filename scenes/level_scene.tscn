@@ -104,3 +104,16 @@ expand_mode = 1
 
 [node name="Control" type="Control" parent="NoteContainer" unique_id=585934474]
 layout_mode = 2
+
+[node name="StruggleText" type="RichTextLabel" parent="." unique_id=1874579482]
+visible = false
+offset_left = 114.0
+offset_top = 588.0
+offset_right = 1041.0
+offset_bottom = 644.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("3_c8xsp")
+theme_override_font_sizes/normal_font_size = 45
+text = "STRUGGLING? TRY CHILL MODE IN OPTIONS!"
+horizontal_alignment = 1

@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="4_ol02w"]
 [ext_resource type="Texture2D" uid="uid://b22bcfltv6jse" path="res://assets/bluenote.png" id="4_sren0"]
 [ext_resource type="Texture2D" uid="uid://bwmumxgpujvf4" path="res://assets/trebleclef.png" id="5_2i8f8"]
+[ext_resource type="Texture2D" uid="uid://ihmy2ejhu1as" path="res://assets/instructions-card.png" id="7_1av5u"]
 [ext_resource type="Script" uid="uid://4amyffha4f7s" path="res://scenes/buttonHover.gd" id="9_0fn5h"]
 [ext_resource type="FontFile" uid="uid://b2q0pxqeuwfe" path="res://BagelFatOne-Regular.ttf" id="9_2i8f8"]
 [ext_resource type="AudioStream" uid="uid://dip0wq0tyusbj" path="res://sounds/pickUp.mp3" id="10_sren0"]
@@ -43,14 +44,6 @@ unicode = 103
 
 [sub_resource type="Shortcut" id="Shortcut_eyr1m"]
 events = [SubResource("InputEventKey_j5rk6")]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7304a"]
-bg_color = Color(0.2784314, 0, 0.6901961, 1)
-border_width_left = 15
-border_width_top = 15
-border_width_right = 15
-border_width_bottom = 15
-border_color = Color(0.40392157, 0.19607843, 1, 1)
 
 [node name="Minigame_7" type="Node2D" unique_id=913392316]
 script = ExtResource("1_ol02w")
@@ -166,19 +159,19 @@ text = "G
 "
 horizontal_alignment = 1
 
-[node name="InstructionBg" type="Panel" parent="." unique_id=866488993]
+[node name="InstructionBg" type="TextureRect" parent="." unique_id=2119879370]
 offset_left = 250.0
 offset_top = 29.0
 offset_right = 909.0
 offset_bottom = 629.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_7304a")
+texture = ExtResource("7_1av5u")
 
 [node name="Instructions" type="RichTextLabel" parent="InstructionBg" unique_id=1468149387]
 layout_mode = 0
-offset_left = 50.0
-offset_top = 78.0
-offset_right = 607.0
-offset_bottom = 426.0
+offset_left = 78.0
+offset_top = 73.0
+offset_right = 635.0
+offset_bottom = 421.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/normal_font = ExtResource("3_me5al")
@@ -190,10 +183,10 @@ horizontal_alignment = 1
 
 [node name="Start" type="TextureButton" parent="InstructionBg" unique_id=1932501601]
 layout_mode = 0
-offset_left = 177.0
-offset_top = 405.0
-offset_right = 461.0
-offset_bottom = 537.0
+offset_left = 205.0
+offset_top = 400.0
+offset_right = 489.0
+offset_bottom = 532.0
 texture_normal = ExtResource("4_ol02w")
 ignore_texture_size = true
 stretch_mode = 0

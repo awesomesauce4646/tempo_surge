@@ -7,7 +7,7 @@ extends Node2D
 @onready var leftSound: AudioStreamPlayer2D = $Left
 @onready var rightSound: AudioStreamPlayer2D = $Right
 
-@onready var instructions: Panel = $InstructionBg
+@onready var instructions: TextureRect = $InstructionBg
 
 # --- hit feedback settings ---
 const HIT_SQUASH := 0.95                       # lower = bigger press
