@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var themed_timer: Node2D = $Timer
-@onready var instructions: ColorRect = $InstructionBg
+@onready var instructions: Panel = $InstructionBg
 @onready var firstNote: TextureButton = $C
 @onready var secondNote: TextureButton = $D
 @onready var thirdNote: TextureButton = $A
@@ -47,11 +47,11 @@ func _process(delta: float) -> void:
 		secondText.show()
 		thirdText.show()
 		fourthText.show()
-		await themed_timer.Timer(1)
+		await themed_timer.Timer(1 + Global.extra_time)
 		#after this is completed...
 		await _fade_out_notes()
 		stepOne = true
-		await themed_timer.Timer(3.0)
+		await themed_timer.Timer(3.0 + Global.extra_time)
 		timer_end = true
 
 	cPressed = Input.is_action_pressed("c")

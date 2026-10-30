@@ -13,8 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://0y3golswfj2d" path="res://assets/brick6.png" id="7_6n0yg"]
 [ext_resource type="Texture2D" uid="uid://7swidhx2bj4t" path="res://assets/brick4.png" id="8_2gcu5"]
 [ext_resource type="Texture2D" uid="uid://co10aouc6m57p" path="res://assets/brick5.png" id="9_g4fmr"]
+[ext_resource type="Script" uid="uid://cuqydm3t0v7x0" path="res://scenes/guitarPickCentering.gd" id="12_vkn2u"]
 [ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="14_2gcu5"]
 [ext_resource type="Script" uid="uid://4amyffha4f7s" path="res://scenes/buttonHover.gd" id="15_g4fmr"]
+[ext_resource type="AudioStream" uid="uid://dip0wq0tyusbj" path="res://sounds/pickUp.mp3" id="16_b5m2w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7304a"]
 size = Vector2(1311.3125, 37)
@@ -59,6 +61,20 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_7304a"]
 radius = 46.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f50c0"]
+size = Vector2(274.78125, 228.49707)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7304a"]
+bg_color = Color(0.2784314, 0, 0.6901961, 1)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(0.40392157, 0.19607843, 1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kptrr"]
+size = Vector2(27, 686)
+
 [node name="Minigame_1" type="Node2D" unique_id=1202186254]
 script = ExtResource("1_j1cg4")
 
@@ -98,9 +114,6 @@ stretch_mode = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=410771953]
 position = Vector2(1420, 447)
 shape = SubResource("RectangleShape2D_7304a")
-
-[node name="Player" parent="." unique_id=1483980912 instance=ExtResource("3_xpvfh")]
-position = Vector2(157, 464)
 
 [node name="Platform3" type="StaticBody2D" parent="." unique_id=1700724851]
 
@@ -172,6 +185,7 @@ offset_top = 4.0
 offset_right = 80.0
 offset_bottom = 87.0
 texture = ExtResource("5_oxfl2")
+script = ExtResource("12_vkn2u")
 
 [node name="animation" type="AnimationPlayer" parent="GuitarPick" unique_id=710810341]
 libraries/ = SubResource("AnimationLibrary_or1ld")
@@ -192,6 +206,7 @@ offset_top = 4.0
 offset_right = 80.0
 offset_bottom = 87.0
 texture = ExtResource("5_oxfl2")
+script = ExtResource("12_vkn2u")
 metadata/_edit_use_anchors_ = true
 
 [node name="animation" type="AnimationPlayer" parent="GuitarPick2" unique_id=2006125585]
@@ -213,6 +228,7 @@ offset_top = 4.0
 offset_right = 80.0
 offset_bottom = 87.0
 texture = ExtResource("5_oxfl2")
+script = ExtResource("12_vkn2u")
 
 [node name="animation" type="AnimationPlayer" parent="GuitarPick3" unique_id=1464023611]
 libraries/ = SubResource("AnimationLibrary_or1ld")
@@ -227,6 +243,9 @@ shape = SubResource("CircleShape2D_7304a")
 [node name="Timer" parent="." unique_id=93331502 instance=ExtResource("6_1digs")]
 position = Vector2(16, -4)
 
+[node name="Player" parent="." unique_id=1483980912 instance=ExtResource("3_xpvfh")]
+position = Vector2(157, 464)
+
 [node name="Barrier" type="StaticBody2D" parent="." unique_id=637672580]
 position = Vector2(-1272.0001, -89.00001)
 scale = Vector2(0.9026325, 1.0206088)
@@ -240,23 +259,24 @@ offset_bottom = 616.0
 texture = ExtResource("8_2gcu5")
 stretch_mode = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier" unique_id=1593467949]
-position = Vector2(2314.3418, 542.81323)
-shape = SubResource("RectangleShape2D_7304a")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier" unique_id=1098047116]
+position = Vector2(1810.2606, 522.2373)
+scale = Vector2(0.9999999, 0.9999998)
+shape = SubResource("RectangleShape2D_f50c0")
 
-[node name="InstructionBg" type="ColorRect" parent="." unique_id=1095769498]
-offset_left = 272.0
-offset_top = 53.0
-offset_right = 875.0
-offset_bottom = 592.0
-color = Color(0.27688348, 0.0006513053, 0.690726, 1)
+[node name="InstructionBg" type="Panel" parent="." unique_id=2011769772]
+offset_left = 238.0
+offset_top = 18.0
+offset_right = 909.0
+offset_bottom = 637.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7304a")
 
 [node name="Instructions" type="RichTextLabel" parent="InstructionBg" unique_id=290456941]
 layout_mode = 0
-offset_left = 22.0
-offset_top = 27.0
-offset_right = 579.0
-offset_bottom = 375.0
+offset_left = 59.0
+offset_top = 75.0
+offset_right = 616.0
+offset_bottom = 423.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/normal_font = ExtResource("6_vc5od")
@@ -268,14 +288,33 @@ horizontal_alignment = 1
 
 [node name="Start" type="TextureButton" parent="InstructionBg" unique_id=1801364449]
 layout_mode = 0
-offset_left = 151.0
-offset_top = 381.0
-offset_right = 435.0
-offset_bottom = 513.0
+offset_left = 188.0
+offset_top = 429.0
+offset_right = 472.0
+offset_bottom = 561.0
 texture_normal = ExtResource("14_2gcu5")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("15_g4fmr")
+
+[node name="PickUp" type="AudioStreamPlayer2D" parent="." unique_id=1197137768]
+position = Vector2(238, 18)
+stream = ExtResource("16_b5m2w")
+pitch_scale = 1.27
+
+[node name="Area2D" type="StaticBody2D" parent="." unique_id=1661020752]
+position = Vector2(1034, 78)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2125038254]
+position = Vector2(-1127, 262)
+shape = SubResource("RectangleShape2D_kptrr")
+
+[node name="Area2D2" type="StaticBody2D" parent="." unique_id=1553907966]
+position = Vector2(2426, 42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1598901278]
+position = Vector2(-1127, 262)
+shape = SubResource("RectangleShape2D_kptrr")
 
 [connection signal="note_collected" from="GuitarPick" to="." method="_on_guitar_pick_note_collected"]
 [connection signal="note_collected" from="GuitarPick2" to="." method="_on_guitar_pick_2_note_collected"]

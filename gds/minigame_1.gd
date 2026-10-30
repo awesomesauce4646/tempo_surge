@@ -1,7 +1,9 @@
 extends Node2D
 @onready var themed_timer: Node2D = $Timer
 @onready var barrier: StaticBody2D = $Barrier
-@onready var instructions: ColorRect = $InstructionBg
+@onready var instructions: Panel = $InstructionBg
+
+
 var start = false
 
 
@@ -21,7 +23,7 @@ func _process(delta: float) -> void: # running every frame brochacho
 		instructions.hide()
 		barrier.free()
 		start = false
-		await themed_timer.Timer(9) #accessing a function from this node
+		await themed_timer.Timer(9.7 + Global.extra_time) #accessing a function from this node
 		#after this is compeleted...
 		timer_end = true # now we're saying "oh ye you ran out of time"
 	if note_collected == 3: # the double equals is just an argument asking if it's the same, with "=" it'll give an error

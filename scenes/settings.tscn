@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c6c8hk8yan1wx" path="res://assets/music_off.png.png.png" id="4_es4n0"]
 [ext_resource type="Texture2D" uid="uid://fc8k6p0cru1v" path="res://assets/options_tempo.png.png" id="5_es4n0"]
 [ext_resource type="Script" uid="uid://4amyffha4f7s" path="res://scenes/buttonHover.gd" id="5_gis3k"]
+[ext_resource type="Texture2D" uid="uid://busmf2ed63wrb" path="res://assets/chill_tempo.png" id="7_83j8s"]
 
 [node name="Settings" type="Node2D" unique_id=1816991760]
 script = ExtResource("1_f4mfi")
@@ -21,22 +22,31 @@ texture = ExtResource("3_es4n0")
 expand_mode = 1
 
 [node name="MusicToggle" type="TextureButton" parent="." unique_id=414059727]
-offset_left = 49.0
-offset_top = 278.0
-offset_right = 512.0
-offset_bottom = 557.0
+offset_left = 15.0
+offset_top = 387.0
+offset_right = 379.0
+offset_bottom = 567.0
 texture_normal = ExtResource("4_es4n0")
 stretch_mode = 0
 script = ExtResource("5_gis3k")
 
 [node name="Back" type="TextureButton" parent="." unique_id=546769291]
-offset_left = 601.0
-offset_top = 282.0
-offset_right = 1044.0
-offset_bottom = 560.0
+offset_left = 771.0
+offset_top = 387.0
+offset_right = 1135.0
+offset_bottom = 567.0
 texture_normal = ExtResource("5_es4n0")
 stretch_mode = 0
 script = ExtResource("5_gis3k")
 
+[node name="ChillMode" type="TextureButton" parent="." unique_id=590611576]
+offset_left = 396.0
+offset_top = 390.0
+offset_right = 760.0
+offset_bottom = 570.0
+texture_normal = ExtResource("7_83j8s")
+script = ExtResource("5_gis3k")
+
 [connection signal="pressed" from="MusicToggle" to="." method="_on_music_toggle_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="ChillMode" to="." method="_on_chill_mode_pressed"]

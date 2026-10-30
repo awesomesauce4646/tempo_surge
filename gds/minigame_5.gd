@@ -9,7 +9,7 @@ extends Node2D
 @onready var pointFour: TextureButton = $PointFour
 @onready var pointFive: TextureButton = $PointFive
 @onready var pointSix: TextureButton = $PointSix
-@onready var instructions: ColorRect = $InstructionBg
+@onready var instructions: Panel = $InstructionBg
 
 const HOVER_MULT := 1.20
 const HOVER_TIME := 0.12
@@ -41,7 +41,7 @@ func _process(delta: float) -> void:
 	if start:
 		start = false
 		instructions.hide()
-		await themed_timer.Timer(5.0)
+		await themed_timer.Timer(5.0 + Global.extra_time)
 		#after this is completed...
 		timer_end = true
 

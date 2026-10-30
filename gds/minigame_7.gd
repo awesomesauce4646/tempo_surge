@@ -7,7 +7,7 @@ extends Node2D
 @onready var leftSound: AudioStreamPlayer2D = $Left
 @onready var rightSound: AudioStreamPlayer2D = $Right
 
-@onready var instructions: ColorRect = $InstructionBg
+@onready var instructions: Panel = $InstructionBg
 
 # --- hit feedback settings ---
 const HIT_SQUASH := 0.95                       # lower = bigger press
@@ -50,7 +50,7 @@ func _process(delta: float) -> void:
 		playing = true
 		instructions.hide()
 		keyOne.modulate = Color(0.373, 1.0, 0.537, 1.0)
-		await themed_timer.Timer(6.0)
+		await themed_timer.Timer(6.0 + Global.extra_time)
 		#after this is completed...
 		timer_end = true
 

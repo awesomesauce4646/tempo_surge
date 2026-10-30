@@ -2,6 +2,7 @@ extends TextureButton
 @onready var parent = $".."
 
 func _ready() -> void:
+	pivot_offset = size / 2
 	position = Vector2(
 		parent.rng.randf_range(0.0, 950.0),
 		parent.rng.randf_range(0.0, 420.0)

@@ -12,6 +12,14 @@
 [ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="10_c7se5"]
 [ext_resource type="Script" uid="uid://4amyffha4f7s" path="res://scenes/buttonHover.gd" id="11_puk54"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7304a"]
+bg_color = Color(0.2784314, 0, 0.6901961, 1)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(0.40392157, 0.19607843, 1, 1)
+
 [node name="Minigame_5" type="Node2D" unique_id=2080477134]
 script = ExtResource("1_wi4wl")
 
@@ -113,19 +121,19 @@ scale = Vector2(1.1163951, 1.1845915)
 texture_normal = ExtResource("7_puk54")
 stretch_mode = 0
 
-[node name="InstructionBg" type="ColorRect" parent="." unique_id=1855719636]
-offset_left = 272.0
-offset_top = 53.0
-offset_right = 875.0
-offset_bottom = 592.0
-color = Color(0.27688348, 0.0006513053, 0.690726, 1)
+[node name="InstructionBg" type="Panel" parent="." unique_id=1122279414]
+offset_left = 257.0
+offset_top = 22.0
+offset_right = 897.0
+offset_bottom = 625.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7304a")
 
 [node name="Instructions" type="RichTextLabel" parent="InstructionBg" unique_id=875878094]
 layout_mode = 0
-offset_left = 12.0
-offset_top = 22.0
-offset_right = 591.0
-offset_bottom = 373.0
+offset_left = 33.0
+offset_top = 56.0
+offset_right = 612.0
+offset_bottom = 407.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/normal_font = ExtResource("5_7pr0y")
@@ -137,10 +145,10 @@ horizontal_alignment = 1
 
 [node name="Start" type="TextureButton" parent="InstructionBg" unique_id=1554335050]
 layout_mode = 0
-offset_left = 151.0
-offset_top = 381.0
-offset_right = 435.0
-offset_bottom = 513.0
+offset_left = 172.0
+offset_top = 427.0
+offset_right = 456.0
+offset_bottom = 559.0
 texture_normal = ExtResource("10_c7se5")
 ignore_texture_size = true
 stretch_mode = 0

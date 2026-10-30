@@ -122,17 +122,19 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_7304a")
 
 [node name="Instructions" type="RichTextLabel" parent="InstructionBg" unique_id=1192304269]
 layout_mode = 0
-offset_left = 63.0
-offset_top = 69.0
-offset_right = 620.0
-offset_bottom = 417.0
+offset_left = 48.0
+offset_top = 47.0
+offset_right = 647.0
+offset_bottom = 427.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/normal_font = ExtResource("7_s0say")
-theme_override_font_sizes/normal_font_size = 40
-text = "SWAP THE KEYS IN TALLEST TO SHORTEST ORDER, FROM LEFT TO RIGHT. ONLY CORRECT PAIR SWAPS WORK!
+theme_override_font_sizes/normal_font_size = 34
+theme_override_font_sizes/bold_font_size = 16
+text = "SWAP THE KEYS IN TALLEST TO SHORTEST ORDER, FROM LEFT TO RIGHT. ONLY CORRECT PAIR SWAPS WORK! CLICK ONE AND THEN CLICK ANOTHER TO SWAP.
 
-CONTROLS: LEFT MOUSE CLICK"
+CONTROLS: LEFT MOUSE CLICK
+(NO DRAGGING)"
 horizontal_alignment = 1
 
 [node name="Start" type="TextureButton" parent="InstructionBg" unique_id=390575612]

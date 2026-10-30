@@ -9,7 +9,7 @@ extends Node2D
 @onready var cNote: AudioStreamPlayer2D = $C
 @onready var dNote: AudioStreamPlayer2D = $D
 @onready var textHi: RichTextLabel = $RichTextLabel
-@onready var instructions: ColorRect = $InstructionBg
+@onready var instructions: Panel = $InstructionBg
 
 var stepOne = false
 var stepTwo = false
@@ -36,7 +36,7 @@ func _process(delta: float) -> void:
 		instructions.hide()
 		keyOne.modulate = Color(0.373, 1.0, 0.537, 1.0)
 		keyThree.modulate = Color(0.373, 1.0, 0.537, 1.0)
-		await themed_timer.Timer(6.0)
+		await themed_timer.Timer(6.0 + Global.extra_time)
 		#after this is completed...
 		timer_end = true 
 	

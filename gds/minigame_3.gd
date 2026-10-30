@@ -1,7 +1,7 @@
 extends Node2D
 @onready var themed_timer: Node2D = $Timer
 @onready var info: RichTextLabel = $RichTextLabel
-@onready var instructions: ColorRect = $InstructionBg
+@onready var instructions: Panel = $InstructionBg
 
 var buttons_pressed := 0
 var timer_end = false
@@ -18,7 +18,7 @@ func _process(delta: float) -> void:
 		instructions.hide()
 		start = false
 		info.show()
-		await themed_timer.Timer(4.5)
+		await themed_timer.Timer(4.5 + Global.extra_time)
 		#after this is completed...
 		timer_end = true 
 	
