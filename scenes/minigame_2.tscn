@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://v2lc0jgyarh8" path="res://PixelifySans-VariableFont_wght.ttf" id="6_c3ytc"]
 [ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="7_eachr"]
 [ext_resource type="Script" uid="uid://4amyffha4f7s" path="res://scenes/buttonHover.gd" id="8_6tcq3"]
+[ext_resource type="AudioStream" uid="uid://ccafd551xwxwq" path="res://sounds/note.mp3" id="9_6co8m"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kptrr"]
 bg_color = Color(0.2784314, 0, 0.6901961, 1)
@@ -102,6 +103,9 @@ texture_normal = ExtResource("7_eachr")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("8_6tcq3")
+
+[node name="SoundEffect" type="AudioStreamPlayer2D" parent="." unique_id=355622952]
+stream = ExtResource("9_6co8m")
 
 [connection signal="pressed" from="Button_1" to="Button_1" method="_on_pressed"]
 [connection signal="pressed" from="Button_2" to="Button_2" method="_on_pressed"]

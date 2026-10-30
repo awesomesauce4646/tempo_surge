@@ -10,28 +10,41 @@ extends Node2D
 @onready var pointFive: TextureButton = $PointFive
 @onready var pointSix: TextureButton = $PointSix
 @onready var instructions: Panel = $InstructionBg
+@onready var harpStrung: AudioStreamPlayer2D = $HarpStrung
+@onready var wrongString: AudioStreamPlayer2D = $WrongHarp
+
 
 const HOVER_MULT := 1.20
 const HOVER_TIME := 0.12
+const SELECT_COLOR := Color(0.373, 1.0, 0.537, 1.0)
+const WRONG_START := 0.17 # skips the silence at the start of harp-boing-1.mp3
+const WIN_DELAY := 0.5 # lets the last string sound ring out before the scene changes
 
 var timer_end = false
-
-var pointOneClick = false
-var pointTwoClick = false
-var pointThreeClick = false
-var pointFourClick = false
-var pointFiveClick = false
-var pointSixClick = false
-
-var strungOne = false
-var strungTwo = false
-var strungThree = false
-
 var start = false
+var playing = false
+var won = false
+var finished = false
+
+var selected: TextureButton = null # the point waiting for its partner
+var partners := {} # point -> the point it should connect to
+var strings := {} # point -> the string that appears when its pair connects
+var done := {} # points that are already connected
+var strung_count := 0
 
 var hover_data := {} # btn -> base_scale, center, zoom, tween
 
 func _ready() -> void:
+	partners = {
+		pointOne: pointTwo, pointTwo: pointOne,
+		pointThree: pointFour, pointFour: pointThree,
+		pointFive: pointSix, pointSix: pointFive,
+	}
+	strings = {
+		pointOne: stringOne, pointTwo: stringOne,
+		pointThree: stringTwo, pointFour: stringTwo,
+		pointFive: stringThree, pointSix: stringThree,
+	}
 	for btn in [pointOne, pointTwo, pointThree, pointFour, pointFive, pointSix]:
 		btn.mouse_entered.connect(_on_point_hover.bind(btn, true))
 		btn.mouse_exited.connect(_on_point_hover.bind(btn, false))
@@ -40,17 +53,19 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if start:
 		start = false
+		playing = true
 		instructions.hide()
 		await themed_timer.Timer(5.0 + Global.extra_time)
 		#after this is completed...
 		timer_end = true
 
-	_string_strung()
-	if strungOne && strungTwo && strungThree == true:
+	if won and not finished:
+		finished = true
 		Global.won = true
+		await get_tree().create_timer(WIN_DELAY).timeout
 		Transition.change_scene_to_file("res://scenes/level_scene.tscn") # back to intermission
 
-	if timer_end:
+	if timer_end and not won:
 		Global.lives -= 1
 		Global.minigames_done -=1
 		Global.won = false
@@ -91,111 +106,58 @@ func _set_point_zoom(z: float, btn: TextureButton) -> void:
 
 # ---------- game logic ----------
 
-func _string_strung() -> void:
-	if pointOneClick && pointTwoClick == true:
-		strungOne = true
-		stringOne.show()
-	if pointThreeClick && pointFourClick == true:
-		strungTwo = true
-		stringTwo.show()
-	if pointFiveClick && pointSixClick == true:
-		strungThree = true
-		stringThree.show()
+func _point_pressed(btn: TextureButton) -> void:
+	if not playing or won:
+		return # ignore clicks while the instructions are up or after winning
+	if done.has(btn):
+		return # already part of a finished string
+
+	# first click: pick a point
+	if selected == null:
+		selected = btn
+		btn.modulate = SELECT_COLOR
+		return
+
+	# clicked the same point again: deselect
+	if selected == btn:
+		btn.modulate = Color.WHITE
+		selected = null
+		return
+
+	# second click: is it the matching point?
+	if partners[selected] == btn:
+		strings[btn].show()
+		harpStrung.play()
+		done[selected] = true
+		done[btn] = true
+		btn.modulate = SELECT_COLOR # both stay green once connected
+		selected = null
+		strung_count += 1
+		if strung_count >= 3:
+			won = true
+	else:
+		wrongString.play(WRONG_START)
+		selected.modulate = Color.WHITE
+		selected = null
 
 
 func _on_point_one_pressed() -> void:
-	pointOneClick = !pointOneClick
-	if (pointOneClick == true):
-		pointOne.modulate = Color(0.373, 1.0, 0.537, 1.0)
-		pointThree.modulate = Color(1,1,1,1)
-		pointFour.modulate = Color(1,1,1,1)
-		pointFive.modulate = Color(1,1,1,1)
-		pointSix.modulate = Color(1,1,1,1)
-	else:
-		pointOne.modulate = Color(1,1,1,1)
-	pointThreeClick = false
-	pointFourClick = false
-	pointFiveClick = false
-	pointSixClick = false
-
+	_point_pressed(pointOne)
 
 func _on_point_two_pressed() -> void:
-	pointTwoClick = !pointTwoClick
-	if (pointTwoClick == true):
-		pointTwo.modulate = Color(0.373, 1.0, 0.537, 1.0)
-		pointThree.modulate = Color(1,1,1,1)
-		pointFour.modulate = Color(1,1,1,1)
-		pointFive.modulate = Color(1,1,1,1)
-		pointSix.modulate = Color(1,1,1,1)
-	else:
-		pointTwo.modulate = Color(1,1,1,1)
-	pointThreeClick = false
-	pointFourClick = false
-	pointFiveClick = false
-	pointSixClick = false
-
+	_point_pressed(pointTwo)
 
 func _on_point_three_pressed() -> void:
-	pointThreeClick = !pointThreeClick
-	if (pointThreeClick == true):
-		pointThree.modulate = Color(0.373, 1.0, 0.537, 1.0)
-		pointOne.modulate = Color(1,1,1,1)
-		pointTwo.modulate = Color(1,1,1,1)
-		pointFive.modulate = Color(1,1,1,1)
-		pointSix.modulate = Color(1,1,1,1)
-	else:
-		pointThree.modulate = Color(1,1,1,1)
-	pointOneClick = false
-	pointTwoClick = false
-	pointFiveClick = false
-	pointSixClick = false
+	_point_pressed(pointThree)
 
 func _on_point_four_pressed() -> void:
-	pointFourClick = !pointFourClick
-	if (pointFourClick == true):
-		pointFour.modulate = Color(0.373, 1.0, 0.537, 1.0)
-		pointOne.modulate = Color(1,1,1,1)
-		pointTwo.modulate = Color(1,1,1,1)
-		pointFive.modulate = Color(1,1,1,1)
-		pointSix.modulate = Color(1,1,1,1)
-	else:
-		pointFour.modulate = Color(1,1,1,1)
-	pointOneClick = false
-	pointTwoClick = false
-	pointFiveClick = false
-	pointSixClick = false
-
+	_point_pressed(pointFour)
 
 func _on_point_five_pressed() -> void:
-	pointFiveClick = !pointFiveClick
-	if (pointFiveClick == true):
-		pointFive.modulate = Color(0.373, 1.0, 0.537, 1.0)
-		pointOne.modulate = Color(1,1,1,1)
-		pointTwo.modulate = Color(1,1,1,1)
-		pointFour.modulate = Color(1,1,1,1)
-		pointThree.modulate = Color(1,1,1,1)
-	else:
-		pointFive.modulate = Color(1,1,1,1)
-	pointOneClick = false
-	pointTwoClick = false
-	pointThreeClick = false
-	pointFourClick = false
-
+	_point_pressed(pointFive)
 
 func _on_point_six_pressed() -> void:
-	pointSixClick = !pointSixClick
-	if (pointSixClick == true):
-		pointSix.modulate = Color(0.373, 1.0, 0.537, 1.0)
-		pointOne.modulate = Color(1,1,1,1)
-		pointTwo.modulate = Color(1,1,1,1)
-		pointFour.modulate = Color(1,1,1,1)
-		pointThree.modulate = Color(1,1,1,1)
-	else:
-		pointSix.modulate = Color(1,1,1,1)
-	pointOneClick = false
-	pointTwoClick = false
-	pointThreeClick = false
-	pointFourClick = false
+	_point_pressed(pointSix)
 
 
 func _on_start_pressed() -> void:

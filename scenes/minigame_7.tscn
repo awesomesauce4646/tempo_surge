@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://bwmumxgpujvf4" path="res://assets/trebleclef.png" id="5_2i8f8"]
 [ext_resource type="Script" uid="uid://4amyffha4f7s" path="res://scenes/buttonHover.gd" id="9_0fn5h"]
 [ext_resource type="FontFile" uid="uid://b2q0pxqeuwfe" path="res://BagelFatOne-Regular.ttf" id="9_2i8f8"]
+[ext_resource type="AudioStream" uid="uid://dip0wq0tyusbj" path="res://sounds/pickUp.mp3" id="10_sren0"]
+[ext_resource type="AudioStream" uid="uid://bhsalpxyondnc" path="res://sounds/wrong.mp3" id="11_2i8f8"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_w2dmm"]
 device = -1
@@ -196,6 +198,13 @@ texture_normal = ExtResource("4_ol02w")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("9_0fn5h")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="." unique_id=1393460947]
+stream = ExtResource("10_sren0")
+
+[node name="SoundWrong" type="AudioStreamPlayer2D" parent="." unique_id=554455052]
+stream = ExtResource("11_2i8f8")
+pitch_scale = 0.65
 
 [connection signal="pressed" from="C" to="." method="_on_c_pressed"]
 [connection signal="pressed" from="D" to="." method="_on_d_pressed"]

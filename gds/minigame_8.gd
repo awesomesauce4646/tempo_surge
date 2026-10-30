@@ -10,25 +10,25 @@ extends Node2D
 @onready var secondText: RichTextLabel = $DText
 @onready var thirdText: RichTextLabel = $AText
 @onready var fourthText: RichTextLabel = $GText
+@onready var sound: AudioStreamPlayer2D = $Sound
+@onready var wrongSound: AudioStreamPlayer2D = $SoundWrong
 
 const FADE_TIME := 0.4
 
-var stepOne = false
-var stepTwo = false
-var stepThree = false
-var stepFour = false
+# every letter that counts as a note press
+const NOTE_KEYS := {
+	KEY_A: "A", KEY_B: "B", KEY_C: "C", KEY_D: "D",
+	KEY_E: "E", KEY_F: "F", KEY_G: "G",
+}
+
+# the order the player has to type
+var sequence := ["C", "D", "A", "G"]
+var step := 0
+var input_open := false # true once the notes have faded and typing starts
 
 var endGame = false
-
 var timer_end = false
-
-var cPressed = false
-var dPressed = false
-var aPressed = false
-var gPressed = false
-
 var start = false
-
 var won = false
 
 func _ready() -> void:
@@ -50,22 +50,16 @@ func _process(delta: float) -> void:
 		await themed_timer.Timer(1 + Global.extra_time)
 		#after this is completed...
 		await _fade_out_notes()
-		stepOne = true
+		input_open = true
 		await themed_timer.Timer(3.0 + Global.extra_time)
 		timer_end = true
 
-	cPressed = Input.is_action_pressed("c")
-	dPressed = Input.is_action_pressed("d")
-	aPressed = Input.is_action_pressed("a")
-	gPressed = Input.is_action_pressed("g")
-
-	_keys()
-
 	if (won == true):
+		won = false
 		Global.won = true
 		Transition.change_scene_to_file("res://scenes/level_scene.tscn") # go back to the intermission scene
 
-	if timer_end:
+	if timer_end and not endGame:
 		Global.lives -= 1
 		Global.minigames_done -=1
 		Global.won = false
@@ -75,6 +69,35 @@ func _process(delta: float) -> void:
 			Transition.change_scene_to_file("res://scenes/lost_game.tscn")
 		else:
 			Transition.change_scene_to_file("res://scenes/level_scene.tscn") # back to intermission
+
+
+func _input(event: InputEvent) -> void:
+	if not input_open or endGame:
+		return
+	if event is InputEventKey and event.pressed and not event.echo:
+		var letter = NOTE_KEYS.get(event.keycode)
+		if letter != null:
+			_play_note(letter)
+
+
+func _play_note(letter: String) -> void:
+	if letter == sequence[step]:
+		_reveal(letter)
+		sound.play()
+		step += 1
+		if step >= sequence.size():
+			endGame = true
+			won = true
+	else:
+		wrongSound.play() # wrong order, or a note that isn't in the song (B, E, F)
+
+
+func _reveal(letter: String) -> void:
+	match letter:
+		"C": firstNote.show()
+		"D": secondNote.show()
+		"A": thirdNote.show()
+		"G": fourthNote.show()
 
 
 func _fade_out_notes() -> void:
@@ -91,60 +114,19 @@ func _fade_out_notes() -> void:
 		item.modulate.a = 1.0 # reset so show() works later when the player types it
 
 
-func _keys() -> void:
-
-	if cPressed && !dPressed && !aPressed && !gPressed && !endGame && stepOne && !stepTwo && !stepThree &&  !stepFour:
-		firstNote.show()
-		cPressed = false
-		dPressed = false
-		aPressed = false
-		gPressed = false
-		stepOne = false
-		stepTwo = true
-		return
-
-	if !cPressed && dPressed && !aPressed && !gPressed && !endGame && !stepOne && stepTwo && !stepThree && !stepFour:
-		secondNote.show()
-		cPressed = false
-		dPressed = false
-		aPressed = false
-		gPressed = false
-		stepTwo = false
-		stepThree = true
-		return
-
-	if !cPressed && !dPressed && aPressed && !gPressed && !endGame && !stepOne && !stepTwo && stepThree && !stepFour:
-		thirdNote.show()
-		cPressed = false
-		dPressed = false
-		aPressed = false
-		gPressed = false
-		stepThree = false
-		stepFour = true
-		return
-
-	if !cPressed && !dPressed && !aPressed && gPressed && !endGame && !stepOne && !stepTwo && !stepThree && stepFour:
-		fourthNote.show()
-		cPressed = false
-		dPressed = false
-		aPressed = false
-		gPressed = false
-		stepFour = false
-		won = true
-		return
-
 func _on_start_pressed() -> void:
 	start = true
 
 
+# kept so the scene's signal connections don't break; typing is handled in _input
 func _on_c_pressed() -> void:
-	cPressed = true
+	pass
 
 func _on_d_pressed() -> void:
-	dPressed = true
+	pass
 
 func _on_a_pressed() -> void:
-	aPressed = true
+	pass
 
 func _on_g_pressed() -> void:
-	gPressed = true
+	pass

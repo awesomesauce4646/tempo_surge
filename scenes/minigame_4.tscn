@@ -23,6 +23,7 @@
 [ext_resource type="Script" uid="uid://bhgu4l8uk8ro8" path="res://gds/8.gd" id="20_2ar1m"]
 [ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="22_otrfb"]
 [ext_resource type="Script" uid="uid://4amyffha4f7s" path="res://scenes/buttonHover.gd" id="23_ikgmd"]
+[ext_resource type="AudioStream" uid="uid://b65fupca75oye" path="res://sounds/xylophone.mp3" id="24_rkvtw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7304a"]
 bg_color = Color(0.2784314, 0, 0.6901961, 1)
@@ -147,5 +148,9 @@ texture_normal = ExtResource("22_otrfb")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("23_ikgmd")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="." unique_id=1743399598]
+stream = ExtResource("24_rkvtw")
+volume_db = 13.0
 
 [connection signal="pressed" from="InstructionBg/Start" to="." method="_on_start_pressed"]

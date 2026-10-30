@@ -20,3 +20,8 @@ res://gds/settings.gd
 res://global.gd
 res://gds/minigame_2.gd
 res://gds/minigame_4.gd
+res://gds/player.gd
+res://scenes/done_screen.tscn
+res://gds/done_screen.gd
+res://scenes/lost_game.tscn
+res://gds/lost_game.gd

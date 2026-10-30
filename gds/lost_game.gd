@@ -1,6 +1,10 @@
 extends Node2D
 
 @onready var button: TextureButton = $Back
+@onready var loseSound: AudioStreamPlayer2D = $Lose
+
+func _ready() -> void:
+	loseSound.play()
 
 func _on_back_pressed() -> void:
 	Global.minigames_done = 0 #track how many minigames done

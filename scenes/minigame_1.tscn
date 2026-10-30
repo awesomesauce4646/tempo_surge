@@ -17,12 +17,14 @@
 [ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="14_2gcu5"]
 [ext_resource type="Script" uid="uid://4amyffha4f7s" path="res://scenes/buttonHover.gd" id="15_g4fmr"]
 [ext_resource type="AudioStream" uid="uid://dip0wq0tyusbj" path="res://sounds/pickUp.mp3" id="16_b5m2w"]
+[ext_resource type="AudioStream" uid="uid://3xv1bre6bha6" path="res://sounds/jump.mp3" id="18_df5hh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7304a"]
 size = Vector2(1311.3125, 37)
 
 [sub_resource type="Animation" id="Animation_r6gmb"]
-length = 0.5
+length = 1.3333334
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -30,15 +32,16 @@ tracks/0/path = NodePath("GuitarPick:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.76666665, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(0, 4)]
+"values": [Vector2(0, 4), Vector2(0, -16), Vector2(0, 4)]
 }
 
 [sub_resource type="Animation" id="Animation_or1ld"]
 resource_name = "floating"
-loop_mode = 2
+length = 2.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -245,6 +248,10 @@ position = Vector2(16, -4)
 
 [node name="Player" parent="." unique_id=1483980912 instance=ExtResource("3_xpvfh")]
 position = Vector2(157, 464)
+
+[node name="Jump" type="AudioStreamPlayer2D" parent="Player" unique_id=1270492033]
+position = Vector2(-157, -464)
+stream = ExtResource("18_df5hh")
 
 [node name="Barrier" type="StaticBody2D" parent="." unique_id=637672580]
 position = Vector2(-1272.0001, -89.00001)

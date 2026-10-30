@@ -10,12 +10,15 @@ extends Node2D
 @onready var x7: TextureButton = $Six
 @onready var x8: TextureButton = $Five
 @onready var instructions: Panel = $InstructionBg
+@onready var sound: AudioStreamPlayer2D = $Sound
 
 const HOVER_MULT := 1.05
 const HOVER_TIME := 0.12
+const WIN_DELAY := 0.4 # lets the last swap sound ring out before the scene changes
 
 var start = false
 var timer_end = false
+var finished = false # set on win so the timer can't also fire
 var selected: TextureButton = null
 var pairs = []
 var swapped_state = {} # pair_index -> bool (true = currently swapped)
@@ -50,7 +53,8 @@ func _process(delta: float) -> void:
 		instructions.hide()
 		await themed_timer.Timer(6.0 + Global.extra_time)
 		timer_end = true
-	if timer_end:
+	if timer_end and not finished:
+		finished = true
 		Global.lives -= 1
 		Global.minigames_done -= 1
 		Global.won = false
@@ -72,6 +76,9 @@ func _on_key_hover(btn: TextureButton, hovering: bool) -> void:
 	hover_tweens[btn] = t
 
 func _on_button_pressed(btn: TextureButton) -> void:
+	if finished:
+		return # win or loss already happening, ignore clicks
+
 	if selected == null:
 		selected = btn
 		selected.modulate = Color(1.3, 1.3, 1.3)
@@ -105,6 +112,7 @@ func _swap_positions(a: TextureButton, b: TextureButton) -> void:
 	var center_b = b.position + b.size / 2
 	a.position = center_b - a.size / 2
 	b.position = center_a - b.size / 2
+	sound.play()
 
 func _check_win() -> void:
 	for i in range(pairs.size()):
@@ -113,8 +121,10 @@ func _check_win() -> void:
 	_on_win()
 
 func _on_win() -> void:
+	finished = true
 	Global.won = true
-	get_tree().change_scene_to_file("res://scenes/level_scene.tscn")
+	await get_tree().create_timer(WIN_DELAY).timeout
+	Transition.change_scene_to_file("res://scenes/level_scene.tscn")
 
 func _on_start_pressed() -> void:
 	start = true

@@ -3,6 +3,7 @@ extends Node2D
 @onready var self_area = $Area2D
 @onready var player_area = $"../Player/Area2D"
 @onready var soundEffect = $"../PickUp"
+@onready var anim: AnimationPlayer = $animation
 
 signal note_collected
 
@@ -10,6 +11,10 @@ var collected := false
 var start_scale := Vector2.ONE
 var start_pos := Vector2.ZERO
 var center := Vector2.ZERO
+
+func _ready() -> void:
+	anim.play("floating")
+	anim.seek(randf() * anim.current_animation_length) # random start so the picks don't bob together
 
 func _process(delta: float) -> void:
 	if collected:

@@ -1,5 +1,6 @@
 extends TextureButton
 @onready var parent = $".."
+@onready var sound = $"../SoundEffect"
 
 func _ready() -> void:
 	pivot_offset = size / 2
@@ -9,6 +10,7 @@ func _ready() -> void:
 	)
 
 func _on_pressed() -> void: #YOU NEED TO CONNECT THIS SIGNAL FROM THE TAB NEXT TO INSPECTOR!!
+	sound.play()
 	parent.buttons_pressed += 1	
 	self_modulate = Color(3.0, 3.0, 3.0, 1.0) # Super bright white-out flash
 	await get_tree().create_timer(0.04).timeout

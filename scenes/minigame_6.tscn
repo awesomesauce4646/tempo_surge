@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://2prwi4r8go7s" path="res://sounds/d_trumpet.mp3" id="11_tpeky"]
 [ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="13_j4u76"]
 [ext_resource type="Script" uid="uid://4amyffha4f7s" path="res://scenes/buttonHover.gd" id="14_70jd5"]
+[ext_resource type="AudioStream" uid="uid://bhsalpxyondnc" path="res://sounds/wrong.mp3" id="15_gdows"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_86m45"]
 keycode = 49
@@ -186,6 +187,10 @@ texture_normal = ExtResource("13_j4u76")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("14_70jd5")
+
+[node name="WrongSound" type="AudioStreamPlayer2D" parent="." unique_id=503290709]
+position = Vector2(258, 33)
+stream = ExtResource("15_gdows")
 
 [connection signal="button_down" from="TrumpetKey1" to="." method="_on_trumpet_key_1_button_down"]
 [connection signal="button_up" from="TrumpetKey1" to="." method="_on_trumpet_key_1_button_up"]
