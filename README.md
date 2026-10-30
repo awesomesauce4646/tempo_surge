@@ -25,6 +25,8 @@ To start, just press run!
 - Memorization - Press the right letters in the right order of the notes that appear
 - Press keyboard letters - Press the correct bongo in the right order
 
+- Chill Mode - Turn this on through Options to have more time during the minigames!
+
 Made in Godot and was made for the Stardance Hackclub program, with the project: Make a WarioWare game. 
 **Tempo Surge** was also made in order to learn Godot and to learn how to make games and art.
 
