@@ -68,8 +68,7 @@ func _process(delta: float) -> void:
 	if (won == true):
 		won = false
 		Global.won = true
-		await get_tree().create_timer(.5).timeout
-		Transition.change_scene_to_file("res://scenes/done_screen.tscn")
+		Transition.change_scene_to_file("res://scenes/level_scene.tscn") # go back to the intermission scene
 
 	if timer_end:
 		Global.lives -= 1

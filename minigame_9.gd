@@ -120,10 +120,8 @@ func _feedback(color: Color, punch: bool) -> void:
 	feedback_tween = create_tween().set_parallel(true)
 	feedback_tween.tween_property(metronome, "self_modulate", color, FLASH_IN_TIME)
 	if punch:
-		feedback_tween.tween_property(metronome, "scale", metronome_base_scale * PUNCH_SCALE, FLASH_IN_TIME)
-	feedback_tween.chain()
-	feedback_tween.tween_property(metronome, "self_modulate", Color.WHITE, FLASH_OUT_TIME)
-	feedback_tween.tween_property(metronome, "scale", metronome_base_scale, FLASH_OUT_TIME).set_ease(Tween.EASE_OUT)
+		feedback_tween.chain()
+		feedback_tween.tween_property(metronome, "self_modulate", Color.WHITE, FLASH_OUT_TIME)
 
 
 func _on_start_pressed() -> void:
