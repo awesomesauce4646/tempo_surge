@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var themed_timer: Node2D = $Timer
-@onready var instructions: Panel = $InstructionBg
+@onready var instructions: TextureRect = $InstructionBg
 @onready var firstNote: TextureButton = $C
 @onready var secondNote: TextureButton = $D
 @onready var thirdNote: TextureButton = $A

@@ -1,3 +1,4 @@
+TextureRect
 AudioStreamPlayer2D
 AudioListener2D
 TextureButton
@@ -5,7 +6,6 @@ CollisionShape2D
 StaticBody2D
 Area2D
 Panel
-TextureRect
 Button
 CanvasLayer
 Node2D

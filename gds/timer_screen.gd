@@ -8,6 +8,7 @@ extends Node2D
 @onready var level: RichTextLabel = $Level
 @onready var timer: RichTextLabel = $Timer
 @onready var completeLevel: RichTextLabel = $LevelComplete
+@onready var struggleText: RichTextLabel = $StruggleText
 
 var time
 
@@ -36,7 +37,6 @@ func _process(delta: float) -> void: # runs EVERY FRAME
 	match Global.lives: # asks or checks if lives is equal to one of 
 #these values, cool hack. by the way this is a horrid way to illustrate the 
 #lives visually so later you can always find alternative code. Now, dw abt it.
-
 		4:
 			note.hide()
 		3:
@@ -54,6 +54,8 @@ func _process(delta: float) -> void: # runs EVERY FRAME
 		0:
 			note_container.hide() # just hides everything
 	
+	if Global.lives < 5:
+		struggleText.show()
 	timer.text = str(time) # make ths text reflect the value of the time variable. this makes names easier. the str() converts the int to a String
 	level.text = "LEVEL " + str(Global.minigames_done + 1) # this tells you want minigame you're on using concatenation (google the word yo)
 

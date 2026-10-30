@@ -37,4 +37,4 @@ func _on_chill_mode_pressed() -> void:
 	else:
 		chillOrNormal = "CHILL"
 		chillButton.texture_normal = normal     # Uses the preloaded texture!
-		Global.extra_time = 4.0
+		Global.extra_time = 7.0

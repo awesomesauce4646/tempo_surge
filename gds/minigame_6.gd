@@ -10,7 +10,7 @@ extends Node2D
 @onready var dNote: AudioStreamPlayer2D = $D
 @onready var wrongSound: AudioStreamPlayer2D = $WrongSound
 @onready var textHi: RichTextLabel = $RichTextLabel
-@onready var instructions: Panel = $InstructionBg
+@onready var instructions: TextureRect = $InstructionBg
 
 # each key is a bit: key1 = 1, key2 = 2, key3 = 4
 # the sequence: G (key1 + key3 together), B (key2), D (key1), C (key3)

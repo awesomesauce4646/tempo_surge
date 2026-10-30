@@ -4,7 +4,7 @@ extends Node2D
 @onready var noteTwo: TextureButton = $Button_2
 @onready var noteThree: TextureButton = $Button_3
 @onready var noteFour: TextureButton = $Button_4
-@onready var instructions: Panel = $InstructionBg
+@onready var instructions: TextureRect = $InstructionBg
 
 var buttons_pressed := 0
 var timer_end = false

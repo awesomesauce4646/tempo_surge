@@ -9,7 +9,7 @@ extends Node2D
 @onready var x6: TextureButton = $Seven
 @onready var x7: TextureButton = $Six
 @onready var x8: TextureButton = $Five
-@onready var instructions: Panel = $InstructionBg
+@onready var instructions: TextureRect = $InstructionBg
 @onready var sound: AudioStreamPlayer2D = $Sound
 
 const HOVER_MULT := 1.05
@@ -51,7 +51,7 @@ func _process(delta: float) -> void:
 	if start:
 		start = false
 		instructions.hide()
-		await themed_timer.Timer(6.0 + Global.extra_time)
+		await themed_timer.Timer(15.0 + Global.extra_time)
 		timer_end = true
 	if timer_end and not finished:
 		finished = true
