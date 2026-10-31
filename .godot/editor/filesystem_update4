@@ -2,3 +2,8 @@ res://scenes/minigame_1.tscn
 res://gds/player.gd
 res://scenes/player.tscn
 res://gds/minigame_1.gd
+res://global.gd
+res://gds/minigame_timer.gd
+res://scenes/timer.tscn
+res://scenes/level_scene.tscn
+res://gds/timer_screen.gd

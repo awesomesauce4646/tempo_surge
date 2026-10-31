@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bopybumko3qso" path="res://assets/level.png" id="2_3mivm"]
 [ext_resource type="Texture2D" uid="uid://co03xrf5m0kim" path="res://assets/musicnote.png" id="2_187gu"]
 [ext_resource type="FontFile" uid="uid://v2lc0jgyarh8" path="res://PixelifySans-VariableFont_wght.ttf" id="3_c8xsp"]
+[ext_resource type="AudioStream" uid="uid://b5nddxs1tjlkg" path="res://sounds/recordScratch.mp3" id="5_fkwfp"]
 
 [node name="LevelScene" type="Node2D" unique_id=1994702572]
 script = ExtResource("1_3mivm")
@@ -117,3 +118,7 @@ theme_override_fonts/normal_font = ExtResource("3_c8xsp")
 theme_override_font_sizes/normal_font_size = 45
 text = "STRUGGLING? TRY CHILL MODE IN OPTIONS!"
 horizontal_alignment = 1
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="." unique_id=1575699169]
+stream = ExtResource("5_fkwfp")
+pitch_scale = 0.7
