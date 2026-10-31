@@ -16,14 +16,16 @@ To start, just press run!
 ### Features 
 
 8 fast-paced minigames! Such as:
-- Platformer - Grab the guitar picks as fast as possible
-- Clicker - Collect all the music notes in time
-- Click-Smasher - Tune your sound before time ends
-- Swap Pieces - Swap the xylophone keys into place
-- Click parallel buttons - String the harp as soon as you can
-- Press keyboard numbers - Press the trumpet keys in the right order
-- Memorization - Press the right letters in the right order of the notes that appear
-- Press keyboard letters - Press the correct bongo in the right order
+
+- Guitar Platformer - Grab the guitar picks as fast as possible!
+- Note Clicker - Collect all the music notes in time!
+- Tuner - Tune your sound before time ends!
+- Wrong Order - Swap the xylophone keys into place!
+- String the Harp - String the harp as soon as you can!
+- Trumpet Player - Press the trumpet keys in the right order!
+- Memorization - Press the right letters in the right order of the notes that appear!
+- Bongo - Press the correct bongo in the right order!
+- Metronome - Click when the pendelum of the metronome is in the middle!
 
 - Chill Mode - Turn this on through Options to have more time during the minigames!
 
@@ -36,6 +38,12 @@ I will probably add more things in the game, as well as redesign some things tha
 
 Hope you have fun playing **Tempo Surge!**
 
+### Images
+
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+
 ### AI Usage
 
-I used AI to help me debug some errors in the code as well as help me bring the fourth minigame to life, since I wasn't sure on what the best way of adding a swap object system would look like.
+I used AI to help me debug some errors in the code as well as help me bring the fourth minigame to life, since I wasn't sure on what the best way of adding a swap object system would look like. I also used AI to help me improve the touch feedback animations and bring more life to the game.
