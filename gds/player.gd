@@ -1,10 +1,15 @@
 extends CharacterBody2D
 
 @onready var jumpNoise: AudioStreamPlayer2D = $Jump
+@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
+const REST_FRAME = 0 
 
+func _ready() -> void:
+	anim.stop()
+	anim.frame = REST_FRAME
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -16,8 +21,6 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 		jumpNoise.play()
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * SPEED
@@ -25,3 +28,11 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+	if direction > 0:
+		anim.play("default")
+	elif direction < 0:
+		anim.play_backwards("default")
+	else:
+		if anim.frame == 0:
+			anim.stop()
