@@ -41,7 +41,7 @@ func _process(delta: float) -> void: # running every frame brochacho
 		barrierTwo.free()
 		start = false
 		move_platform() # platform 6 starts moving when the game starts
-		await themed_timer.Timer(1 + Global.extra_time) #accessing a function from this node
+		await themed_timer.Timer(13 + Global.extra_time) #accessing a function from this node
 		#after this is compeleted...
 		timer_end = true # now we're saying "oh ye you ran out of time"
 	if note_collected == 3: # the double equals is just an argument asking if it's the same, with "=" it'll give an error

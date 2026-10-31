@@ -37,6 +37,8 @@ var strung_count := 0
 
 var hover_data := {} # btn -> base_scale, center, zoom, tween
 
+var line = Line2D.new()
+
 func _ready() -> void:
 	partners = {
 		pointOne: pointTwo, pointTwo: pointOne,
@@ -51,9 +53,16 @@ func _ready() -> void:
 	for btn in [pointOne, pointTwo, pointThree, pointFour, pointFive, pointSix]:
 		btn.mouse_entered.connect(_on_point_hover.bind(btn, true))
 		btn.mouse_exited.connect(_on_point_hover.bind(btn, false))
+	line.width = 25
+	line.default_color = Color(1.0, 1.0, 1.0, 1.0)
+	add_child(line)
+	line.hide()
 
 
 func _process(delta: float) -> void:
+	if selected != null:
+		line.set_point_position(1, get_local_mouse_position())
+
 	if start:
 		start = false
 		playing = true
@@ -109,6 +118,10 @@ func _set_point_zoom(z: float, btn: TextureButton) -> void:
 
 # ---------- game logic ----------
 
+func get_center(btn: TextureButton) -> Vector2:
+	return btn.position + (btn.size / 2 * btn.scale).rotated(btn.rotation)
+
+
 func _point_pressed(btn: TextureButton) -> void:
 	if not playing or won:
 		return # ignore clicks while the instructions are up or after winning
@@ -119,12 +132,17 @@ func _point_pressed(btn: TextureButton) -> void:
 	if selected == null:
 		selected = btn
 		btn.modulate = SELECT_COLOR
+		line.clear_points()
+		line.add_point(get_center(btn))
+		line.add_point(get_local_mouse_position())
+		line.show()
 		return
 
 	# clicked the same point again: deselect
 	if selected == btn:
 		btn.modulate = Color.WHITE
 		selected = null
+		line.hide()
 		return
 
 	# second click: is it the matching point?
@@ -135,6 +153,7 @@ func _point_pressed(btn: TextureButton) -> void:
 		done[btn] = true
 		btn.modulate = SELECT_COLOR # both stay green once connected
 		selected = null
+		line.hide()
 		strung_count += 1
 		if strung_count >= 3:
 			won = true
@@ -142,6 +161,7 @@ func _point_pressed(btn: TextureButton) -> void:
 		wrongString.play(WRONG_START)
 		selected.modulate = Color.WHITE
 		selected = null
+		line.hide()
 
 
 func _on_point_one_pressed() -> void:

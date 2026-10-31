@@ -6,7 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://df87en882qas1" path="res://assets/angry.png" id="4_nuwo7"]
 [ext_resource type="Texture2D" uid="uid://fyecq5y4d14o" path="res://assets/up.png" id="5_rguwe"]
 [ext_resource type="Script" uid="uid://canm8xguitmcu" path="res://gds/up.gd" id="6_knknf"]
+[ext_resource type="AudioStream" uid="uid://bhsalpxyondnc" path="res://sounds/wrong.mp3" id="7_8q1gs"]
 [ext_resource type="Script" uid="uid://bewnixgmxu1xk" path="res://gds/down.gd" id="7_knknf"]
+[ext_resource type="AudioStream" uid="uid://ccafd551xwxwq" path="res://sounds/note.mp3" id="8_b7s57"]
 [ext_resource type="FontFile" uid="uid://v2lc0jgyarh8" path="res://PixelifySans-VariableFont_wght.ttf" id="8_ybnx4"]
 [ext_resource type="Texture2D" uid="uid://ihmy2ejhu1as" path="res://assets/instructions-card.png" id="9_sfvvs"]
 [ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="9_w3p2l"]
@@ -124,6 +126,15 @@ texture_normal = ExtResource("5_rguwe")
 ignore_texture_size = true
 script = ExtResource("6_knknf")
 
+[node name="WrongSound" type="AudioStreamPlayer2D" parent="up" unique_id=313311544]
+position = Vector2(-541.24994, -41.25)
+scale = Vector2(1.2499999, 1.2499999)
+stream = ExtResource("7_8q1gs")
+pitch_scale = 0.53
+
+[node name="RightSound" type="AudioStreamPlayer2D" parent="up" unique_id=323799861]
+stream = ExtResource("8_b7s57")
+
 [node name="down" type="TextureButton" parent="." unique_id=1023147883]
 offset_left = 794.00006
 offset_top = 646.0
@@ -134,6 +145,16 @@ scale = Vector2(0.8, 0.8)
 texture_normal = ExtResource("5_rguwe")
 ignore_texture_size = true
 script = ExtResource("7_knknf")
+
+[node name="WrongSound" type="AudioStreamPlayer2D" parent="down" unique_id=1672978338]
+stream = ExtResource("7_8q1gs")
+pitch_scale = 0.53
+
+[node name="RightSound" type="AudioStreamPlayer2D" parent="down" unique_id=1524125203]
+position = Vector2(1013.7865, 780.6083)
+rotation = 3.1147869
+scale = Vector2(1.2499999, 1.2499999)
+stream = ExtResource("8_b7s57")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2009845234]
 visible = false

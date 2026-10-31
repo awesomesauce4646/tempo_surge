@@ -7,3 +7,8 @@ res://gds/minigame_timer.gd
 res://scenes/timer.tscn
 res://scenes/level_scene.tscn
 res://gds/timer_screen.gd
+res://scenes/minigame_5.tscn
+res://gds/minigame_5.gd
+res://gds/up.gd
+res://gds/down.gd
+res://scenes/minigame_3.tscn
