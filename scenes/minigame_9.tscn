@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bxah38raxbxsx"]
 
-[ext_resource type="Script" uid="uid://c8rvj2mu4i53s" path="res://minigame_9.gd" id="1_vhvok"]
+[ext_resource type="Script" uid="uid://c8rvj2mu4i53s" path="res://gds/minigame_9.gd" id="1_vhvok"]
 [ext_resource type="Texture2D" uid="uid://uwhfymna3xfw" path="res://assets/metronome-background.png" id="2_ud4lh"]
 [ext_resource type="PackedScene" uid="uid://dx6cybk5her3x" path="res://scenes/timer.tscn" id="3_ud4lh"]
 [ext_resource type="Texture2D" uid="uid://ihmy2ejhu1as" path="res://assets/instructions-card.png" id="4_mpjqy"]
