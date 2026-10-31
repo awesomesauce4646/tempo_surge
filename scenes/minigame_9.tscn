@@ -10,7 +10,72 @@
 [ext_resource type="Texture2D" uid="uid://0xbtq50q25bk" path="res://assets/metronome.png" id="8_bt7l0"]
 [ext_resource type="Texture2D" uid="uid://b18oyikpgov2l" path="res://assets/metronome-swing.png" id="9_mqns1"]
 [ext_resource type="AudioStream" uid="uid://f83p3ey0j5li" path="res://sounds/metronome-tick.wav" id="10_1xq11"]
+[ext_resource type="Texture2D" uid="uid://bm6b62hkkrcbx" path="res://assets/gif-button.png" id="10_kvevx"]
+[ext_resource type="Texture2D" uid="uid://dtay6g3g6h36t" path="res://gif-images/metronome (1).png" id="11_57ei3"]
 [ext_resource type="AudioStream" uid="uid://bhsalpxyondnc" path="res://sounds/wrong.mp3" id="11_ud4lh"]
+[ext_resource type="Texture2D" uid="uid://cla646ur1rwqu" path="res://gif-images/metronome (2).png" id="12_hydgb"]
+[ext_resource type="Texture2D" uid="uid://nhnghfalqnhx" path="res://gif-images/metronome (3).png" id="13_cjyye"]
+[ext_resource type="Texture2D" uid="uid://bmekaod4a60xi" path="res://gif-images/metronome (4).png" id="14_t1hnp"]
+[ext_resource type="Texture2D" uid="uid://7sbe0qrso0k" path="res://gif-images/metronome (5).png" id="15_2gd12"]
+[ext_resource type="Texture2D" uid="uid://cvha3rqqck6bf" path="res://gif-images/metronome (6).png" id="16_esw4l"]
+[ext_resource type="Texture2D" uid="uid://b8lupuakfy0jn" path="res://gif-images/metronome (7).png" id="17_3f8m8"]
+[ext_resource type="Texture2D" uid="uid://cubga8ywf4364" path="res://gif-images/metronome (8).png" id="18_7ji6a"]
+[ext_resource type="Texture2D" uid="uid://cgv1tltc7s74l" path="res://gif-images/metronome (9).png" id="19_tty3w"]
+[ext_resource type="Texture2D" uid="uid://bdp6yvactma6q" path="res://gif-images/metronome (10).png" id="20_pnc1p"]
+[ext_resource type="Texture2D" uid="uid://dukqctejs3o3m" path="res://gif-images/metronome (11).png" id="21_vok20"]
+[ext_resource type="Texture2D" uid="uid://dqt0y8ploflwd" path="res://gif-images/metronome (12).png" id="22_odq5n"]
+[ext_resource type="Texture2D" uid="uid://dqmxdtn513tit" path="res://gif-images/metronome (13).png" id="23_vpnbd"]
+[ext_resource type="Texture2D" uid="uid://d2k4dfgv6jo2v" path="res://gif-images/metronome (14).png" id="24_wrn3d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4v3m6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_57ei3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_hydgb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_cjyye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_t1hnp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_2gd12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_esw4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_3f8m8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_7ji6a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_tty3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_pnc1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_vok20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_odq5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_vpnbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_wrn3d")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Minigame_9" type="Node2D" unique_id=913392316]
 script = ExtResource("1_vhvok")
@@ -53,21 +118,40 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/normal_font = ExtResource("5_xkc62")
 theme_override_font_sizes/normal_font_size = 40
-text = "CLICK ON THE MIDDLE WHEN THE PENDELUM OF THE METRONOME IS IN THE CENTER! THREE TIMES!
+text = "CLICK WHEN THE PENDELUM OF THE METRONOME IS IN THE CENTER! THREE TIMES!
 
 CONTROLS: LEFT MOUSE CLICK"
 horizontal_alignment = 1
 
 [node name="Start" type="TextureButton" parent="InstructionBg" unique_id=1932501601]
 layout_mode = 0
-offset_left = 197.0
-offset_top = 394.0
-offset_right = 481.0
-offset_bottom = 526.0
+offset_left = 63.0
+offset_top = 407.0
+offset_right = 347.0
+offset_bottom = 539.0
 texture_normal = ExtResource("6_2ylhf")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("7_nd67f")
+
+[node name="GifButton" type="TextureButton" parent="InstructionBg" unique_id=434884]
+layout_mode = 0
+offset_left = 369.0
+offset_top = 408.0
+offset_right = 632.0
+offset_bottom = 534.0
+texture_normal = ExtResource("10_kvevx")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("7_nd67f")
+
+[node name="InstructionsGif" type="AnimatedSprite2D" parent="InstructionBg" unique_id=783839438]
+visible = false
+position = Vector2(356, 220)
+scale = Vector2(0.2527372, 0.24040066)
+sprite_frames = SubResource("SpriteFrames_4v3m6")
+frame = 7
+frame_progress = 0.4016697
 
 [node name="MetronomeTick" type="AudioStreamPlayer2D" parent="." unique_id=1926620765]
 stream = ExtResource("10_1xq11")
@@ -77,3 +161,4 @@ volume_db = 8.925
 stream = ExtResource("11_ud4lh")
 
 [connection signal="pressed" from="InstructionBg/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="InstructionBg/GifButton" to="." method="_on_gif_button_pressed"]

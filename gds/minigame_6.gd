@@ -11,12 +11,17 @@ extends Node2D
 @onready var wrongSound: AudioStreamPlayer2D = $WrongSound
 @onready var textHi: RichTextLabel = $RichTextLabel
 @onready var instructions: TextureRect = $InstructionBg
+@onready var gif: AnimatedSprite2D = $InstructionBg/InstructionsGif
+@onready var instructionText: RichTextLabel = $InstructionBg/Instructions
+@onready var gifButton: TextureButton = $InstructionBg/GifButton
 
 # each key is a bit: key1 = 1, key2 = 2, key3 = 4
 # the sequence: G (key1 + key3 together), B (key2), D (key1), C (key3)
 const EXPECTED := [5, 2, 1, 4]
 const CHORD_MS := 50 # two keys within this many ms count as one chord
 const C_START := 0.55 # skips the silence at the start of c_trumpet.mp3
+
+var gifOpened = false
 
 var step := 0
 var playing := false
@@ -160,3 +165,15 @@ func _on_trumpet_key_3_button_up() -> void:
 
 func _on_start_pressed() -> void:
 	start = true
+
+
+func _on_gif_button_pressed() -> void:
+	if gifOpened == false:
+		gif.play("default")
+		gif.show()
+		gifOpened = true
+		instructionText.hide()
+	else:
+		gif.hide()
+		gifOpened = false
+		instructionText.show()

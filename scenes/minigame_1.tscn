@@ -19,9 +19,50 @@
 [ext_resource type="Texture2D" uid="uid://ihmy2ejhu1as" path="res://assets/instructions-card.png" id="15_n7omf"]
 [ext_resource type="AudioStream" uid="uid://dip0wq0tyusbj" path="res://sounds/pickUp.mp3" id="16_b5m2w"]
 [ext_resource type="AudioStream" uid="uid://3xv1bre6bha6" path="res://sounds/jump.mp3" id="18_df5hh"]
+[ext_resource type="Texture2D" uid="uid://bm6b62hkkrcbx" path="res://assets/gif-button.png" id="19_s6d20"]
+[ext_resource type="Texture2D" uid="uid://dplywnhh2iltp" path="res://gif-images/guitar (1).png" id="21_s6d20"]
+[ext_resource type="Texture2D" uid="uid://o82rlkphvopr" path="res://gif-images/guitar (2).png" id="22_5yr4n"]
+[ext_resource type="Texture2D" uid="uid://c3bsje3nt82ab" path="res://gif-images/guitar (3).png" id="23_r8b4f"]
+[ext_resource type="Texture2D" uid="uid://uidyuhyduy81" path="res://gif-images/guitar (4).png" id="24_8q7c3"]
+[ext_resource type="Texture2D" uid="uid://w8f0mun26np1" path="res://gif-images/guitar (5).png" id="25_h5aht"]
+[ext_resource type="Texture2D" uid="uid://caa1bt1yvfd2l" path="res://gif-images/guitar (6).png" id="26_7q14a"]
+[ext_resource type="Texture2D" uid="uid://bxrpiqjofiisu" path="res://gif-images/guitar (7).png" id="27_1mohw"]
+[ext_resource type="Texture2D" uid="uid://cqkio64eltscf" path="res://gif-images/guitar (8).png" id="28_ho78n"]
+[ext_resource type="Texture2D" uid="uid://2uegd8bqgjic" path="res://gif-images/guitar (9).png" id="29_a72du"]
+[ext_resource type="Texture2D" uid="uid://d2xv3lddm5gjo" path="res://gif-images/guitar (10).png" id="30_4iq7q"]
+[ext_resource type="Texture2D" uid="uid://djorvqug5dbos" path="res://gif-images/guitar (11).png" id="31_174mb"]
+[ext_resource type="Texture2D" uid="uid://cmsgibkq6bhlq" path="res://gif-images/guitar (12).png" id="32_u0u18"]
+[ext_resource type="Texture2D" uid="uid://d25lgiy56nqvy" path="res://gif-images/guitar (13).png" id="33_0m4b1"]
+[ext_resource type="Texture2D" uid="uid://0lrh40vc1lop" path="res://gif-images/guitar (14).png" id="34_ppvci"]
+[ext_resource type="Texture2D" uid="uid://btul0t6omqsfv" path="res://gif-images/guitar (15).png" id="35_u7ssq"]
+[ext_resource type="Texture2D" uid="uid://c3v2t70jq23f7" path="res://gif-images/guitar (16).png" id="36_5c734"]
+[ext_resource type="Texture2D" uid="uid://dhf6revwqbr6m" path="res://gif-images/guitar (17).png" id="37_xq6dy"]
+[ext_resource type="Texture2D" uid="uid://bdmjmiqrlfbo2" path="res://gif-images/guitar (18).png" id="38_hmgku"]
+[ext_resource type="Texture2D" uid="uid://bpj2e1x5kwnb8" path="res://gif-images/guitar (19).png" id="39_2dvnu"]
+[ext_resource type="Texture2D" uid="uid://c7626dn12pq2e" path="res://gif-images/guitar (20).png" id="40_7bd2t"]
+[ext_resource type="Texture2D" uid="uid://dw7ev770rmx0f" path="res://gif-images/guitar (21).png" id="41_ib503"]
+[ext_resource type="Texture2D" uid="uid://csp7qd56g50ty" path="res://gif-images/guitar (22).png" id="42_fncbw"]
+[ext_resource type="Texture2D" uid="uid://1rjyiyu1wjye" path="res://gif-images/guitar (23).png" id="43_do7p7"]
+[ext_resource type="Texture2D" uid="uid://c0n23is3g588y" path="res://gif-images/guitar (24).png" id="44_upw3u"]
+[ext_resource type="Texture2D" uid="uid://ca114kdgejk68" path="res://gif-images/guitar (25).png" id="45_gwk14"]
+[ext_resource type="Texture2D" uid="uid://c30mvpxemirhv" path="res://gif-images/guitar (26).png" id="46_fsd3v"]
+[ext_resource type="Texture2D" uid="uid://c2jiuewauv13" path="res://gif-images/guitar (27).png" id="47_f8bhl"]
+[ext_resource type="Texture2D" uid="uid://bk134lqumw1pb" path="res://gif-images/guitar (28).png" id="48_2xox5"]
+[ext_resource type="Texture2D" uid="uid://biu7083g1wk0m" path="res://gif-images/guitar (29).png" id="49_2qkcs"]
+[ext_resource type="Texture2D" uid="uid://c3ytttoglsj22" path="res://gif-images/guitar (30).png" id="50_dj0no"]
+[ext_resource type="Texture2D" uid="uid://dq2lyjsglig6k" path="res://gif-images/guitar (31).png" id="51_8tuml"]
+[ext_resource type="Texture2D" uid="uid://djntc3xpnif56" path="res://gif-images/guitar (32).png" id="52_22dsi"]
+[ext_resource type="Texture2D" uid="uid://cheqct0yxtm7i" path="res://gif-images/guitar (33).png" id="53_iipgm"]
+[ext_resource type="Texture2D" uid="uid://c1c6ox1qw4aqy" path="res://gif-images/guitar (34).png" id="54_eqytx"]
+[ext_resource type="Texture2D" uid="uid://bkdho4qkdxlks" path="res://gif-images/guitar (35).png" id="55_oy13o"]
+[ext_resource type="Texture2D" uid="uid://cwu6wfvsmm2nb" path="res://gif-images/guitar (36).png" id="56_am8de"]
+[ext_resource type="Texture2D" uid="uid://cn20fkesr3t8m" path="res://gif-images/guitar (37).png" id="57_wpi53"]
+[ext_resource type="Texture2D" uid="uid://ojrji58800hj" path="res://gif-images/guitar (38).png" id="58_8fkcr"]
+[ext_resource type="Texture2D" uid="uid://mrye8cq3p2h0" path="res://gif-images/guitar (39).png" id="59_rfdyg"]
+[ext_resource type="Texture2D" uid="uid://bv2nuig3g14sn" path="res://gif-images/guitar (40).png" id="60_gbd0n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7304a"]
-size = Vector2(1311.3125, 37)
+size = Vector2(1324.6563, 37)
 
 [sub_resource type="Animation" id="Animation_r6gmb"]
 length = 1.3333334
@@ -68,6 +109,134 @@ radius = 46.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f50c0"]
 size = Vector2(274.78125, 228.49707)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_7304a"]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("21_s6d20")
+}, {
+"duration": 0.5,
+"texture": ExtResource("22_5yr4n")
+}, {
+"duration": 0.5,
+"texture": ExtResource("23_r8b4f")
+}, {
+"duration": 0.5,
+"texture": ExtResource("24_8q7c3")
+}, {
+"duration": 0.5,
+"texture": ExtResource("25_h5aht")
+}, {
+"duration": 0.5,
+"texture": ExtResource("26_7q14a")
+}, {
+"duration": 0.5,
+"texture": ExtResource("27_1mohw")
+}, {
+"duration": 0.5,
+"texture": ExtResource("28_ho78n")
+}, {
+"duration": 0.5,
+"texture": ExtResource("29_a72du")
+}, {
+"duration": 0.5,
+"texture": ExtResource("30_4iq7q")
+}, {
+"duration": 0.5,
+"texture": ExtResource("31_174mb")
+}, {
+"duration": 0.5,
+"texture": ExtResource("32_u0u18")
+}, {
+"duration": 0.5,
+"texture": ExtResource("33_0m4b1")
+}, {
+"duration": 0.5,
+"texture": ExtResource("34_ppvci")
+}, {
+"duration": 0.5,
+"texture": ExtResource("35_u7ssq")
+}, {
+"duration": 0.5,
+"texture": ExtResource("36_5c734")
+}, {
+"duration": 0.5,
+"texture": ExtResource("37_xq6dy")
+}, {
+"duration": 0.5,
+"texture": ExtResource("38_hmgku")
+}, {
+"duration": 0.5,
+"texture": ExtResource("39_2dvnu")
+}, {
+"duration": 0.5,
+"texture": ExtResource("40_7bd2t")
+}, {
+"duration": 0.5,
+"texture": ExtResource("41_ib503")
+}, {
+"duration": 0.5,
+"texture": ExtResource("42_fncbw")
+}, {
+"duration": 0.5,
+"texture": ExtResource("43_do7p7")
+}, {
+"duration": 0.5,
+"texture": ExtResource("44_upw3u")
+}, {
+"duration": 0.5,
+"texture": ExtResource("45_gwk14")
+}, {
+"duration": 0.5,
+"texture": ExtResource("46_fsd3v")
+}, {
+"duration": 0.5,
+"texture": ExtResource("47_f8bhl")
+}, {
+"duration": 0.5,
+"texture": ExtResource("48_2xox5")
+}, {
+"duration": 0.5,
+"texture": ExtResource("49_2qkcs")
+}, {
+"duration": 0.5,
+"texture": ExtResource("50_dj0no")
+}, {
+"duration": 0.5,
+"texture": ExtResource("51_8tuml")
+}, {
+"duration": 0.5,
+"texture": ExtResource("52_22dsi")
+}, {
+"duration": 0.5,
+"texture": ExtResource("53_iipgm")
+}, {
+"duration": 0.5,
+"texture": ExtResource("54_eqytx")
+}, {
+"duration": 0.5,
+"texture": ExtResource("55_oy13o")
+}, {
+"duration": 0.5,
+"texture": ExtResource("56_am8de")
+}, {
+"duration": 0.5,
+"texture": ExtResource("57_wpi53")
+}, {
+"duration": 0.5,
+"texture": ExtResource("58_8fkcr")
+}, {
+"duration": 0.5,
+"texture": ExtResource("59_rfdyg")
+}, {
+"duration": 0.5,
+"texture": ExtResource("60_gbd0n")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kptrr"]
 size = Vector2(27, 686)
 
@@ -112,6 +281,7 @@ position = Vector2(1420, 447)
 shape = SubResource("RectangleShape2D_7304a")
 
 [node name="Platform3" type="StaticBody2D" parent="." unique_id=1700724851]
+position = Vector2(0, -5)
 
 [node name="ColorRect" type="TextureRect" parent="Platform3" unique_id=931082445]
 offset_left = -2.0
@@ -122,7 +292,7 @@ texture = ExtResource("6_00jeu")
 stretch_mode = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" unique_id=827477468]
-position = Vector2(-119, 346)
+position = Vector2(-112.328125, 346)
 shape = SubResource("RectangleShape2D_7304a")
 
 [node name="Platform4" type="StaticBody2D" parent="." unique_id=1410841085]
@@ -273,29 +443,46 @@ texture = ExtResource("15_n7omf")
 
 [node name="Instructions" type="RichTextLabel" parent="InstructionBg" unique_id=290456941]
 layout_mode = 0
-offset_left = 59.0
-offset_top = 75.0
-offset_right = 616.0
-offset_bottom = 423.0
+offset_left = 61.0
+offset_top = 74.0
+offset_right = 651.0
+offset_bottom = 480.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/normal_font = ExtResource("6_vc5od")
-theme_override_font_sizes/normal_font_size = 45
+theme_override_font_sizes/normal_font_size = 42
 text = "COLLECT THE GUITAR PICKS! WALK INTO EACH GUITAR PICK TO COLLECT!
 
-CONTROLS: ARROW KEYS TO MOVE. SPACE TO JUMP."
+CONTROLS: WASD/ ARROW KEYS TO MOVE. SPACE TO JUMP."
 horizontal_alignment = 1
 
 [node name="Start" type="TextureButton" parent="InstructionBg" unique_id=1801364449]
 layout_mode = 0
-offset_left = 188.0
+offset_left = 69.0
 offset_top = 429.0
-offset_right = 472.0
+offset_right = 353.0
 offset_bottom = 561.0
 texture_normal = ExtResource("14_2gcu5")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("15_g4fmr")
+
+[node name="GifButton" type="TextureButton" parent="InstructionBg" unique_id=1829053135]
+layout_mode = 0
+offset_left = 364.0
+offset_top = 430.0
+offset_right = 627.0
+offset_bottom = 556.0
+texture_normal = ExtResource("19_s6d20")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("15_g4fmr")
+
+[node name="InstructionsGif" type="AnimatedSprite2D" parent="InstructionBg" unique_id=115681805]
+visible = false
+position = Vector2(353.99994, 250)
+scale = Vector2(0.2527372, 0.24040066)
+sprite_frames = SubResource("SpriteFrames_7304a")
 
 [node name="PickUp" type="AudioStreamPlayer2D" parent="." unique_id=1197137768]
 position = Vector2(238, 18)
@@ -338,3 +525,4 @@ shape = SubResource("RectangleShape2D_f50c0")
 [connection signal="note_collected" from="GuitarPick2" to="." method="_on_guitar_pick_2_note_collected"]
 [connection signal="note_collected" from="GuitarPick3" to="." method="_on_guitar_pick_3_note_collected"]
 [connection signal="pressed" from="InstructionBg/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="InstructionBg/GifButton" to="." method="_on_gif_button_pressed"]

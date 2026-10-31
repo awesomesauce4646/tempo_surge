@@ -12,6 +12,11 @@ extends Node2D
 @onready var fourthText: RichTextLabel = $GText
 @onready var sound: AudioStreamPlayer2D = $Sound
 @onready var wrongSound: AudioStreamPlayer2D = $SoundWrong
+@onready var gif: AnimatedSprite2D = $InstructionBg/InstructionsGif
+@onready var instructionText: RichTextLabel = $InstructionBg/Instructions
+@onready var gifButton: TextureButton = $InstructionBg/GifButton
+
+var gifOpened = false
 
 const FADE_TIME := 0.4
 
@@ -47,11 +52,11 @@ func _process(delta: float) -> void:
 		secondText.show()
 		thirdText.show()
 		fourthText.show()
-		await themed_timer.Timer(1 + Global.extra_time)
+		await themed_timer.Timer(3 + Global.extra_time)
 		#after this is completed...
 		await _fade_out_notes()
 		input_open = true
-		await themed_timer.Timer(3.0 + Global.extra_time)
+		await themed_timer.Timer(6.0 + Global.extra_time)
 		timer_end = true
 
 	if (won == true):
@@ -130,3 +135,15 @@ func _on_a_pressed() -> void:
 
 func _on_g_pressed() -> void:
 	pass
+
+
+func _on_gif_button_pressed() -> void:
+	if gifOpened == false:
+		gif.play("default")
+		gif.show()
+		gifOpened = true
+		instructionText.hide()
+	else:
+		gif.hide()
+		gifOpened = false
+		instructionText.show()

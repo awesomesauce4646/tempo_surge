@@ -25,6 +25,87 @@
 [ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="22_otrfb"]
 [ext_resource type="Script" uid="uid://4amyffha4f7s" path="res://scenes/buttonHover.gd" id="23_ikgmd"]
 [ext_resource type="AudioStream" uid="uid://b65fupca75oye" path="res://sounds/xylophone.mp3" id="24_rkvtw"]
+[ext_resource type="Texture2D" uid="uid://bm6b62hkkrcbx" path="res://assets/gif-button.png" id="26_sirik"]
+[ext_resource type="Texture2D" uid="uid://dsb5rl41ayw01" path="res://gif-images/xylophone (1).png" id="27_3n4ql"]
+[ext_resource type="Texture2D" uid="uid://bdyh8ilcygt0h" path="res://gif-images/xylophone (2).png" id="28_sirik"]
+[ext_resource type="Texture2D" uid="uid://u0cv71rbm5pq" path="res://gif-images/xylophone (3).png" id="29_ll21c"]
+[ext_resource type="Texture2D" uid="uid://cqjrlxb1y3iwl" path="res://gif-images/xylophone (4).png" id="30_yvcpl"]
+[ext_resource type="Texture2D" uid="uid://cb4y2uitqnpk4" path="res://gif-images/xylophone (5).png" id="31_se7ay"]
+[ext_resource type="Texture2D" uid="uid://buyc3tljc7m4" path="res://gif-images/xylophone (6).png" id="32_kf55e"]
+[ext_resource type="Texture2D" uid="uid://cu75ljlymsjov" path="res://gif-images/xylophone (7).png" id="33_a04rw"]
+[ext_resource type="Texture2D" uid="uid://bbxl1jkcpwsct" path="res://gif-images/xylophone (8).png" id="34_1q0xp"]
+[ext_resource type="Texture2D" uid="uid://oe8wvygxkcoe" path="res://gif-images/xylophone (9).png" id="35_h6fwc"]
+[ext_resource type="Texture2D" uid="uid://0h7igl1cn07s" path="res://gif-images/xylophone (10).png" id="36_tuw2c"]
+[ext_resource type="Texture2D" uid="uid://mi7j2cdrm5gf" path="res://gif-images/xylophone (11).png" id="37_k7064"]
+[ext_resource type="Texture2D" uid="uid://c7mays8wuqlog" path="res://gif-images/xylophone (12).png" id="38_24aqo"]
+[ext_resource type="Texture2D" uid="uid://bkdfqgo5p0kqh" path="res://gif-images/xylophone (13).png" id="39_jm3te"]
+[ext_resource type="Texture2D" uid="uid://bssbo5tu3dvea" path="res://gif-images/xylophone (14).png" id="40_vacuk"]
+[ext_resource type="Texture2D" uid="uid://c67qsqloyhg0q" path="res://gif-images/xylophone (15).png" id="41_cusrf"]
+[ext_resource type="Texture2D" uid="uid://bwui45h4f4jq1" path="res://gif-images/xylophone (16).png" id="42_7v627"]
+[ext_resource type="Texture2D" uid="uid://dcblubcpenxl8" path="res://gif-images/xylophone (17).png" id="43_r4l8u"]
+[ext_resource type="Texture2D" uid="uid://bchsqo4utm6ag" path="res://gif-images/xylophone (18).png" id="44_x451x"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_60yt5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_3n4ql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_sirik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ll21c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_yvcpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_se7ay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_kf55e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_a04rw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_1q0xp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_h6fwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_tuw2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_k7064")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_24aqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_jm3te")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_vacuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_cusrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_7v627")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_r4l8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_x451x")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Minigame_4" type="Node2D" unique_id=734237319]
 script = ExtResource("1_drpx1")
@@ -133,17 +214,35 @@ horizontal_alignment = 1
 
 [node name="Start" type="TextureButton" parent="InstructionBg" unique_id=390575612]
 layout_mode = 0
-offset_left = 192.0
-offset_top = 396.0
-offset_right = 476.0
-offset_bottom = 528.0
+offset_left = 68.0
+offset_top = 397.0
+offset_right = 352.0
+offset_bottom = 529.0
 texture_normal = ExtResource("22_otrfb")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("23_ikgmd")
+
+[node name="GifButton" type="TextureButton" parent="InstructionBg" unique_id=890964017]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 403.0
+offset_right = 630.0
+offset_bottom = 529.0
+texture_normal = ExtResource("26_sirik")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("23_ikgmd")
+
+[node name="InstructionsGif" type="AnimatedSprite2D" parent="InstructionBg" unique_id=1796340758]
+visible = false
+position = Vector2(344, 218)
+scale = Vector2(0.2527372, 0.24040066)
+sprite_frames = SubResource("SpriteFrames_60yt5")
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="." unique_id=1743399598]
 stream = ExtResource("24_rkvtw")
 volume_db = 13.0
 
 [connection signal="pressed" from="InstructionBg/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="InstructionBg/GifButton" to="." method="_on_gif_button_pressed"]

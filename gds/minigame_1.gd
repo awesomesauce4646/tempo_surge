@@ -1,11 +1,15 @@
 extends Node2D
+
 @onready var themed_timer: Node2D = $Timer
 @onready var barrier: StaticBody2D = $Barrier
 @onready var barrierTwo: StaticBody2D = $Barrier2
 @onready var instructions: TextureRect = $InstructionBg
 @onready var platform6: Node2D = $Platform6 # the platform we're going to move
+@onready var gif: AnimatedSprite2D = $InstructionBg/InstructionsGif
+@onready var instructionText: RichTextLabel = $InstructionBg/Instructions
 
 var start = false
+var gifOpened = false
 
 # how the platform moves (tweak these to change the difficulty)
 var platform_distance = 150.0 # how many pixels it moves each way
@@ -73,3 +77,15 @@ func _on_guitar_pick_note_collected() -> void:
 
 func _on_start_pressed() -> void:
 	start = true
+
+
+func _on_gif_button_pressed() -> void:
+	if gifOpened == false:
+		gif.show()
+		gifOpened = true
+		instructionText.hide()
+		gif.play("default")
+	else:
+		gif.hide()
+		gifOpened = false
+		instructionText.show()

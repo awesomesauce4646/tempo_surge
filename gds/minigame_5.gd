@@ -12,7 +12,9 @@ extends Node2D
 @onready var instructions: TextureRect = $InstructionBg
 @onready var harpStrung: AudioStreamPlayer2D = $HarpStrung
 @onready var wrongString: AudioStreamPlayer2D = $WrongHarp
-
+@onready var gif: AnimatedSprite2D = $InstructionBg/InstructionsGif
+@onready var instructionText: RichTextLabel = $InstructionBg/Instructions
+@onready var gifButton: TextureButton = $InstructionBg/GifButton
 
 const HOVER_MULT := 1.20
 const HOVER_TIME := 0.12
@@ -20,6 +22,7 @@ const SELECT_COLOR := Color(0.373, 1.0, 0.537, 1.0)
 const WRONG_START := 0.17 # skips the silence at the start of harp-boing-1.mp3
 const WIN_DELAY := 0.5 # lets the last string sound ring out before the scene changes
 
+var gifOpened = false
 var timer_end = false
 var start = false
 var playing = false
@@ -162,3 +165,15 @@ func _on_point_six_pressed() -> void:
 
 func _on_start_pressed() -> void:
 	start = true
+
+
+func _on_gif_button_pressed() -> void:
+	if gifOpened == false:
+		gif.play("default")
+		gif.show()
+		gifOpened = true
+		instructionText.hide()
+	else:
+		gif.hide()
+		gifOpened = false
+		instructionText.show()

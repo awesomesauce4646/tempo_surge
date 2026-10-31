@@ -16,6 +16,23 @@
 [ext_resource type="Texture2D" uid="uid://b44xrv7rqmoda" path="res://assets/start_tempo.png.png" id="13_j4u76"]
 [ext_resource type="Script" uid="uid://4amyffha4f7s" path="res://scenes/buttonHover.gd" id="14_70jd5"]
 [ext_resource type="AudioStream" uid="uid://bhsalpxyondnc" path="res://sounds/wrong.mp3" id="15_gdows"]
+[ext_resource type="Texture2D" uid="uid://bm6b62hkkrcbx" path="res://assets/gif-button.png" id="16_5jlbl"]
+[ext_resource type="Texture2D" uid="uid://bixpc7d8edjrw" path="res://gif-images/trumpet (1).png" id="17_o3ekq"]
+[ext_resource type="Texture2D" uid="uid://2suj53sme70b" path="res://gif-images/trumpet (2).png" id="18_qbxh4"]
+[ext_resource type="Texture2D" uid="uid://qvn26bpewc0g" path="res://gif-images/trumpet (3).png" id="19_ng6yh"]
+[ext_resource type="Texture2D" uid="uid://dfvccdqk8yu5e" path="res://gif-images/trumpet (4).png" id="20_8kjn2"]
+[ext_resource type="Texture2D" uid="uid://dfkfi5v2vmn62" path="res://gif-images/trumpet (5).png" id="21_psygb"]
+[ext_resource type="Texture2D" uid="uid://bjfxi4r8me47m" path="res://gif-images/trumpet (6).png" id="22_7buvm"]
+[ext_resource type="Texture2D" uid="uid://6jvmus8d0f1c" path="res://gif-images/trumpet (7).png" id="23_pda8d"]
+[ext_resource type="Texture2D" uid="uid://cq5gxw61n5w01" path="res://gif-images/trumpet (8).png" id="24_o8d6c"]
+[ext_resource type="Texture2D" uid="uid://dswbllqty2hwq" path="res://gif-images/trumpet (9).png" id="25_6t2oq"]
+[ext_resource type="Texture2D" uid="uid://brjo7e72qq8bi" path="res://gif-images/trumpet (10).png" id="26_b7uuh"]
+[ext_resource type="Texture2D" uid="uid://daljhgkondk80" path="res://gif-images/trumpet (11).png" id="27_jnw44"]
+[ext_resource type="Texture2D" uid="uid://cadsy4bb77lvm" path="res://gif-images/trumpet (12).png" id="28_xsyq4"]
+[ext_resource type="Texture2D" uid="uid://i8313nxpdv30" path="res://gif-images/trumpet (13).png" id="29_4kqwu"]
+[ext_resource type="Texture2D" uid="uid://clsmkhah4f4yn" path="res://gif-images/trumpet (14).png" id="30_rg123"]
+[ext_resource type="Texture2D" uid="uid://bu38occbgtaga" path="res://gif-images/trumpet (15).png" id="31_3g4qn"]
+[ext_resource type="Texture2D" uid="uid://c6p0slcngs0nu" path="res://gif-images/trumpet (16).png" id="32_5k1nq"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_86m45"]
 keycode = 49
@@ -39,6 +56,62 @@ unicode = 51
 
 [sub_resource type="Shortcut" id="Shortcut_wkrsm"]
 events = [SubResource("InputEventKey_2jndo")]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b37gr"]
+animations = [{
+"frames": [{
+"duration": 1.3,
+"texture": ExtResource("17_o3ekq")
+}, {
+"duration": 1.3,
+"texture": ExtResource("18_qbxh4")
+}, {
+"duration": 1.3,
+"texture": ExtResource("19_ng6yh")
+}, {
+"duration": 1.3,
+"texture": ExtResource("20_8kjn2")
+}, {
+"duration": 1.3,
+"texture": ExtResource("21_psygb")
+}, {
+"duration": 1.3,
+"texture": ExtResource("22_7buvm")
+}, {
+"duration": 1.3,
+"texture": ExtResource("23_pda8d")
+}, {
+"duration": 1.3,
+"texture": ExtResource("24_o8d6c")
+}, {
+"duration": 1.3,
+"texture": ExtResource("25_6t2oq")
+}, {
+"duration": 1.3,
+"texture": ExtResource("26_b7uuh")
+}, {
+"duration": 1.3,
+"texture": ExtResource("27_jnw44")
+}, {
+"duration": 1.3,
+"texture": ExtResource("28_xsyq4")
+}, {
+"duration": 1.3,
+"texture": ExtResource("29_4kqwu")
+}, {
+"duration": 1.3,
+"texture": ExtResource("30_rg123")
+}, {
+"duration": 1.3,
+"texture": ExtResource("31_3g4qn")
+}, {
+"duration": 1.3,
+"texture": ExtResource("32_5k1nq")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Minigame_6" type="Node2D" unique_id=646867803]
 script = ExtResource("1_4a7cy")
@@ -172,14 +245,31 @@ horizontal_alignment = 1
 
 [node name="Start" type="TextureButton" parent="InstructionBg" unique_id=1677907741]
 layout_mode = 0
-offset_left = 212.0
-offset_top = 412.0
-offset_right = 496.0
-offset_bottom = 544.0
+offset_left = 92.0
+offset_top = 414.0
+offset_right = 376.0
+offset_bottom = 546.0
 texture_normal = ExtResource("13_j4u76")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("14_70jd5")
+
+[node name="GifButton" type="TextureButton" parent="InstructionBg" unique_id=879846441]
+layout_mode = 0
+offset_left = 389.0
+offset_top = 415.0
+offset_right = 652.0
+offset_bottom = 541.0
+texture_normal = ExtResource("16_5jlbl")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("14_70jd5")
+
+[node name="InstructionsGif" type="AnimatedSprite2D" parent="InstructionBg" unique_id=2072611962]
+visible = false
+position = Vector2(380, 220)
+scale = Vector2(0.2527372, 0.24040066)
+sprite_frames = SubResource("SpriteFrames_b37gr")
 
 [node name="WrongSound" type="AudioStreamPlayer2D" parent="." unique_id=503290709]
 position = Vector2(258, 33)
@@ -192,3 +282,4 @@ stream = ExtResource("15_gdows")
 [connection signal="button_down" from="TrumpetKey3" to="." method="_on_trumpet_key_3_button_down"]
 [connection signal="button_up" from="TrumpetKey3" to="." method="_on_trumpet_key_3_button_up"]
 [connection signal="pressed" from="InstructionBg/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="InstructionBg/GifButton" to="." method="_on_gif_button_pressed"]

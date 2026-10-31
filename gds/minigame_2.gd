@@ -5,9 +5,14 @@ extends Node2D
 @onready var noteThree: TextureButton = $Button_3
 @onready var noteFour: TextureButton = $Button_4
 @onready var instructions: TextureRect = $InstructionBg
+@onready var gif: AnimatedSprite2D = $InstructionBg/InstructionsGif
+@onready var instructionText: RichTextLabel = $InstructionBg/Instructions
+@onready var gifButton: TextureButton = $InstructionBg/GifButton
 
 var buttons_pressed := 0
 var timer_end = false
+
+var gifOpened = false
 
 var rng = RandomNumberGenerator.new()
 var start = false
@@ -52,3 +57,15 @@ func _process(delta: float) -> void:
 
 func _on_start_pressed() -> void:
 	start = true
+
+
+func _on_gif_button_pressed() -> void:
+	if gifOpened == false:
+		gif.play("default")
+		gif.show()
+		gifOpened = true
+		instructionText.hide()
+	else:
+		gif.hide()
+		gifOpened = false
+		instructionText.show()

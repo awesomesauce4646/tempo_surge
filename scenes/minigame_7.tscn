@@ -12,6 +12,30 @@
 [ext_resource type="FontFile" uid="uid://b2q0pxqeuwfe" path="res://BagelFatOne-Regular.ttf" id="9_2i8f8"]
 [ext_resource type="AudioStream" uid="uid://dip0wq0tyusbj" path="res://sounds/pickUp.mp3" id="10_sren0"]
 [ext_resource type="AudioStream" uid="uid://bhsalpxyondnc" path="res://sounds/wrong.mp3" id="11_2i8f8"]
+[ext_resource type="Texture2D" uid="uid://bm6b62hkkrcbx" path="res://assets/gif-button.png" id="11_mved7"]
+[ext_resource type="Texture2D" uid="uid://c8kvvk8ngb53y" path="res://gif-images/memorization (1).png" id="12_cpoci"]
+[ext_resource type="Texture2D" uid="uid://ye8wpqjgbvqc" path="res://gif-images/memorization (2).png" id="13_oabfw"]
+[ext_resource type="Texture2D" uid="uid://jdc0dfw2fdr6" path="res://gif-images/memorization (3).png" id="14_8m1ln"]
+[ext_resource type="Texture2D" uid="uid://cgf05m813hebm" path="res://gif-images/memorization (4).png" id="15_38pyo"]
+[ext_resource type="Texture2D" uid="uid://71ltuuf2kmn8" path="res://gif-images/memorization (5).png" id="16_qfbus"]
+[ext_resource type="Texture2D" uid="uid://bqyh0d4waufcs" path="res://gif-images/memorization (6).png" id="17_lqhlk"]
+[ext_resource type="Texture2D" uid="uid://cu87nx5wsxarq" path="res://gif-images/memorization (7).png" id="18_72gsy"]
+[ext_resource type="Texture2D" uid="uid://cltbvlxutii0c" path="res://gif-images/memorization (8).png" id="19_4i574"]
+[ext_resource type="Texture2D" uid="uid://ugsyk36wlm72" path="res://gif-images/memorization (9).png" id="20_hvmkh"]
+[ext_resource type="Texture2D" uid="uid://b5bi70hy4amsi" path="res://gif-images/memorization (10).png" id="21_8eb2i"]
+[ext_resource type="Texture2D" uid="uid://cgjnxwh1mgmyg" path="res://gif-images/memorization (11).png" id="22_mcmm4"]
+[ext_resource type="Texture2D" uid="uid://bnogptjsqapbp" path="res://gif-images/memorization (12).png" id="23_i1sqj"]
+[ext_resource type="Texture2D" uid="uid://4h8mo1wrybex" path="res://gif-images/memorization (13).png" id="24_8mdhf"]
+[ext_resource type="Texture2D" uid="uid://2xg6ayoxmr5m" path="res://gif-images/memorization (14).png" id="25_io5t3"]
+[ext_resource type="Texture2D" uid="uid://dl0lap6esnips" path="res://gif-images/memorization (15).png" id="26_pwjy3"]
+[ext_resource type="Texture2D" uid="uid://c0eank0qb6a70" path="res://gif-images/memorization (16).png" id="27_h3deg"]
+[ext_resource type="Texture2D" uid="uid://cdrt0qhgrq3" path="res://gif-images/memorization (17).png" id="28_6sxrd"]
+[ext_resource type="Texture2D" uid="uid://bw4f1lvtr4p34" path="res://gif-images/memorization (18).png" id="29_n5sxc"]
+[ext_resource type="Texture2D" uid="uid://ciwkit43hsyum" path="res://gif-images/memorization (19).png" id="30_yju1s"]
+[ext_resource type="Texture2D" uid="uid://cpe5orwk4wak5" path="res://gif-images/memorization (20).png" id="31_cuplk"]
+[ext_resource type="Texture2D" uid="uid://bbq7pdtjxjw54" path="res://gif-images/memorization (21).png" id="32_nb7vt"]
+[ext_resource type="Texture2D" uid="uid://lfwldxp23ygh" path="res://gif-images/memorization (22).png" id="33_sg0qp"]
+[ext_resource type="Texture2D" uid="uid://mxonppc610to" path="res://gif-images/memorization (23).png" id="34_634w7"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_w2dmm"]
 device = -1
@@ -44,6 +68,83 @@ unicode = 103
 
 [sub_resource type="Shortcut" id="Shortcut_eyr1m"]
 events = [SubResource("InputEventKey_j5rk6")]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_snu2v"]
+animations = [{
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("12_cpoci")
+}, {
+"duration": 0.3,
+"texture": ExtResource("13_oabfw")
+}, {
+"duration": 0.3,
+"texture": ExtResource("14_8m1ln")
+}, {
+"duration": 0.3,
+"texture": ExtResource("15_38pyo")
+}, {
+"duration": 0.3,
+"texture": ExtResource("16_qfbus")
+}, {
+"duration": 0.3,
+"texture": ExtResource("17_lqhlk")
+}, {
+"duration": 0.3,
+"texture": ExtResource("18_72gsy")
+}, {
+"duration": 0.3,
+"texture": ExtResource("19_4i574")
+}, {
+"duration": 0.3,
+"texture": ExtResource("20_hvmkh")
+}, {
+"duration": 0.3,
+"texture": ExtResource("21_8eb2i")
+}, {
+"duration": 0.3,
+"texture": ExtResource("22_mcmm4")
+}, {
+"duration": 0.3,
+"texture": ExtResource("23_i1sqj")
+}, {
+"duration": 0.3,
+"texture": ExtResource("24_8mdhf")
+}, {
+"duration": 0.3,
+"texture": ExtResource("25_io5t3")
+}, {
+"duration": 0.3,
+"texture": ExtResource("26_pwjy3")
+}, {
+"duration": 0.3,
+"texture": ExtResource("27_h3deg")
+}, {
+"duration": 0.3,
+"texture": ExtResource("28_6sxrd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_n5sxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_yju1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_cuplk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_nb7vt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_sg0qp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_634w7")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Minigame_7" type="Node2D" unique_id=913392316]
 script = ExtResource("1_ol02w")
@@ -183,14 +284,31 @@ horizontal_alignment = 1
 
 [node name="Start" type="TextureButton" parent="InstructionBg" unique_id=1932501601]
 layout_mode = 0
-offset_left = 205.0
-offset_top = 400.0
-offset_right = 489.0
-offset_bottom = 532.0
+offset_left = 63.0
+offset_top = 409.0
+offset_right = 347.0
+offset_bottom = 541.0
 texture_normal = ExtResource("4_ol02w")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("9_0fn5h")
+
+[node name="GifButton" type="TextureButton" parent="InstructionBg" unique_id=942406801]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 413.0
+offset_right = 634.0
+offset_bottom = 539.0
+texture_normal = ExtResource("11_mved7")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("9_0fn5h")
+
+[node name="InstructionsGif" type="AnimatedSprite2D" parent="InstructionBg" unique_id=1448048224]
+visible = false
+position = Vector2(380, 220)
+scale = Vector2(0.2527372, 0.24040066)
+sprite_frames = SubResource("SpriteFrames_snu2v")
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="." unique_id=1393460947]
 stream = ExtResource("10_sren0")
@@ -204,3 +322,4 @@ pitch_scale = 0.65
 [connection signal="pressed" from="A" to="." method="_on_a_pressed"]
 [connection signal="pressed" from="G" to="." method="_on_g_pressed"]
 [connection signal="pressed" from="InstructionBg/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="InstructionBg/GifButton" to="." method="_on_gif_button_pressed"]

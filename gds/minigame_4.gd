@@ -11,10 +11,15 @@ extends Node2D
 @onready var x8: TextureButton = $Five
 @onready var instructions: TextureRect = $InstructionBg
 @onready var sound: AudioStreamPlayer2D = $Sound
+@onready var gif: AnimatedSprite2D = $InstructionBg/InstructionsGif
+@onready var instructionText: RichTextLabel = $InstructionBg/Instructions
+@onready var gifButton: TextureButton = $InstructionBg/GifButton
 
 const HOVER_MULT := 1.05
 const HOVER_TIME := 0.12
 const WIN_DELAY := 0.4 # lets the last swap sound ring out before the scene changes
+
+var gifOpened = false
 
 var start = false
 var timer_end = false
@@ -128,3 +133,15 @@ func _on_win() -> void:
 
 func _on_start_pressed() -> void:
 	start = true
+
+
+func _on_gif_button_pressed() -> void:
+	if gifOpened == false:
+		gif.play("default")
+		gif.show()
+		gifOpened = true
+		instructionText.hide()
+	else:
+		gif.hide()
+		gifOpened = false
+		instructionText.show()

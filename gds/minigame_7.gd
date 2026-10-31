@@ -8,6 +8,9 @@ extends Node2D
 @onready var rightSound: AudioStreamPlayer2D = $Right
 
 @onready var instructions: TextureRect = $InstructionBg
+@onready var gif: AnimatedSprite2D = $InstructionBg/InstructionsGif
+@onready var instructionText: RichTextLabel = $InstructionBg/Instructions
+@onready var gifButton: TextureButton = $InstructionBg/GifButton
 
 # --- hit feedback settings ---
 const HIT_SQUASH := 0.95                       # lower = bigger press
@@ -22,6 +25,8 @@ var stepTwo = false
 var stepThree = false
 var stepFour = false
 var endGame = false
+
+var gifOpened = false
 
 var timer_end = false
 
@@ -190,3 +195,15 @@ func _on_bongo_key_2_pressed() -> void:
 	keyTwoPressed = true
 	if playing:
 		_hit(keyTwo)
+
+
+func _on_gif_button_pressed() -> void:
+	if gifOpened == false:
+		gif.play("default")
+		gif.show()
+		gifOpened = true
+		instructionText.hide()
+	else:
+		gif.hide()
+		gifOpened = false
+		instructionText.show()

@@ -6,6 +6,10 @@ extends Node2D
 @onready var swing: TextureRect = $Swing
 @onready var sound: AudioStreamPlayer2D = $MetronomeTick
 @onready var wrongSound: AudioStreamPlayer2D = $WrongSound
+@onready var gif: AnimatedSprite2D = $InstructionBg/InstructionsGif
+@onready var instructionText: RichTextLabel = $InstructionBg/Instructions
+@onready var gifButton: TextureButton = $InstructionBg/GifButton
+
 
 const MAX_ANGLE := 28.0         
 const BASE_SPEED := 4.0         
@@ -18,6 +22,8 @@ const BAD_FLASH := Color(1.0, 0.55, 0.55, 1.0)
 const PUNCH_SCALE := 1.03
 const FLASH_IN_TIME := 0.04
 const FLASH_OUT_TIME := 0.15
+
+var gifOpened = false
 
 var swing_time := 0.0
 var hits := 0
@@ -126,3 +132,15 @@ func _feedback(color: Color, punch: bool) -> void:
 
 func _on_start_pressed() -> void:
 	start = true
+
+
+func _on_gif_button_pressed() -> void:
+	if gifOpened == false:
+		gif.play("default")
+		gif.show()
+		gifOpened = true
+		instructionText.hide()
+	else:
+		gif.hide()
+		gifOpened = false
+		instructionText.show()
