@@ -4,9 +4,10 @@ extends Node2D
 @onready var instructions: TextureRect = $InstructionBg
 @onready var upArrow: TextureButton = $up
 @onready var downArrow: TextureButton = $down
-@onready var gif: AnimatedSprite2D = $InstructionBg/InstructionsGif
+@onready var gif: AnimatedSprite2D = $InstructionBg/GifBackground/InstructionsGif
 @onready var instructionText: RichTextLabel = $InstructionBg/Instructions
 @onready var gifButton: TextureButton = $InstructionBg/GifButton
+@onready var gifBackground: TextureRect = $InstructionBg/GifBackground
 
 const SHINE_COLOR := Color(1.5, 1.5, 1.5, 1.0) # raise toward 2.0 for a stronger shine
 const SHINE_TIME := 0.2
@@ -90,10 +91,12 @@ func _on_start_pressed() -> void:
 func _on_gif_button_pressed() -> void:
 	if gifOpened == false:
 		gif.play("default")
+		gifBackground.show()
 		gif.show()
 		gifOpened = true
 		instructionText.hide()
 	else:
 		gif.hide()
+		gifBackground.hide()
 		gifOpened = false
 		instructionText.show()

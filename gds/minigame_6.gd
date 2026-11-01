@@ -11,9 +11,10 @@ extends Node2D
 @onready var wrongSound: AudioStreamPlayer2D = $WrongSound
 @onready var textHi: RichTextLabel = $RichTextLabel
 @onready var instructions: TextureRect = $InstructionBg
-@onready var gif: AnimatedSprite2D = $InstructionBg/InstructionsGif
+@onready var gif: AnimatedSprite2D = $InstructionBg/GifBackground/InstructionsGif
 @onready var instructionText: RichTextLabel = $InstructionBg/Instructions
 @onready var gifButton: TextureButton = $InstructionBg/GifButton
+@onready var gifBackground: TextureRect = $InstructionBg/GifBackground
 
 # each key is a bit: key1 = 1, key2 = 2, key3 = 4
 # the sequence: G (key1 + key3 together), B (key2), D (key1), C (key3)
@@ -170,10 +171,12 @@ func _on_start_pressed() -> void:
 func _on_gif_button_pressed() -> void:
 	if gifOpened == false:
 		gif.play("default")
+		gifBackground.show()
 		gif.show()
 		gifOpened = true
 		instructionText.hide()
 	else:
 		gif.hide()
+		gifBackground.hide()
 		gifOpened = false
 		instructionText.show()

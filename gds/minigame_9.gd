@@ -6,10 +6,10 @@ extends Node2D
 @onready var swing: TextureRect = $Swing
 @onready var sound: AudioStreamPlayer2D = $MetronomeTick
 @onready var wrongSound: AudioStreamPlayer2D = $WrongSound
-@onready var gif: AnimatedSprite2D = $InstructionBg/InstructionsGif
+@onready var gif: AnimatedSprite2D = $InstructionBg/GifBackground/InstructionsGif
 @onready var instructionText: RichTextLabel = $InstructionBg/Instructions
 @onready var gifButton: TextureButton = $InstructionBg/GifButton
-
+@onready var gifBackground: TextureRect = $InstructionBg/GifBackground
 
 const MAX_ANGLE := 28.0         
 const BASE_SPEED := 4.0         
@@ -138,9 +138,11 @@ func _on_gif_button_pressed() -> void:
 	if gifOpened == false:
 		gif.play("default")
 		gif.show()
+		gifBackground.show()
 		gifOpened = true
 		instructionText.hide()
 	else:
 		gif.hide()
+		gifBackground.hide()
 		gifOpened = false
 		instructionText.show()

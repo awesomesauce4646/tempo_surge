@@ -5,7 +5,8 @@ extends Node2D
 @onready var barrierTwo: StaticBody2D = $Barrier2
 @onready var instructions: TextureRect = $InstructionBg
 @onready var platform6: Node2D = $Platform6 # the platform we're going to move
-@onready var gif: AnimatedSprite2D = $InstructionBg/InstructionsGif
+@onready var gif: AnimatedSprite2D = $InstructionBg/GifBackground/InstructionsGif
+@onready var gifBackground: TextureRect = $InstructionBg/GifBackground
 @onready var instructionText: RichTextLabel = $InstructionBg/Instructions
 
 var start = false
@@ -82,10 +83,12 @@ func _on_start_pressed() -> void:
 func _on_gif_button_pressed() -> void:
 	if gifOpened == false:
 		gif.show()
+		gifBackground.show()
 		gifOpened = true
 		instructionText.hide()
 		gif.play("default")
 	else:
+		gifBackground.hide()
 		gif.hide()
 		gifOpened = false
 		instructionText.show()

@@ -11,9 +11,10 @@ extends Node2D
 @onready var x8: TextureButton = $Five
 @onready var instructions: TextureRect = $InstructionBg
 @onready var sound: AudioStreamPlayer2D = $Sound
-@onready var gif: AnimatedSprite2D = $InstructionBg/InstructionsGif
+@onready var gif: AnimatedSprite2D = $InstructionBg/GifBackground/InstructionsGif
 @onready var instructionText: RichTextLabel = $InstructionBg/Instructions
 @onready var gifButton: TextureButton = $InstructionBg/GifButton
+@onready var gifBackground: TextureRect = $InstructionBg/GifBackground
 
 const HOVER_MULT := 1.05
 const HOVER_TIME := 0.12
@@ -138,10 +139,12 @@ func _on_start_pressed() -> void:
 func _on_gif_button_pressed() -> void:
 	if gifOpened == false:
 		gif.play("default")
+		gifBackground.show()
 		gif.show()
 		gifOpened = true
 		instructionText.hide()
 	else:
+		gifBackground.hide()
 		gif.hide()
 		gifOpened = false
 		instructionText.show()

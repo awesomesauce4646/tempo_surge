@@ -304,9 +304,18 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("9_0fn5h")
 
-[node name="InstructionsGif" type="AnimatedSprite2D" parent="InstructionBg" unique_id=1448048224]
+[node name="GifBackground" type="TextureRect" parent="InstructionBg" unique_id=1566864093]
 visible = false
-position = Vector2(380, 220)
+layout_mode = 0
+offset_left = 83.0
+offset_top = 66.0
+offset_right = 621.0
+offset_bottom = 393.0
+texture = ExtResource("7_1av5u")
+expand_mode = 1
+
+[node name="InstructionsGif" type="AnimatedSprite2D" parent="InstructionBg/GifBackground" unique_id=1448048224]
+position = Vector2(268, 165.99998)
 scale = Vector2(0.2527372, 0.24040066)
 sprite_frames = SubResource("SpriteFrames_snu2v")
 

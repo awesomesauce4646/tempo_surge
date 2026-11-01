@@ -8,9 +8,10 @@ extends Node2D
 @onready var rightSound: AudioStreamPlayer2D = $Right
 
 @onready var instructions: TextureRect = $InstructionBg
-@onready var gif: AnimatedSprite2D = $InstructionBg/InstructionsGif
+@onready var gif: AnimatedSprite2D = $InstructionBg/GifBackground/InstructionsGif
 @onready var instructionText: RichTextLabel = $InstructionBg/Instructions
 @onready var gifButton: TextureButton = $InstructionBg/GifButton
+@onready var gifBackground: TextureRect = $InstructionBg/GifBackground
 
 # --- hit feedback settings ---
 const HIT_SQUASH := 0.95                       # lower = bigger press
@@ -201,9 +202,11 @@ func _on_gif_button_pressed() -> void:
 	if gifOpened == false:
 		gif.play("default")
 		gif.show()
+		gifBackground.show()
 		gifOpened = true
 		instructionText.hide()
 	else:
 		gif.hide()
+		gifBackground.hide()
 		gifOpened = false
 		instructionText.show()
