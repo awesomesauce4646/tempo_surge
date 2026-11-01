@@ -15,7 +15,7 @@ To start, just press run!
 
 ### Features 
 
-8 fast-paced minigames! Such as:
+9 fast-paced minigames! Such as:
 
 - Guitar Platformer - Grab the guitar picks as fast as possible!
 - Note Clicker - Collect all the music notes in time!
